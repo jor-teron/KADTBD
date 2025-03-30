@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tiles with Favicons and Text</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            height: 100%;
+            gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid #444;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-item:hover {
+            border: 3px solid #888;
+            box-shadow: 0 0 10px #888;
+        }
+
+        .grid-item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .grid-item img {
+            max-height: 80%; /* Increased image size */
+            max-width: 80%;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+
+        .grid-item span {
+            color: white;
+            font-weight: bold;
+            font-size: 2em; /* Increased text size */
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item"><a href="https://www.google.com"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" alt="Google Favicon"><span>Google</span></a></div>
+        <div class="grid-item"><a href="https://www.whatsapp.com/"><img src="https://www.google.com/s2/favicons?domain=https://www.whatsapp.com/&sz=256" alt="Example 1 Favicon"><span> Whatsapp </span></a></div>
+        <div class="grid-item"><a href="https://services.gst.gov.in/services/login"><img src="https://www.google.com/s2/favicons?domain=https://services.gst.gov.in/services/login&sz=256" alt="Instagram Favicon"><span> GST - login </span></a></div>
+        <div class="grid-item"><a href="https://fin.assam.gov.in/cas/login"><img src="https://www.google.com/s2/favicons?domain=https://fin.assam.gov.in/cas/login&sz=256" alt="Example 2 Favicon"><span> FinAssam - Login </span></a></div>
+        
+        <div class="grid-item"><a href="https://mail.google.com/mail/u/0/#inbox"><img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail&sz=256" alt="Linkedin Favicon"><span> Gmail </span></a></div>        
+        <div class="grid-item"><a href="https://drive.google.com/drive/my-drive"><img src="https://www.google.com/s2/favicons?domain=https://drive.google.com/drive/my-drive&sz=256" alt="Facebook Favicon"><span> Google Drive </span></a></div>
+
+        <div class="grid-item"><a href="https://www.apdcl.org/website/ViewBill"><img src="https://www.google.com/s2/favicons?domain=https://www.apdcl.org&sz=256" alt="Twitter Favicon"><span> APDCL - View bill </span></a></div>
+                 <div class="grid-item"><a href="https://kritagyata.assam.gov.in/"><img src="https://www.google.com/s2/favicons?domain=https://kritagyata.assam.gov.in/&sz=256" alt="Amazon Favicon"><span> Kritagyata </span></a></div>
+
+        <div class="grid-item"><a href="https://mmlsay.assam.gov.in/"><img src="https://www.google.com/s2/favicons?domain=https://mmlsay.assam.gov.in/&sz=256" alt="Reddit Favicon"><span> MMLSAY </span></a></div>
+                <div class="grid-item"><a href="https://assam.gov.in/"><img src="https://www.google.com/s2/favicons?domain=https://assam.gov.in&sz=256" alt="Apple Favicon"><span> Assam Govt. </span></a></div>
+        <div class="grid-item"><a href="https://pfms.nic.in"><img src="https://www.google.com/s2/favicons?domain=https://pfms.nic.in&sz=256" alt="Netflix Favicon"><span> PFMS </span></a></div>
+        
+        
+        <div class="grid-item"><a href="https://meet.google.com/"><img src="https://www.google.com/s2/favicons?domain=https://meet.google.com&sz=64" alt="Spotify Favicon"><span> Google Meet </span></a></div>
+        
+        <div class="grid-item"><a href="http://192.168.10.1/"><img src="https://www.google.com/s2/favicons?domain=http://192.168.10.1/&sz=256" alt="Twitch Favicon"><span> KADT WIFI </span></a></div> 
+        <div class="grid-item"><a href="https://www.wikipedia.org"><img src="https://www.google.com/s2/favicons?domain=wikipedia.org&sz=256" alt="Wikipedia Favicon"><span>Wikipedia</span></a></div>
+        <div class="grid-item"><a href="https://www.microsoft.com"><img src="https://www.google.com/s2/favicons?domain=microsoft.com&sz=256" alt="Microsoft Favicon"><span>Microsoft</span></a></div>
+        <div class="grid-item"><a href="https://www.youtube.com"><img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="Youtube Favicon"><span>Youtube</span></a></div>
+    </div>
+
+</body>
+</html>
