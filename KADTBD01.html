@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important links for works</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            height: 100%;
+            gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .iframe-container {
+            grid-column: 1 / 4;
+            grid-row: 1 / 5;
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid #444;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-item:hover {
+            z-index: 1;
+            border: 3px solid #888;
+        }
+
+        .grid-item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .grid-item img {
+            max-height: 80%;
+            max-width: 80%;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+
+        .grid-item span {
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+            white-space: nowrap;
+        }
+
+        /* Corrected styling for the 4th column */
+        .grid-item:nth-child(4n) {
+            grid-column: 4;
+        }
+
+        /* Corrected styling for the last grid item */
+        .grid-item:last-child {
+            grid-row: 4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="iframe-container">
+            <iframe src="https://www.google.com/" title="WhatsApp Web"></iframe>
+        </div>
+
+        <div class="grid-item"><a href="https://www.google.com/ncr" target="_blank"><img
+                    src="https://www.google.com/s2/favicons?domain=google.com&sz=256" alt="Google Favicon"><span>Google</span></a>
+        </div>
+        <div class="grid-item"><a href="https://drive.google.com/drive/my-drive" target="_blank"><img
+                    src="https://www.google.com/s2/favicons?domain=https://drive.google.com&sz=256"><span> Google Drive
+                </span></a></div>
+        <div class="grid-item"><a href="https://meet.google.com" target="_blank"><img
+                    src="https://www.google.com/s2/favicons?domain=https://meet.google.com&sz=64"><span> Google Meet
+                </span></a></div>
+        <div class="grid-item"><a href="https://remotedesktop.google.com/access" target="_blank"><img
+                    src="https://www.google.com/s2/favicons?domain=https://remotedesktop.google.com&sz=64"><span> Chrome
+                    Remote </span></a></div>
+
+    </div>
+
+</body>
+
+</html>
