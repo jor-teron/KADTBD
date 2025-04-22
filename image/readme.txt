@@ -1,3 +1,3 @@
 readme
 
-sir to store image
+Directory to store image
