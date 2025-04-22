@@ -4,89 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Important link </title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background-color: #333;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            height: 100%;
-            gap: 10px;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .grid-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #222;
-            border-radius: 32px;
-            overflow: hidden;
-            border: 1px solid #444;
-            transition: border 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .grid-item:hover {
-        	z-index: 1;
-           border: 3px solid #888; 
-           /* box-shadow: 0 0 70px #888;  */
-        }
-
-        .grid-item a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-        }
-
-        .grid-item img {
-            max-height: 80%; /* Increased image size */
-            max-width: 80%;
-            object-fit: contain;
-            margin-right: 10px;
-        }
-
-        .grid-item span {
-            color: white;
-            font-weight: bold;
-            font-size: 2em; /* Increased text size */
-            white-space: nowrap;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
 <div class="grid-container">
 
-	<div class="grid-item"><a href="https://assam.gov.in" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://assam.gov.in&sz=256" ><span> Assam Govt. </span></a></div>	
+	<div class="grid-item"><a href="https://assam.gov.in" target="_blank" ><img src="image/location.png" ><span> Assam Govt. </span></a></div>	
+	<div class="grid-item"><a href="https://gad.assam.gov.in" target="_blank" ><img src="image/location.png" ><span> GAD Assam </span></a></div>
+	<div class="grid-item"><a href="https://pwdbnh.assam.gov.in" target="_blank" ><img src="image/location.png" ><span> PWD (B&NH) </span></a></div> 
+	
 	<div class="grid-item"><a href="https://karbianglong.co.in/" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.co.in&sz=256" ><span> KAAC </span></a></div>
 	<div class="grid-item"><a href="https://karbianglong.co.in/Pages/WhosWho.php" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.co.in&sz=256" ><span> Dept. i/c </span></a></div>
 	<div class="grid-item"><a href="https://karbianglong.gov.in" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.gov.in&sz=64" ><span> K/A.gov.in </span></a></div>
 
-	<div class="grid-item"><a href="https://gad.assam.gov.in" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://gad.assam.gov.in&sz=256" ><span> GAD Assam </span></a></div>
-	<div class="grid-item"><a href="https://pwdbnh.assam.gov.in" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://pwdbnh.assam.gov.in&sz=256" ><span> PWD (B&NH) </span></a></div>        
 	<div class="grid-item"><a href="https://finance.assam.gov.in/documents/notifications-16" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" alt="Microsoft Favicon"><span> Finance - Notification </span></a></div>
 	<div class="grid-item"><a href="https://finance.assam.gov.in/documents/office-memorandum" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" ><span> Finance - OM </span></a></div>
-    
 	<div class="grid-item"><a href="https://www.india.gov.in/state-and-ut-holiday-calendar" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://www.india.gov.in&sz=256" ><span> State Holiday </span></a></div>
-	<div class="grid-item"><a href="https://www.apdcl.org/website/ViewBill" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://www.apdcl.org&sz=256" ><span> APDCL - View bill </span></a></div>
-	<div class="grid-item"><a href="https://remotedesktop.google.com/access" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://remotedesktop.google.com&sz=256" ><span> Chrome Remote </span></a></div>
-	<div class="grid-item"><a href="https://calendar.google.com/calendar/u/0/r/month" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://calendar.google.com&sz=256" ><span> Calender </span></a></div>
 
+	<div class="grid-item"><a href="misc.html" ><img src="image/clipboard.png" ><span> MISC </span></a></div>
+   	<div class="grid-item"><a href="index.html" ><img src="image/house.png" ><span> HOME </span></a></div>
+   	<div class="grid-item"><a href="more.html" ><img src="image/more.png" ><span>  </span></a></div>
+
+<!--
 	<div class="grid-item"><a href="https://www.wikipedia.org" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=wikipedia.org&sz=256" alt="Wikipedia Favicon"><span>Wikipedia</span></a></div>
-	<div class="grid-item"><a href="https://account.microsoft.com/" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://account.microsoft.com&sz=256" alt="Whatsapp"><span> MS Account </span></a></div>		        
 	<div class="grid-item"><a href="http://10.10.10.1" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=http://192.168.10.1&sz=256" ><span> KADT WIFI </span></a></div>
-	<div class="grid-item"><a href="index.html" target="" ><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" alt="" ><span> ..back </span></a></div>
+-->
 
  </div>
 
