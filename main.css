@@ -20,6 +20,7 @@ body {
     gap: 10px;
     padding: 10px;
     box-sizing: border-box;
+    overflow: hidden; /* Prevent scrollbars from scaled tiles */
 }
 
 .grid-item {
@@ -30,13 +31,40 @@ body {
     border-radius: 32px;
     overflow: hidden;
     border: 1px solid #444;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
+    transition: border 2s ease, box-shadow 0.3s ease, transform 1s ease, background-color 1s ease;
 }
 
 .grid-item:hover {
     z-index: 1;
     border: 3px solid #888;
+    background-color: #444;
+    transform: scale(1.3);
     /* box-shadow: 0 0 70px #888; */
+}
+
+/* Left column (items 1, 4, 7, 10): shift right on hover */
+.grid-item:nth-child(3n+1):hover {
+    transform: scale(1.2) translateX(20px);
+}
+
+/* Right column (items 3, 6, 9, 12): shift left on hover */
+.grid-item:nth-child(3n):hover {
+    transform: scale(1.2) translateX(-20px);
+}
+
+/* Top row (items 1, 2, 3): shift down on hover */
+.grid-item:nth-child(-n+3):hover {
+    transform: scale(1.2) translateY(20px);
+}
+
+/* Bottom row (items 10, 11, 12): shift up on hover */
+.grid-item:nth-child(n+10):nth-child(-n+12):hover {
+    transform: scale(1.2) translateY(-20px);
+}
+
+/* Middle tiles (items 4, 5, 6, 7, 8, 9): no translation, only scale */
+.grid-item:nth-child(n+4):nth-child(-n+9):hover {
+    transform: scale(1.2);
 }
 
 .grid-item a {
@@ -64,5 +92,5 @@ body {
 
 /* Make bottom row tiles darker */
 .grid-item:nth-child(n+10):nth-child(-n+12) {
-    background-color: #1a1a1a;
+    background-color: #171717;
 }
