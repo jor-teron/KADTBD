@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Important link </title>
+    <title>Home</title>
     <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-
-<div class="grid-container">
-
-	<div class="grid-item"><a href="https://www.google.com/ncr" target="_blank"  target="_blank" ><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" alt="Google Favicon" ><span>Google</span></a></div>
-	<div class="grid-item"><a href="https://web.whatsapp.com" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" alt="Whatsapp"><span> Whatsapp </span></a></div>	
-	<div class="grid-item"><a href="https://mail.google.com/" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail&sz=256" ><span> Gmail </span></a></div>        
-
-
-	<div class="grid-item"><a href="https://fin.assam.gov.in/cas/login" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://fin.assam.gov.in&sz=256" ><span> FinAssam - Login </span></a></div>
-	<div class="grid-item"><a href="https://services.gst.gov.in/services/login" target="_blank" ><img src="image/gst.png" ><span> GST - Login </span></a></div>
-	<div class="grid-item"><a href="https://eportal.incometax.gov.in/iec/foservices/#/e-pay-tax-prelogin/user-details" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://eportal.incometax.gov.in&sz=256" ><span> e-Filling IT - Login </span></a></div>
-
-    
-	<div class="grid-item"><a href="https://kritagyata.assam.gov.in" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://kritagyata.assam.gov.in/&sz=256" ><span> Kritagyata </span></a></div>
-	<div class="grid-item"><a href="https://mmlsay.assam.gov.in" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://mmlsay.assam.gov.in/&sz=256" ><span> MMLSAY </span></a></div>
-	<div class="grid-item"><a href="https://pfms.nic.in" target="_blank" ><img src="https://www.google.com/s2/favicons?domain=https://pfms.nic.in&sz=256" ><span> PFMS </span></a></div>
-
-	<div class="grid-item"><a href="misc.html" ><img src="image/clipboard.png" ><span> MISC </span></a></div>
-   	<div class="grid-item"><a href="index.html" ><img src="image/house.png" ><span> HOME </span></a></div>
-   	<div class="grid-item"><a href="more.html" ><img src="image/more.png" ><span>  </span></a></div>
-
- </div>
-
+    <button id="toggle-grid" aria-label="Minimize grid">Minimize</button>
+    <div class="grid-container">
+        <div class="grid-item"><a href="https://www.google.com/ncr" target="_blank"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" alt="Google Favicon"><span>Google</span></a></div>
+        <div class="grid-item"><a href="https://web.whatsapp.com" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" alt="Whatsapp"><span>Whatsapp</span></a></div>	
+        <div class="grid-item"><a href="https://mail.google.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail&sz=256"><span>Gmail</span></a></div>        
+        
+	<div class="grid-item"><a href="https://fin.assam.gov.in/cas/login" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://fin.assam.gov.in&sz=256"><span>FinAssam - Login</span></a></div>
+        <div class="grid-item"><a href="https://services.gst.gov.in/services/login" target="_blank"><img src="image/gst.png"><span>GST - Login</span></a></div>
+        <div class="grid-item"><a href="https://eportal.incometax.gov.in/iec/foservices/#/e-pay-tax-prelogin/user-details" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://eportal.incometax.gov.in&sz=256"><span>e-Filling IT - Login</span></a></div>
+        
+	<div class="grid-item"><a href="https://kritagyata.assam.gov.in" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://kritagyata.assam.gov.in/&sz=256"><span>Kritagyata</span></a></div>
+        <div class="grid-item"><a href="https://mmlsay.assam.gov.in" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://mmlsay.assam.gov.in/&sz=256"><span>MMLSAY</span></a></div>
+        <div class="grid-item"><a href="https://pfms.nic.in" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://pfms.nic.in&sz=256"><span>PFMS</span></a></div>
+        
+	<div class="grid-item"><a href="misc.html"><img src="image/clipboard.png"><span>MISC</span></a></div>
+        <div class="grid-item"><a href="index.html"><img src="image/house.png"><span>HOME</span></a></div>
+        <div class="grid-item"><a href="more.html"><img src="image/more.png"><span></span></a></div>
+    </div>
+    <div id="notifications" class="notifications"></div>
+    <script src="app.js"></script>
 </body>
 </html>
