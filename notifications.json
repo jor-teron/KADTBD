@@ -1,0 +1,23 @@
+{
+    "header": ["MONTH", "DATE", "TYPE", "VALUE"],
+    "data": [
+        ["04", "27", "Holiday", "Happy Holidays!"],
+        ["04", "27", "Birthday", "Happy Birthday!"],
+        ["04", "29", "Holiday", "Happy Earth Day!"],
+
+        ["01", "15", "Festival", "Happy Magh Bihu!"],
+        ["01", "26", "Holiday", "Celebrate Republic Day!"],
+        ["01", "31", "Festival", "Honor Me-Dam-Me-Phi!"],
+        ["03", "14", "Festival", "Happy Holi!"],
+        ["03", "31", "Festival", "Eid Mubarak!"],
+        ["04", "14", "Festival", "Happy Bohag Bihu!"],
+        ["04", "18", "Holiday", "Reflect on Good Friday"],
+        ["08", "15", "Holiday", "Proud Independence Day!"],
+        ["10", "02", "Holiday", "Honor Gandhi Jayanti!"],
+        ["10", "11", "Festival", "Joyful Durga Puja!"],
+        ["10", "17", "Festival", "Happy Kati Bihu!"],
+        ["10", "20", "Festival", "Happy Diwali!"],
+        ["10", "26", "Festival", "Celebrate Chhath Puja!"],
+        ["12", "25", "Holiday", "Merry Christmas!"]
+    ]
+}
