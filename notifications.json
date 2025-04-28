@@ -16,10 +16,7 @@
         ["02", "26", "", "", "", "Joyful Maha Shivaratri !"],
         ["02", "28", "", "", "", "Death Anniversary of Semson Sing Ingti"],
         
-        ["04", "14", "04", "15", "", "Happy Bohag Bihu!"],        
-        ["04", "27", "", "", "", "A holiday Test... <br /> 1st Test !"],
-        ["04", "28", "", "", "Y", "A Holiday Test... <br /> 2nd Test !"],
-        ["04", "28", "", "", "", "A Holiday Test... <br /> 2nd Duplicate Test !"],
+        ["04", "14", "04", "15", "", "Happy Bohag Bihu!"],
                 
         ["05", "01", "", "", "", "May Day !"],
         
@@ -67,6 +64,11 @@
         ["12", "18", "", "", "Y", ""],
         ["12", "25", "", "", "Y", ""],
         ["12", "29", "", "", "Y", ""],
+        
+        
+        ["04", "28", "", "", "", "SAFETY AND HEALTH AT WORK INTERNATIONAL DAY ! <br /> NATIONAL SUPERHERO DAY !"],
+        ["04", "29", "", "", "", "INTERNATIONAL DANCE DAY !"],
+        ["04", "30", "", "", "", "Ayushman Bharat Diwas !"],
         
         
         ["01", "04", "01", "10", "", "OIL CONSERVATION WEEK"],
