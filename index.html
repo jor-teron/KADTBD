@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="basic.css">
+    <title>Redirect Page</title>
+    <style>
+        body {
+            background-color: grey;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
+    <div id="message">Checking...</div>
+    <script>
+        // URLs to check and redirect
+        const website1 = 'http://server.local'; // Replace with actual URL
+        const website2 = 'https://jor-teron.github.io/KADTBD/main.html'; // Replace with actual URL
 
-    <div class="grid-container">
-    
-        <div class="grid-item"><a href="https://www.google.com/ncr" target="_blank"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" alt="Google Favicon"><span>Google</span></a></div>
-        <div class="grid-item"><a href="https://web.whatsapp.com" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" alt="Whatsapp"><span>Whatsapp</span></a></div>	
-        
-        <div class="grid-item"><a href="https://mail.google.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail&sz=256"><span>Gmail</span></a></div>        
-        <div class="grid-item"><a href="https://services.gst.gov.in/services/login" target="_blank"><img src="image/gst.png"><span>GST - Login</span></a></div>
-        
-        <div class="grid-item"><a href="https://fin.assam.gov.in/cas/login" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://fin.assam.gov.in&sz=256"><span> FinAssam - User Login</span></a></div>
-        <div class="grid-item"><a href="https://fin.assam.gov.in/ess/gotoEmpLogin" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://fin.assam.gov.in&sz=256"><span> FinAssam - Employee Login</span></a></div>
-         
-        <div class="grid-item" id="notifications"></div> 
-        <div class="grid-item"><a href="" target="_blank"><img src="image/more.png"><span> BLANK</span></a></div>
-        
-    </div>
+        // Function to check if website1 is accessible
+        async function checkWebsite() {
+            // Initial delay of 0.5 seconds
+            await new Promise(resolve => setTimeout(resolve, 500));
 
-    <script src="app.js"></script>
+            try {
+                // Attempt to fetch website1 with a timeout
+                await Promise.race([
+                    fetch(website1, { method: 'HEAD', mode: 'no-cors' }),
+                    new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000))
+                ]);
+                // If fetch is successful, show message and redirect to website1
+                document.getElementById('message').textContent = 'Website 1 is accessible! Redirecting...';
+                await new Promise(resolve => setTimeout(resolve, 500)); // Delay before redirect
+                window.location.href = website1;
+            } catch (error) {
+                // If fetch fails or times out, show message and redirect to website2
+                document.getElementById('message').textContent = 'Website 1 is not accessible. Redirecting to Website 2...';
+                await new Promise(resolve => setTimeout(resolve, 500)); // Delay before redirect
+                window.location.href = website2;
+            }
+        }
+
+        // Run the check
+        checkWebsite();
+    </script>
 </body>
 </html>
