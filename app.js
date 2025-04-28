@@ -65,7 +65,7 @@ fetch('notifications.json')
             let index = 0;
             const updateNotification = () => {
                 const entry = displayEntries[index];
-                const dateContext = entry.isToday ? '(Today)' : '(Tomorrow)';
+                const dateContext = entry.isToday ? '&nbsp;&nbsp;(Today)' : '&nbsp;&nbsp;(Tomorrow)';
                 notificationDiv.innerHTML = `${entry.icon} ${entry.text} ${dateContext}`;
                 index = (index + 1) % displayEntries.length;
             };
