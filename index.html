@@ -6,9 +6,10 @@
     <title>Redirect Page</title>
     <style>
         body {
-            background-color: grey;
+            background-color: #222;
             color: white;
             font-family: Arial, sans-serif;
+            font-size:24pt;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,6 +22,7 @@
     <div id="message">Checking...</div>
     <script>
         // URLs to check and redirect
+//          const website1 = 'http://dell.local/server/'; // Replace with actual URL
         const website1 = 'http://server.local'; // Replace with actual URL
         const website2 = 'https://jor-teron.github.io/KADTBD/main.html'; // Replace with actual URL
 
@@ -36,13 +38,14 @@
                     new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000))
                 ]);
                 // If fetch is successful, show message and redirect to website1
-                document.getElementById('message').textContent = 'Website 1 is accessible! Redirecting...';
-                await new Promise(resolve => setTimeout(resolve, 500)); // Delay before redirect
+                document.getElementById('message').textContent = website1 ;
+//                document.getElementById('message').textContent = '"' + website1 + '" - is accessible! Redirecting...';
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Delay before redirect
                 window.location.href = website1;
             } catch (error) {
                 // If fetch fails or times out, show message and redirect to website2
-                document.getElementById('message').textContent = 'Website 1 is not accessible. Redirecting to Website 2...';
-                await new Promise(resolve => setTimeout(resolve, 500)); // Delay before redirect
+                document.getElementById('message').textContent = website2 ;
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Delay before redirect
                 window.location.href = website2;
             }
         }
