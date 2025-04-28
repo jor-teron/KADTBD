@@ -10,6 +10,7 @@ body {
     padding: 0;
     font-family: sans-serif;
     background-color: #333;
+    position: relative;
 }
 
 .grid-container {
@@ -20,7 +21,7 @@ body {
     gap: 10px;
     padding: 10px;
     box-sizing: border-box;
-    overflow: hidden; /* Prevent scrollbars from scaled tiles */
+    overflow: hidden;
 }
 
 .grid-item {
@@ -39,30 +40,24 @@ body {
     border: 1px solid #111;
     background-color: #444;
     transform: scale(1.2);
-    /* box-shadow: 0 0 70px #888; */
 }
 
-/* Left column (items 1, 4, 7, 10): shift right on hover */
 .grid-item:nth-child(3n+1):hover {
     transform: scale(1.2) translateX(20px);
 }
 
-/* Right column (items 3, 6, 9, 12): shift left on hover */
 .grid-item:nth-child(3n):hover {
     transform: scale(1.2) translateX(-20px);
 }
 
-/* Top row (items 1, 2, 3): shift down on hover */
 .grid-item:nth-child(-n+3):hover {
     transform: scale(1.2) translateY(20px);
 }
 
-/* Bottom row (items 10, 11, 12): shift up on hover */
 .grid-item:nth-child(n+10):nth-child(-n+12):hover {
     transform: scale(1.2) translateY(-20px);
 }
 
-/* Middle tiles (items 4, 5, 6, 7, 8, 9): no translation, only scale */
 .grid-item:nth-child(n+4):nth-child(-n+9):hover {
     transform: scale(1.2);
 }
@@ -90,7 +85,6 @@ body {
     white-space: nowrap;
 }
 
-/* Make bottom row tiles darker */
 .grid-item:nth-child(n+10):nth-child(-n+12) {
     background-color: #171717;
 }
@@ -99,57 +93,39 @@ body {
     transform: scale(1);
 }
 
-/* New styles for minimize button and notification area */
-#toggle-grid {
-	z-index: 5;
-	position: fixed;
-	top: 5px;
-	right: 5px ;
-	width: 120px;
-	height: 40px;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #666;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-#toggle-grid:hover {
-    background-color: #888;
-}
-
-.grid-container.hidden {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-}
-
-.notifications {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.left-bottom {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+    height: 200px;
     background-color: #2c2c2c;
-    border-radius: 16px;
+    border-radius: 8px;
     border: 1px solid #444;
-    padding: 20px;
-    max-width: 90vw;
-    max-height: 80vh;
-    color: #ffccdd;
-    font-size: 1.5em;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    display: none;
+    z-index: 10;
+    overflow: hidden;
 }
 
-.notifications.active {
-    opacity: 1;
+.left-bottom iframe {
+    border: none;
+}
+
+#notifications {
+    background-color: #171717;
+    border-radius: 7px;
+    border: 1px solid #444;
+    color: #ffccdd;
+    font-size: 2.8em;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 1s ease, background-color 1s ease;
+}
+
+#notifications:hover {
+    transform: scale(1);
+    background-color: ;
 }
