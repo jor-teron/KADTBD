@@ -25,20 +25,37 @@ fetch('notifications.json')
             const endNum = endMonth * 100 + endDate;
             
             // Check if today or tomorrow falls within the event range
-            if ((todayNum >= startNum && todayNum <= endNum) || 
-                (tomorrowNum >= startNum && tomorrowNum <= endNum)) {
+            const isToday = todayNum >= startNum && todayNum <= endNum;
+            const isTomorrow = tomorrowNum >= startNum && tomorrowNum <= endNum;
+            
+            if (isToday || isTomorrow) {
                 const type = row[4];
                 const message = row[5];
                 if (type === 'Y') {
                     // Add Happy Birthday for birthdays
-                    displayEntries.push({ icon: '🎂', text: 'Happy Birthday' });
+                    displayEntries.push({ 
+                        icon: '🎂', 
+                        text: 'Happy Birthday', 
+                        isToday, 
+                        isTomorrow 
+                    });
                     // Add MESSAGE if non-empty
                     if (message) {
-                        displayEntries.push({ icon: '🎉', text: message });
+                        displayEntries.push({ 
+                            icon: '🎉', 
+                            text: message, 
+                            isToday, 
+                            isTomorrow 
+                        });
                     }
                 } else if (message) {
                     // Add MESSAGE for non-birthday events
-                    displayEntries.push({ icon: '🎉', text: message });
+                    displayEntries.push({ 
+                        icon: '🎉', 
+                        text: message, 
+                        isToday, 
+                        isTomorrow 
+                    });
                 }
             }
         });
@@ -48,7 +65,8 @@ fetch('notifications.json')
             let index = 0;
             const updateNotification = () => {
                 const entry = displayEntries[index];
-                notificationDiv.innerHTML = `${entry.icon} ${entry.text}`;
+                const dateContext = entry.isToday ? '(Today)' : '(Tomorrow)';
+                notificationDiv.innerHTML = `${entry.icon} ${entry.text} ${dateContext}`;
                 index = (index + 1) % displayEntries.length;
             };
             updateNotification();
