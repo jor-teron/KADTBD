@@ -2,39 +2,48 @@
     "header": ["START_MONTH", "START_DATE", "END_MONTH", "END_DATE", "TYPE", "MESSAGE"],
     "data": [
 
-["01", "01", "", "", "Y", "Happy New Year !"],
-["01", "05", "", "", "", "Rongker !"],
-["01", "14", "01", "15", "", "Celebrate Magh Bihu ! <br /> Hacha Kekan Day"],
-["01", "23", "", "", "", "Netaji Birth Anniversary"],
-["01", "26", "", "", "", "Proud Republic Day !"],
 
-["02", "01", "", "", "", "Karbi New Year"],
-["02", "02", "", "", "", "Barithe Karkli"],
-["02", "05", "", "", "", "Lokhimon Karcho"],
-["02", "07", "", "", "", "Birth Anniversary of Sarsing Teron"],
-["02", "17", "02", "19", "", "Karbi Youth Festival !"],
-["02", "28", "", "", "", "Death Anniversary of Semson Sing Ingti"],
+["00", "00", "", "", "", "FIXED DATE HOLIDAY "],
 
-["04", "14", "04", "15", "", "Happy Bohag Bihu!"],
-
-["05", "01", "", "", "", "May Day !"],
-
-["06", "23", "", "", "", "Council Foundation Day"],
-
-["07", "21", "", "", "", "Karbi Student's Day !"],
-["08", "15", "", "", "", "Celebrate Independence Day!"],
-
-["10", "02", "", "", "", "Honour Gandhi Jayanti!"],
-["10", "17", "", "", "", "Charchim Prisek !"],
-
-["11", "05", "", "", "", "Happy Guru Nanak Jayanti!"],
-["11", "28", "", "", "", "Khorsing Terang <br /> Death Anniversary !"],
-
+["01", "01", "", "", "H", "Happy New Year !"],
+["01", "05", "", "", "H", "Rongker !"],
+["01", "14", "01", "15", "H", "Celebrate Magh Bihu ! <br /> Hacha Kekan Day"],
+["01", "23", "", "", "H", "Netaji Birth Anniversary"],
+["01", "26", "", "", "H", "Proud Republic Day !"],
+["02", "01", "", "", "H", "Karbi New Year"],
+["02", "02", "", "", "H", "Barithe Karkli"],
+["02", "05", "", "", "H", "Lokhimon Karcho"],
+["02", "07", "", "", "H", "Birth Anniversary of Sarsing Teron"],
+["02", "17", "02", "19", "H", "Karbi Youth Festival !"],
+["02", "28", "", "", "H", "Death Anniversary of Semson Sing Ingti"],
+["04", "14", "04", "15", "H", "Happy Bohag Bihu!"],
+["04", "14", "", "", "H", "Ambedkar jayanti !"],
+["05", "01", "", "", "H", "May Day !"],
+["06", "23", "", "", "H", "Council Foundation Day"],
+["07", "21", "", "", "H", "Karbi Student's Day !"],
+["08", "15", "", "", "H", "Celebrate Independence Day!"],
+["09", "05", "", "", "", "Teacher Day !"],
+["10", "02", "", "", "H", "Honour Gandhi Jayanti !"],
+["10", "17", "", "", "H", "Charchim Prisek !"],
+["11", "05", "", "", "H", "Happy Guru Nanak Jayanti!"],
+["11", "28", "", "", "H", "Khorsing Terang <br /> Death Anniversary !"],
 ["12", "01", "12", "10", "", "Hornbill Festival"],
-["12", "05", "", "", "", "Commemoration of <br /> Kajir Ronghangpi"],
-["12", "24", "12", "26", "", "Merry Christmas !"],
+["12", "05", "", "", "H", "Commemoration of <br /> Kajir Ronghangpi"],
+["12", "24", "12", "26", "H", "Merry Christmas !"],
 ["12", "31", "", "", "", "New Year Eve !"],
 
+
+["00", "00", "", "", "", "NON-FIXED DATE HOLIDAY "],
+
+["05", "12", "", "", "H", "Buddha Purnima !"],
+["06", "07", "", "", "H", "Id-Ul-Zuha !"],
+["10", "20", "", "", "H", "Diwali !"],
+["09", "14", "", "", "H", "Janmasthami !"],
+["09", "17", "", "", "H", "Biswakarma !"],
+["09", "28", "10", "02", "H", "Durga Puja !"],
+
+
+["00", "00", "", "", "", "INTERNATIONAL + NATIONAL DAY"],
 
 ["01", "04", "01", "10", "", "Oil Conservation Week"],
 ["01", "10", "01", "16", "", "Road Safety Week"],
@@ -112,6 +121,7 @@
 ["01", "28", "", "", "", "Data Privacy Day / Lala Lajpat Rai Jayanti (India)"],
 ["01", "30", "", "", "", "Martyrs' Day (India) / World Leprosy Day"],
 
+["02", "02", "", "", "", "World Wetlands Day"],
 ["02", "04", "", "", "", "World Cancer Day"],
 ["02", "10", "", "", "", "National Deworming Day (India)"],
 ["02", "11", "", "", "", "International Day of Women and Girls in Science"],
@@ -244,7 +254,9 @@
 ["12", "22", "", "", "", "National Mathematics Day (India)"],
 ["12", "23", "", "", "", "Kisan Diwas (Farmer's Day) (India)"],
 
-     
+
+["00", "00", "", "", "", "SUNDAY + SATURDAY"],
+
 ["01", "05", "", "", "", "Sunday"],
 ["01", "11", "", "", "", "2nd Saturday"],
 ["01", "12", "", "", "", "Sunday"],
