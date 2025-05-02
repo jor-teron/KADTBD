@@ -33,13 +33,13 @@ body {
             border-radius: 7px;
             overflow: hidden;
             border: 0px solid #555;
-            transition: border 1s ease, box-shadow 0.5s ease;
+            transition: border 1s ease, box-shadow 0.3s ease;
         }
 
         .grid-item:hover {
         	z-index: 1;
             background-color: #2b2b2b;
-        	box-shadow: 0 25px 90px #111;
+        	box-shadow: 0 25px 90px #030303;
           border: 0px solid #222; 
            transform:scale(1);
            /*   */
