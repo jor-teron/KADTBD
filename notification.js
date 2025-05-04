@@ -1,8 +1,31 @@
-const localNotificationsUrl = 'notifications.json'; // Adjust the path as needed
+const notificationFolder = 'notification/';
+const notificationFiles = [
+	'birthday.json',
+	'holiday.json',
+	'sunday-saturday.json',
+	'DAY.json',
+    'misc.json',
+    'sun.json',
+    'test.json'
+];
 
-fetch(localNotificationsUrl)
-    .then(response => response.json())
-    .then(json => {
+const fetchPromises = notificationFiles.map(file =>
+    fetch(notificationFolder + file).then(response => response.json())
+);
+
+Promise.allSettled(fetchPromises)
+    .then(results => {
+        let allNotificationsData = [];
+
+        results.forEach((result, index) => {
+            const fileName = notificationFiles[index];
+            if (result.status === 'fulfilled' && result.value && result.value.data) {
+                allNotificationsData.push(...result.value.data);
+            } else if (result.reason) {
+                console.warn(`Error fetching ${fileName} (continuing without it):`, result.reason);
+            }
+        });
+
         const today = new Date();
         const tomorrow = new Date(today);
         tomorrow.setDate(today.getDate() + 1);
@@ -17,7 +40,7 @@ fetch(localNotificationsUrl)
         const dayAfterTomorrowDate = dayAfterTomorrow.getDate();
 
         const displayEntries = [];
-        json.data.forEach(row => {
+        allNotificationsData.forEach(row => {
             const startMonth = parseInt(row[0]);
             const startDate = parseInt(row[1]);
             const endMonth = row[2] ? parseInt(row[2]) : startMonth;
@@ -37,28 +60,30 @@ fetch(localNotificationsUrl)
                 const type = row[4];
                 const message = row[5];
                 let dateContext = '';
-                if (isToday && type !== 'D') {
+                if (isToday && type !== 'D' && type !== 'S') {
                     dateContext = '(Today)';
-                } else if (isTomorrow && type !== 'D') {
+                } else if (isTomorrow && type !== 'D' && type !== 'S') {
                     dateContext = '(Tomorrow)';
-                } else if (isDayAfterTomorrow && type !== 'D') {
+                } else if (isDayAfterTomorrow && type !== 'D' && type !== 'S') {
                     dateContext = '(in 2 days)';
                 }
                 let notificationText = message ? `${message} ${dateContext}` : '';
                 let textColor = 'white';
-                let display = true; // Flag to control if an entry is added
+                let display = true;
 
                 if (type === 'Y') {
-                    notificationText = `Happy Birthday ${message} ${dateContext}`;
+                    notificationText = `Happy B'day ${message} ! ${dateContext}`;
                     textColor = '#E96316';
                 } else if (type === 'H') {
                     textColor = '#0DC143';
-                } else if (type === 'R') { // Changed from 'HH' to 'R'
+                } else if (type === 'R') {
                     textColor = '#AFE1AF';
                 } else if (type === 'D') {
-                    notificationText = message || ''; // Display just the message, no date context
+                    notificationText = message || '';
+                } else if (type === 'S') {
+                    notificationText = message ? ` Sunrise - Noon - Sunset :<br /> ${message}` : '';
                 } else if (!message) {
-                    display = false; // Don't display if no message and not a special type
+                    display = false;
                 }
 
                 if (display) {
@@ -88,11 +113,11 @@ fetch(localNotificationsUrl)
                 setInterval(updateNotification, 2000);
             }
         } else {
-            notificationDiv.innerHTML = 'Have a great day!';
-            notificationDiv.style.color = '';
+            notificationDiv.innerHTML = 'Have a great day !';
+            notificationDiv.style.color = 'white';
         }
     })
     .catch(error => {
-        console.error('Error fetching notifications:', error);
+        console.error('Error processing notifications:', error);
         document.getElementById('notifications').innerHTML = 'Failed to load notifications.';
     });
