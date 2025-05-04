@@ -1,0 +1,20 @@
+{
+"header": ["START_MONTH", "START_DATE", "END_MONTH", "END_DATE", "TYPE", "MESSAGE"],
+"data": [
+
+["00", "00", "", "", "", "CUSTOMISED LONG EVENT"],
+
+["10", "01", "10", "31", "D", "Windows 10 [EOL] (15th Oct'2025)"],
+
+
+["03", "15", "", "25", "D", "Vernal Equinox (Equal day) "],
+["06", "15", "", "26", "D", "Summer Solstice (Longest day) "],
+["09", "19", "", "28", "D", "Autumnal Equinox (Equal day] "],
+["12", "15", "", "26", "D", "Winter Solstice (Shortest day) "],
+
+["03", "01", "09", "30", "D", "Office hour:<br /> 10 AM - 05 PM "],
+["10", "01", "02", "28", "D", "Office hour:,br /> 09:30 AM - 04:30 PM "]
+
+  ]
+}
+

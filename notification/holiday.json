@@ -1,0 +1,62 @@
+{
+"header": ["START_MONTH", "START_DATE", "END_MONTH", "END_DATE", "TYPE", "MESSAGE"],
+"data": [
+
+["00", "00", "", "", "", "FIXED DATE HOLIDAY - Restricted holiday "],
+
+["01", "01", "", "", "H", "Happy New Year"],
+["01", "05", "", "", "H", "Rongker"],
+["01", "14", "", "15", "H", "Magh Bihu ! <br /> Hacha Kekan Day"],
+["01", "31", "", "", "R", "Me-Dam-Me-Phi"],
+["01", "23", "", "", "H", "Netaji Birth Anniversary"],
+["01", "26", "", "", "H", "Republic Day"],
+["02", "01", "", "", "H", "Karbi New Year"],
+["02", "02", "", "", "H", "Barithe Karkli"],
+["02", "03", "", "", "R", "Barithe Karkli"],
+["02", "05", "", "", "H", "Lokhimon Karcho"],
+["02", "07", "", "", "H", "Birth Anniversary of Sarsing Teron"],
+["02", "17", "", "19", "H", "Karbi Youth Festival"],
+["02", "28", "", "", "H", "Death Anniversary of Semson Sing Ingti"],
+["04", "14", "", "15", "H", "Happy Bohag Bihu"],
+["05", "01", "", "", "H", "May Day"],
+["06", "23", "", "", "H", "Council Foundation Day"],
+["07", "21", "", "", "H", "Karbi Student's Day"],
+["08", "15", "", "", "H", "Independence Day"],
+["09", "05", "", "", "", "Teacher Day"],
+["10", "02", "", "", "H", "Gandhi Jayanti"],
+["10", "17", "", "", "H", "Charchim Prisek"],
+["11", "01", "", "", "R", "Chawang Kut"],
+["11", "05", "", "", "H", "Happy Guru Nanak Jayanti"],
+["11", "14", "", "", "", "Children Day"],
+["11", "28", "", "", "H", "Khorsing Terang <br /> Death Anniversary"],
+["11", "25", "12", "10", "", "Hornbill Festival"],
+["11", "24", "", "", "R", "Lachit Divas"],
+["12", "01", "", "", "R", "Asom Divas"],
+["12", "05", "", "", "H", "Commemoration of <br /> Kajir Ronghangpi"],
+["12", "24", "", "24", "R", "Christmas Eve"],
+["12", "24", "", "25", "H", "Merry Christmas"],
+["12", "31", "", "", "", "New Year Eve"],
+
+
+["00", "00", "", "", "", "NON-FIXED DATE HOLIDAY "],
+
+["05", "12", "", "", "H", "Buddha Purnima"],
+["10", "20", "", "", "H", "Diwali"],
+["09", "14", "", "", "H", "Janmasthami"],
+["09", "17", "", "", "H", "Biswakarma"],
+["09", "28", "10", "02", "H", "Durga Puja"],
+
+["01", "16", "", "20", "", "Jonbeel Mela"],
+["02", "26", "", "27", "", "Shivratri"],
+
+
+["00", "00", "", "", "", "RESTRICTED HOLIDAYS"],
+
+["03", "11", "", "", "R", "Botor Kekur"],
+["06", "07", "", "", "R", "Id-Ul-Zuha"],
+["10", "18", "", "", "R", "Kati Bihu"],
+["10", "28", "", "", "R", "Chhat Puja"],
+["11", "06", "", "", "R", "Lakshmi Puja"]
+
+  ]
+}
