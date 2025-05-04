@@ -6,7 +6,8 @@
 
 ["01", "01", "", "", "H", "Happy New Year"],
 ["01", "05", "", "", "H", "Rongker"],
-["01", "14", "", "15", "H", "Magh Bihu ! <br /> Hacha Kekan Day"],
+["01", "14", "", "15", "H", "Magh Bihu"],
+["01", "14", "", "15", "H", "Hacha Kekan Day"],
 ["01", "31", "", "", "R", "Me-Dam-Me-Phi"],
 ["01", "23", "", "", "H", "Netaji Birth Anniversary"],
 ["01", "26", "", "", "H", "Republic Day"],
@@ -15,6 +16,7 @@
 ["02", "03", "", "", "R", "Barithe Karkli"],
 ["02", "05", "", "", "H", "Lokhimon Karcho"],
 ["02", "07", "", "", "H", "Birth Anniversary of Sarsing Teron"],
+["02", "15", "", "16", "", "Karbi Youth Festival"],
 ["02", "17", "", "19", "H", "Karbi Youth Festival"],
 ["02", "28", "", "", "H", "Death Anniversary of Semson Sing Ingti"],
 ["04", "14", "", "15", "H", "Happy Bohag Bihu"],
@@ -40,17 +42,14 @@
 
 ["00", "00", "", "", "", "NON-FIXED DATE HOLIDAY "],
 
+["01", "16", "", "20", "", "Jonbeel Mela"],
+["02", "26", "", "27", "", "Shivratri"],
+
 ["05", "12", "", "", "H", "Buddha Purnima"],
 ["10", "20", "", "", "H", "Diwali"],
 ["09", "14", "", "", "H", "Janmasthami"],
 ["09", "17", "", "", "H", "Biswakarma"],
 ["09", "28", "10", "02", "H", "Durga Puja"],
-
-["01", "16", "", "20", "", "Jonbeel Mela"],
-["02", "26", "", "27", "", "Shivratri"],
-
-
-["00", "00", "", "", "", "RESTRICTED HOLIDAYS"],
 
 ["03", "11", "", "", "R", "Botor Kekur"],
 ["06", "07", "", "", "R", "Id-Ul-Zuha"],
