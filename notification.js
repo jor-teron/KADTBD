@@ -1,12 +1,23 @@
+/*
+H -> Holiday
+R -> restricted holiday
+B -> Birthday
+S -> Sunrise
+D -> (No day)
+SS -> Sunday
+2nd -> 2nd Saturday
+4th -> 4th saturday
+*/
+
 const notificationFolder = 'notification/';
 const notificationFiles = [
+//	'test.json',
 	'birthday.json',
 	'holiday.json',
 	'sunday-saturday.json',
 	'DAY.json',
-    'misc.json',
-    'sun.json',
-    'test.json'
+	'misc.json',
+	'sun.json'
 ];
 
 const fetchPromises = notificationFiles.map(file =>
@@ -61,17 +72,17 @@ Promise.allSettled(fetchPromises)
                 const message = row[5];
                 let dateContext = '';
                 if (isToday && type !== 'D' && type !== 'S') {
-                    dateContext = '(Today)';
+                    dateContext = '<br />(Today)';
                 } else if (isTomorrow && type !== 'D' && type !== 'S') {
-                    dateContext = '(Tomorrow)';
+                    dateContext = '<br />(Tomorrow)';
                 } else if (isDayAfterTomorrow && type !== 'D' && type !== 'S') {
-                    dateContext = '(in 2 days)';
+                    dateContext = '<br />(in 2 days)';
                 }
                 let notificationText = message ? `${message} ${dateContext}` : '';
                 let textColor = 'white';
                 let display = true;
 
-                if (type === 'Y') {
+                if (type === 'B') {
                     notificationText = `Happy B'day ${message} ! ${dateContext}`;
                     textColor = '#E96316';
                 } else if (type === 'H') {
@@ -81,7 +92,7 @@ Promise.allSettled(fetchPromises)
                 } else if (type === 'D') {
                     notificationText = message || '';
                 } else if (type === 'S') {
-                    notificationText = message ? ` Sunrise - Noon - Sunset :<br /> ${message}` : '';
+                    notificationText = message ? `<span id="line2"> Sunrise - Noon - Sunset <hr /> ${message} </span>` : '';
                 } else if (!message) {
                     display = false;
                 }
