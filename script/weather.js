@@ -20,11 +20,11 @@ async function getWeatherWithProbability() {
   const nextDayFormatted = formatDate(nextDay);
 
   // Corrected coordinates for Guwahati, Assam, India
-  const latitude = 26.1445;
-  const longitude = 91.7362;
+  const latitude = 25.8387 ;
+  const longitude = 93.4373 ;
 
-  // Fetch hourly and daily data for three days
-  const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=weathercode,temperature_2m,precipitation_probability&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode&timezone=Asia%2FKolkata&start_date=${todayFormatted}&end_date=${nextDayFormatted}`;
+  // Fetch hourly and daily data for three days (removed precipitation_sum from daily)
+  const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=weathercode,temperature_2m,precipitation_probability&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=Asia%2FKolkata&start_date=${todayFormatted}&end_date=${nextDayFormatted}`;
 
   try {
     const response = await fetch(apiUrl);
@@ -37,9 +37,8 @@ async function getWeatherWithProbability() {
       for (let i = 0; i < 3; i++) {
         const date = new Date(data.daily.time[i]);
         const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'long' });
-        const maxTemp = data.daily.temperature_2m_max[i];
-        const minTemp = data.daily.temperature_2m_min[i];
-        const precipitationSum = data.daily.precipitation_sum[i];
+        const maxTemp = Math.round(data.daily.temperature_2m_max[i]); // Round max temperature
+        const minTemp = Math.round(data.daily.temperature_2m_min[i]); // Round min temperature
         const weatherCode = data.daily.weathercode[i];
 
         // Filter hourly data for the current day
@@ -67,7 +66,7 @@ async function getWeatherWithProbability() {
           case 1:
           case 2:
           case 3:
-            skyCondition = 'Mainly clear, partly cloudy';
+            skyCondition = 'Partly cloudy';
             break;
           case 45:
           case 48:
@@ -113,15 +112,14 @@ async function getWeatherWithProbability() {
             break;
           case 96:
           case 99:
-            skyCondition = 'Thunderstorm with hail';
+            skyCondition = 'Thunderstorm + hail';
             break;
           default:
             skyCondition = 'Unknown';
         }
 
-        weatherHTML += `<p><strong><u> ${dayOfWeek} </u></strong> <br>`;
-        weatherHTML += `Max: ${maxTemp}°C<br>`;
-        weatherHTML += `Min: ${minTemp}°C<br>`;
+        weatherHTML += `<p><strong><u> ${dayNames[i]} </u></strong> <br>`;
+        weatherHTML += ` ${maxTemp}°C / ${minTemp}°C <br>`;
         weatherHTML += `${skyCondition}<br>`;
         if (maxPrecipitationProbability > 0) {
           weatherHTML += `Rain: <strong>${maxPrecipitationProbability}%</strong><br>`;
