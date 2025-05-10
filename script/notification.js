@@ -121,7 +121,7 @@ Promise.allSettled(fetchPromises)
             };
             updateNotification();
             if (displayEntries.length > 1) {
-                setInterval(updateNotification, 10000);
+                setInterval(updateNotification, 6000);
             }
         } else {
             notificationDiv.innerHTML = 'Have a great day !';
