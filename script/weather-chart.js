@@ -11,17 +11,17 @@ async function drawWeatherChart() {
     const hours = data.hourly.time;
     const temps = data.hourly.temperature_2m;
 
-    // Filter data between 3 AM and 9 PM
+    // Filter data between 3 AM and 12 AM (midnight)
     const now = new Date();
     const today = now.toISOString().split("T")[0]; // Extract today's date (YYYY-MM-DD)
 
     const labels = [], values = [];
 
-    // Loop through the hours and collect data from 3AM to 9PM
+    // Loop through the hours and collect data from 3 AM to 12 AM
     for (let i = 0; i < hours.length; i++) {
         if (hours[i].startsWith(today)) {
             const hour = new Date(hours[i]).getHours();
-            if (hour >= 3 && hour <= 21) {
+            if (hour >= 3 && hour <= 23) { // Changed from <= 21 to <= 23
                 labels.push(hour);
                 values.push(temps[i]);
             }
@@ -127,7 +127,7 @@ async function drawWeatherChart() {
 
     // Title
     ctx.font = "16px sans-serif";
-    ctx.fillText(`Diphu Hourly Temperature. Today (3AM - 9PM, \u00B0C)`, canvas.width / 2 - 120, padding - 20);
+    ctx.fillText(`Diphu Hourly Temperature. Today (3AM - 12AM, \u00B0C)`, canvas.width / 2 - 120, padding - 20);
 }
 
 drawWeatherChart();
