@@ -127,7 +127,7 @@ async function drawWeatherChart() {
 
     // Title
     ctx.font = "16px sans-serif";
-    ctx.fillText(`Diphu Hourly Temperature. Today (3AM - 12AM, \u00B0C)`, canvas.width / 2 - 120, padding - 20);
+    ctx.fillText(`Diphu Hourly Temperature (Today, 3AM - 12AM, \u00B0C)`, canvas.width / 2 - 120, padding - 20);
 }
 
 drawWeatherChart();
