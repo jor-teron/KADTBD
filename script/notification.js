@@ -114,7 +114,7 @@ Promise.allSettled(fetchPromises)
             }
         });
 
-        const notificationDiv = document.getElementById('notifications');
+        const notificationDiv = document.getElementById('notification');
         if (displayEntries.length > 0) {
             let index = 0;
             let intervalId = null;
@@ -141,10 +141,10 @@ Promise.allSettled(fetchPromises)
             updateNotification();
         } else {
             notificationDiv.innerHTML = 'Have a great day !';
-            notificationDiv.style.color = 'white';
+            notificationDiv.style.color = 'olive';
         }
     })
     .catch(error => {
         console.error('Error processing notifications:', error);
-        document.getElementById('notifications').innerHTML = 'Failed to load notifications.';
+        document.getElementById('notification').innerHTML = 'Failed to load notifications.';
     });
