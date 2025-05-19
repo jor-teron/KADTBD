@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14pt;
+    font-weight: 888;
+    background-color: #111;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+a { 
+	text-decoration: none;
+	color: blue; 
+}
+
+u {
+	color: green;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-bottom: 24vh; /* Space for sticky header row */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header-row {
+    position: sticky;
+    top: 10px;
+    z-index: 1; /* Ensure header stays above other content */
+    background-color: ; /* Match body background for seamless look */
+}
+
+.tile {
+    width: 48vw; /* Adjusted to prevent scrollbar */
+    height: 26vh;
+    background-color: #222;
+    border: 2px solid grey;
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    color: white; /* Contrast with dark background */
+}
+
+.tile:hover {
+    background-color: #333;
+}
+
+.header-tile {
+    background-color: #1a1a1a; /* Header-specific background */
+    font-size: 1.4rem; /* Slightly larger text for emphasis */
+}
+
+.tile img {
+    height: 80%; /* 90% of tile height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
+#fortune , #weather-tile , #notifications {
+	font-size: 1.5em;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	
+	/*
+	color: white;
+    width: 100%;
+    height: 100%; /* or whatever height you want 
+	*/
+	
+}
+
+#notifications {
+	position: ;
+	top: 10;
+}
+
+#fortune {
+	position: ;
+	top: 10px;
+}
+
+#weather-tile p {
+	margin-left: 40px;
+/*
+	height: ;
+	border: 0px solid blue;
+	justify-content: ;
+*/
+	}
+
