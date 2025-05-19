@@ -1,5 +1,5 @@
 async function getWeatherWithProbability() {
-  const weatherDiv = document.getElementById('weather');
+  const weatherDiv = document.getElementById('weather-tile');
   weatherDiv.innerHTML = 'Loading weather data...';
 
   const today = new Date();
