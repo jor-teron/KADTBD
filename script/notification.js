@@ -11,13 +11,12 @@ SS -> Sunday
 
 const notificationFolder = 'notification/';
 const notificationFiles = [
-//	'test.json',
-	'birthday.json',
-	'holiday.json',
-	'sunday-saturday.json',
-	'DAY.json',
-	'misc.json',
-	'sun.json'
+    'birthday.json',
+    'holiday.json',
+    'sunday-saturday.json',
+    'DAY.json',
+    'misc.json',
+    'sun.json'
 ];
 
 const fetchPromises = notificationFiles.map(file =>
@@ -56,6 +55,10 @@ Promise.allSettled(fetchPromises)
             const startDate = parseInt(row[1]);
             const endMonth = row[2] ? parseInt(row[2]) : startMonth;
             const endDate = row[3] ? parseInt(row[3]) : startDate;
+            const timeout = row[6] ? parseFloat(row[6]) : 6; // Default to 6 seconds if TIMEOUT is missing or invalid
+
+            // Validate timeout: must be a positive number
+            const timeoutMs = (!isNaN(timeout) && timeout > 0) ? timeout * 1000 : 6000;
 
             const todayNum = todayMonth * 100 + todayDate;
             const tomorrowNum = tomorrowMonth * 100 + tomorrowDate;
@@ -104,7 +107,8 @@ Promise.allSettled(fetchPromises)
                         isTomorrow,
                         isDayAfterTomorrow,
                         dateContext,
-                        textColor
+                        textColor,
+                        timeout: timeoutMs // Store timeout in milliseconds
                     });
                 }
             }
@@ -113,16 +117,28 @@ Promise.allSettled(fetchPromises)
         const notificationDiv = document.getElementById('notifications');
         if (displayEntries.length > 0) {
             let index = 0;
+            let intervalId = null;
+
             const updateNotification = () => {
                 const entry = displayEntries[index];
                 notificationDiv.innerHTML = `${entry.text}`;
                 notificationDiv.style.color = entry.textColor;
-                index = (index + 1) % displayEntries.length;
+
+                // Clear existing interval (if any) to reset timing
+                if (intervalId !== null) {
+                    clearInterval(intervalId);
+                }
+
+                // Set new interval based on current entry's timeout
+                if (displayEntries.length > 1) {
+                    intervalId = setInterval(() => {
+                        index = (index + 1) % displayEntries.length;
+                        updateNotification();
+                    }, entry.timeout);
+                }
             };
+
             updateNotification();
-            if (displayEntries.length > 1) {
-                setInterval(updateNotification, 6000);
-            }
         } else {
             notificationDiv.innerHTML = 'Have a great day !';
             notificationDiv.style.color = 'white';
