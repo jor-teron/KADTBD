@@ -1,104 +1,110 @@
-
-html, body {    
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: Ubuntu, sans-serif, serif, "Times New Roman", Times ;
-	font-weight:bold;
-	background-color: #121212;
-	}
-
 body {
-	position: relative;
-	font-size: 16pt;
-	}
+	overflow: ;
+	scrollbar-width: none; /* For Firefox */
+    margin: 0;
+    padding: 0;
+    font-size: 14pt;
+    font-weight: 888;
+    background-color: #111;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
 
-a {
+/* For WebKit browsers (Chrome, Safari) */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Chrome, Edge, and Safari */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+a { 
 	text-decoration: none;
-	}
+	color: blue; 
+}
 
 u {
 	color: green;
-	}
+}
 
 .grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-bottom: 24vh; /* Space for sticky header row */
+}
 
-	font-size: 1em;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-	height: 100%;
-	gap: 10px;
-	padding: 10px;
-	box-sizing: border-box;
-	}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 
-.grid-item {
-	font-size: 1em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #1a1a1a;
-	border-radius: 7px;
-	overflow: hidden;
-/*	
-	border: 0px solid #555;
-	transition: border 1s ease, box-shadow 0.3s ease;	
-*/
-    }
+.header-row {
+    position: sticky;
+    top: 10px;
+    z-index: 1; /* Ensure header stays above other content */
+    background-color: ; /* Match body background for seamless look */
+}
 
-.grid-item:hover {
-	z-index:;
-	background-color: #2a2a2a;
-/*	
-	box-shadow: 0 25px 90px #111; 
-	box-shadow: 0 25px 90px #030303; 
-	border: 0px solid #222; 
-	transform:scale(1);
-*/
-    }
+.tile {
+    width: 48vw; /* Adjusted to prevent scrollbar */
+    height: 26vh;
+    background-color: #222;
+    border: 2px solid #333;
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    color: white; /* Contrast with dark background */
+}
 
-.grid-item a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	text-decoration: none;
-    }
+.tile:hover {
+    background-color: #333;
+}
 
-.grid-item img {
-	max-height: 80%; /* Increased image size */
-	max-width: 80%;
-	object-fit: contain;
-	margin-right: 10px;
-    }
+.header-tile {
+    background-color: #1a1a1a; /* Header-specific background */
+    font-size: 1.4rem; /* Slightly larger text for emphasis */
+}
 
-.grid-item span {
-	color: white;
-	font-weight: bold;
-	font-size: 1.5em; /* Increased text size */
-	white-space: nowrap;
-    }
+.tile img {
+    height: 80%; /* 90% of tile height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
 
-#fortune , #weather , #notifications {
-	color: white;
-    width: 100%;
-    height: 100%; /* or whatever height you want */
+#fortune , #weather-tile , #notification {
+	font-size: 1.5em;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
+	
+	/*
+	color: white;
+    width: 100%;
+    height: 100%; /* or whatever height you want 
+	*/
+	
 }
 
-#fortune {
-	font-size: 1.5em;
-}
-
-#weather {
-	font-size: 1.2em;
-}
-
-#weather p {
+#weather-tile p {
 	margin-left: 40px;
 /*
 	height: ;
@@ -107,21 +113,13 @@ u {
 */
 	}
 
-#notifications {
-/*
-    background-color: ;
-    border-radius: 7px;
-    border: 1px solid #444;
-    transition: transform 1s ease, background-color 1s ease;
-    color: #ffccdd;
-*/
-    font-size: 1.6em;
-    display: flex;
-    padding: 0px;
-    overflow: hidden;
-	}
+#fortune {
+	font-size: 1.6em;
+	font-weight: bold;
+	color: lightgreen;
+}
 
 #line2 {
-	font-size: 1em;
+	font-size: 1.2em;
 	color: olive;
 	}
