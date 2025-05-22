@@ -1,0 +1,192 @@
+/* Reset default styles and set up full-screen layout */
+body {
+  margin: 0; /* Remove default margins */
+  font-size: 16pt;
+	font-family: sans-serif, serif, "Times New Roman", Times ;
+	font-weight: 888;
+  padding: 0; /* Remove default padding */
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0; /* Light gray background */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+a {
+	text-decoration: none; 
+	color: blue;
+}
+
+u {
+	color: green;
+}
+
+
+/* Container for the 3D prism, filling the entire screen */
+.prism-container {
+  perspective: 3000px; /* Set 3D perspective depth */
+  perspective-origin: 50% 50%; /* Center the perspective point */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height for mouse wheel scrolling */
+  display: flex; /* Center the prism */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  cursor: default; /* No grab cursor, as mouse wheel controls rotation */
+}
+
+/* Main prism element, container for all faces */
+.prism {
+  width: 50vmin; /* Set prism size (responsive, based on viewport) */
+  height: 50vmin; /* Square shape for prism */
+  position: relative; /* Position faces relative to this */
+  transform-style: preserve-3d; /* Enable 3D transforms for children */
+  transition: transform 0.5s ease; /* Smooth rotation animation */
+}
+
+/* Styles for each face (tile) of the prism */
+.face {
+  /* Appearance properties for tiles */
+  position: absolute; /* Position faces in 3D space */
+  width: 50vmin; /* Tile width, matches prism size */
+  height: 50vmin; /* Tile height, square shape */
+  display: flex; /* Center content within tile */
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border: 2px solid #aaa; /* Dark border around each tile */
+    border-radius: 10px; /* Rounded corners */
+  box-sizing: border-box; /* Include border and padding in size */
+  padding: 5px; /* Internal spacing for visual separation */
+}
+
+/* Anchor tag within each face, making the tile clickable */
+.face a {
+  width: 100%; /* Fill the entire tile */
+  height: 100%; /* Fill the entire tile */
+  display: flex; /* Enable flex for image and text */
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Image within each face, controlling visual content */
+.face img {
+  /* Appearance properties for tile images */
+  width: 80%; /* Image fills available width */
+  height: 70%; /* Reduce height to leave space for text */
+  object-fit: cover; /* Scale image to cover area, maintaining aspect ratio */
+  transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+/* Text below image in each face */
+.face span {
+  /* Appearance properties for tile text */
+  font-size: 2em; /* Text size for readability */
+  color: #333; /* Match border color for consistency */
+  text-align: center; /* Center text horizontally */
+  margin-top: 5px; /* Space between image and text */
+  text-decoration: none; 
+}
+
+/* Hover effect for images */
+.face img:hover {
+  transform: scale(1.15); /* Slightly enlarge image on hover */
+}
+
+/* Position each face in an 8-sided prism (octagonal) */
+.side1 { transform: rotateY(0deg) translateZ(80vmin); } /* Front face */
+.side2 { transform: rotateY(40deg) translateZ(80vmin); } /* 45-degree rotation */
+.side3 { transform: rotateY(80deg) translateZ(80vmin); }
+.side4 { transform: rotateY(120deg) translateZ(80vmin); }
+.side5 { transform: rotateY(160deg) translateZ(80vmin); }
+.side6 { transform: rotateY(200deg) translateZ(80vmin); }
+.side7 { transform: rotateY(240deg) translateZ(80vmin); }
+.side8 { transform: rotateY(280deg) translateZ(80vmin); } /* Last face */
+.side9 { transform: rotateY(320deg) translateZ(80vmin); } /* Last face */
+
+/* Container for control buttons, positioned at the bottom */
+.controls {
+  position: absolute; /* Position buttons at the bottom */
+  bottom: 10px; /* 10px from the bottom of the viewport */
+  display: flex; /* Arrange buttons in a row */
+  gap: 10px; /* Space between buttons */
+  flex-wrap: wrap; /* Wrap buttons on smaller screens */
+  justify-content: center; /* Center buttons horizontally */
+}
+
+/* Style for control buttons */
+.controls button {
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Indicate clickable */
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.1s; /* Smooth color and movement */
+}
+
+/* Button active state (on click) */
+.controls button:active {
+  transform: translateY(3px); /* Move button down 3px when clicked */
+}
+
+/* Button hover effect */
+.controls button:hover {
+  background-color: #555; /* Lighter gray on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .prism {
+    width: 40vmin; /* Smaller prism size */
+    height: 40vmin;
+  }
+  .face {
+    /* Adjusted appearance properties for tiles */
+    width: 40vmin; /* Smaller tile width */
+    height: 40vmin; /* Smaller tile height */
+    padding: 4px; /* Slightly reduced padding */
+  }
+  .face img {
+    /* Adjusted appearance for tile images */
+    height: 80%; /* Maintain space for text */
+  }
+  .face span {
+    /* Adjusted appearance for tile text */
+    font-size: 12px; /* Smaller text for smaller screens */
+  }
+  .side1 { transform: rotateY(0deg) translateZ(64vmin); }
+  .side2 { transform: rotateY(45deg) translateZ(64vmin); }
+  .side3 { transform: rotateY(90deg) translateZ(64vmin); }
+  .side4 { transform: rotateY(135deg) translateZ(64vmin); }
+  .side5 { transform: rotateY(180deg) translateZ(64vmin); }
+  .side6 { transform: rotateY(225deg) translateZ(64vmin); }
+  .side7 { transform: rotateY(270deg) translateZ(64vmin); }
+  .side8 { transform: rotateY(315deg) translateZ(64vmin); }
+}
+
+
+#fortune , #weather-tile , #notification {
+	font-size: 1.5em;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	
+	/*
+	color: white;
+    width: 100%;
+    height: 100%; /* or whatever height you want 
+	*/
+}
+
+#fortune {
+	font-size: 1.6em;
+	font-weight: bold;
+	color: black;
+}
+
+#line2 {
+	font-size: 1.2em;
+	color: olive;
+	}
+

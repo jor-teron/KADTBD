@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotatable 8-Sided Prism Links</title>
+  <link rel="stylesheet" href="3d.css">
+</head>
+<body>
+
+<div class="prism-container">
+ <div class="prism" id="prism">
+      <div class="face side1">
+        <a href="https://www.google.com" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" > <span> Google </span>
+        </a>
+      </div>
+      <div class="face side2">
+        <a href="https://web.whatsapp.com" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" > <span> Whatsapp </span>
+        </a>
+      </div>
+      <div class="face side3">
+        <a href="https://mail.google.com/" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail&sz=256"> <span> Gmail </span>
+        </a>
+      </div>
+      <div class="face side4">
+        <a href="https://fin.assam.gov.in/cas/login" target="_blank">
+          <img src="image/india_flag.png" alt="Link to GitHub"> <span> FinAssam - Login </span>
+        </a>
+      </div>
+      <div class="face side5">
+        <a href="https://services.gst.gov.in/services/login" target="_blank">
+          <img src="image/gst.png"> <span> GST - Login </span>
+        </a>
+      </div>
+      
+      <div class="face side6">
+        <a href="https://meet.google.com" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=https://meet.google.com&sz=256" > <span> Google Meet </span>
+        </a>
+      </div>
+      
+      <div class="face side7" id="fortune"> </div>
+      <div class="face side8" id="notification"> </div>
+      <div class="face side9" id="weather-tile" > </div>
+
+
+ </div>
+</div>
+
+<div class="controls">
+<a href="main.html"><button> [ static ] </button></a>
+<a href="index.html"><button> [ scroll ] </button></a>
+<!--
+    <button onclick="showFace('side3')">Side 3</button>
+    <button onclick="showFace('side4')">Side 4</button>
+    <button onclick="showFace('side5')">Side 5</button>
+    <button onclick="showFace('side6')">Side 6</button>
+    <button onclick="showFace('side7')">Side 7</button>
+    <button onclick="showFace('side8')">Side 8</button>
+-->
+</div>
+
+<script src="script/3d.js"></script>
+<script src="script/notification.js"></script>
+<script src="script/weather-tile.js"></script>
+<script src="script/fortune.js"></script>  
+
+</body>
+</html>
