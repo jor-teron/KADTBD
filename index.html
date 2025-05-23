@@ -3,64 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Home </title>
-<link rel="stylesheet" href="basic.css">
+<title>Multiple Link Redirect</title>
+<style type="text/css">
+body {
+background-color: #222;
+color: white;
+font-family: Arial, sans-serif;
+font-size:24pt;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+</style>
 </head>
 
 <body>
+<script type="text/javascript">
 
-<div class="grid-container" class="no-scrollbar">
+async function checkAndRedirect(links) {
+for (let link of links) {
+	try {
+	// Check if the link is reachable
+	const response = await fetch(link, { 
+	method: 'HEAD', 
+	mode: 'no-cors' 
+	});
+	// If response is okay, redirect
+	window.location.href = link;
+	return;
+	} catch (error) {
+	console.log(`Link ${link} is not available:`, error);
+	// Continue to next link
+	}
+}
 
-<div class="row header-row">
-	<div class="tile" id="notification"></div>
-	<a href="weather-chart.html" target="_blank"><div class="tile" id="weather-tile"> </div></a>
-</div>
+// If all links fail
+alert('All redirect links are unavailable');
+}
 
-<div class="row">
-	<a href="https://www.google.com" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" /> Google </div></a>
-	<a href="https://web.whatsapp.com" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" /> Whatsapp </div></a>
-</div>
+// Array of links to try in order
+const redirectLinks = [
+'http://github.local/main.html',
+'http://dell.local',
+'https://jor-teron.github.io/KADTBD/main.html',
+'http://server.local'
+];
 
-<div class="row">
-	<a href="https://mail.google.com" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail&sz=256" /> Gmail </div></a>
-	<div class="tile" id="fortune"><img src="image/computer.png" /> loading fortune... </div>
-</div>
+// Call the function when page loads
+window.onload = () => checkAndRedirect(redirectLinks);
 
-<div class="row">
-	<a href="https://fin.assam.gov.in/cas/login" target="_blank"><div class="tile"><img src="image/india_flag.png" /> FinAssam - Login </div></a>
-	<a href="https://assam.gov.in" target="_blank"><div class="tile"><img src="image/india_flag.png" /> Assam Govt. </div></a>
-</div>
-
-<div class="row">
-	<a href="https://finance.assam.gov.in/documents/notifications-16" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" /> Finance - Notification </div></a>
-	<a href="https://finance.assam.gov.in/documents/office-memorandum" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" />  Finance - OM </div></a>
-</div>
-
-<div class="row">
-	<a href="https://services.gst.gov.in/services/login" target="_blank"><div class="tile"><img src="image/gst.png" />  GST - Login </div></a>
-	<a href="https://eportal.incometax.gov.in/iec/foservices/#/e-pay-tax-prelogin/user-details" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://eportal.incometax.gov.in&sz=256" /> e-Filling IT - Login </div></a>
-</div>
-
-<div class="row">
-	<a href="https://karbianglong.gov.in" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.gov.in&sz=256" /> K/A.gov.in </div></a>
-	<a href="https://www.india.gov.in/state-and-ut-holiday-calendar" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://www.india.gov.in&sz=256" /> State Holiday </div></a>
-</div>
-
-<div class="row">
-	<a href="https://karbianglong.co.in" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.co.in&sz=256" /> KAAC </div></a>
-	<a href="https://karbianglong.co.in/Pages/WhosWho.php" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.co.in&sz=256" /> Dept. i/c </div></a>
-</div>
-
-<div class="row">
-	<a href="https://meet.google.com" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://meet.google.com&sz=64" /> Google Meet </div></a>
-	<a href="misc.html" ><div class="tile"><img src="image/more.png" /> [ 1 / 2 ] </div></a>
-</div>
-
-</div>
-
-<script src="script/notification.js"></script>
-<script src="script/weather-tile.js"></script>
-<script src="script/fortune.js"></script>
+</script>
 
 </body>
 </html>
