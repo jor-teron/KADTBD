@@ -41,20 +41,44 @@
           <img src="https://www.google.com/s2/favicons?domain=https://meet.google.com&sz=256" > <span> Google Meet </span>
         </a>
       </div>
-      
-      <div class="face side7" id="fortune"> </div>
-      <div class="face side8" id="notification"> </div>
-      <div class="face side9" id="weather-tile" > </div>
+            
+      <div class="face side7">
+        <a href="https://eportal.incometax.gov.in/iec/foservices/#/e-pay-tax-prelogin/user-details" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=https://eportal.incometax.gov.in&sz=256" > <span> e-Filling IT - Login </span>
+        </a>
+      </div>
+          
+      <div class="face side8">
+        <a href="main.html" >
+          <img src="image/tile.png" > <span> [ 1 / 3 ] </span>
+        </a>
+      </div>
+          
+      <div class="face side9">
+        <a href="many.html" >
+          <img src="image/more.png" > <span> [ 2 / 3 ] </span>
+        </a>
+      </div>
+    
+      <div class="face side10" id="fortune"> </div>
+      <div class="face side11" id="notification"> </div>
+      <div class="face side12" id="weather-tile" > </div>
 
 
  </div>
 </div>
 
 <div class="controls">
-<a href="main.html"><button> [ static ] </button></a>
-<a href="index.html"><button> [ scroll ] </button></a>
+<button onclick="showFace('side8')"> Home [ 1 / 3 ] </button>
+<button onclick="showFace('side9')"> More [ 2 / 3 ] </button>
+
 <!--
-    <button onclick="showFace('side3')">Side 3</button>
+
+<a href="main.html"><button> [ 1 / 3 ] </button></a>
+<a href="many.html"><button> [ 2 / 3 ] </button></a>
+<button onclick="showFace('side8')"> [ 1 / 3 ] </button>
+<button onclick="showFace('side9')"> [ 3 / 3 ] </button>
+
     <button onclick="showFace('side4')">Side 4</button>
     <button onclick="showFace('side5')">Side 5</button>
     <button onclick="showFace('side6')">Side 6</button>

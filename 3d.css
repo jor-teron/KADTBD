@@ -6,7 +6,7 @@ body {
 	font-weight: 888;
   padding: 0; /* Remove default padding */
   height: 100vh; /* Full viewport height */
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: #fff; /* Light gray background */
   overflow: hidden; /* Prevent scrollbars */
 }
 
@@ -22,8 +22,8 @@ u {
 
 /* Container for the 3D prism, filling the entire screen */
 .prism-container {
-  perspective: 3000px; /* Set 3D perspective depth */
-  perspective-origin: 50% 50%; /* Center the perspective point */
+  perspective: 8000px; /* Set 3D perspective depth */
+  perspective-origin: 50% -70%; /* Center the perspective point */
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height for mouse wheel scrolling */
   display: flex; /* Center the prism */
@@ -51,7 +51,7 @@ u {
   flex-direction: column; /* Stack image and text vertically */
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  background-color: rgba(150, 150, 150, 0.6); /* Semi-transparent white background */
   border: 2px solid #aaa; /* Dark border around each tile */
     border-radius: 10px; /* Rounded corners */
   box-sizing: border-box; /* Include border and padding in size */
@@ -73,7 +73,7 @@ u {
   /* Appearance properties for tile images */
   width: 80%; /* Image fills available width */
   height: 70%; /* Reduce height to leave space for text */
-  object-fit: cover; /* Scale image to cover area, maintaining aspect ratio */
+  object-fit: contain; /* Scale image to cover area, maintaining aspect ratio */
   transition: transform 0.3s; /* Smooth scaling on hover */
 }
 
@@ -93,15 +93,18 @@ u {
 }
 
 /* Position each face in an 8-sided prism (octagonal) */
-.side1 { transform: rotateY(0deg) translateZ(80vmin); } /* Front face */
-.side2 { transform: rotateY(40deg) translateZ(80vmin); } /* 45-degree rotation */
-.side3 { transform: rotateY(80deg) translateZ(80vmin); }
-.side4 { transform: rotateY(120deg) translateZ(80vmin); }
-.side5 { transform: rotateY(160deg) translateZ(80vmin); }
-.side6 { transform: rotateY(200deg) translateZ(80vmin); }
-.side7 { transform: rotateY(240deg) translateZ(80vmin); }
-.side8 { transform: rotateY(280deg) translateZ(80vmin); } /* Last face */
-.side9 { transform: rotateY(320deg) translateZ(80vmin); } /* Last face */
+.side1 { transform: rotateY(0deg) translateZ(100vmin); } /* Front face */
+.side2 { transform: rotateY(30deg) translateZ(100vmin); } /* 30-degree rotation */
+.side3 { transform: rotateY(60deg) translateZ(100vmin); }
+.side4 { transform: rotateY(90deg) translateZ(100vmin); }
+.side5 { transform: rotateY(120deg) translateZ(100vmin); }
+.side6 { transform: rotateY(150deg) translateZ(100vmin); }
+.side7 { transform: rotateY(180deg) translateZ(100vmin); }
+.side8 { transform: rotateY(210deg) translateZ(100vmin); }
+.side9 { transform: rotateY(240deg) translateZ(100vmin); }
+.side10 { transform: rotateY(270deg) translateZ(100vmin); }
+.side11 { transform: rotateY(300deg) translateZ(100vmin); } 
+.side12 { transform: rotateY(330deg) translateZ(100vmin); } /* Last face */
 
 /* Container for control buttons, positioned at the bottom */
 .controls {
