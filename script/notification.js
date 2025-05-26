@@ -95,7 +95,7 @@ Promise.allSettled(fetchPromises)
                 } else if (type === 'D') {
                     notificationText = message || '';
                 } else if (type === 'S') {
-                    notificationText = message ? `<span id="line2"> Sunrise - Noon - Sunset <hr /> ${message} </span>` : '';
+                    notificationText = message ? `<span id="line2"> sunrise - noon - sunset <hr /> ${message} </span>` : '';
                 } else if (!message) {
                     display = false;
                 }
