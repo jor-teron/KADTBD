@@ -1,0 +1,88 @@
+body {
+	overflow: ;
+	scrollbar-width: none; /* For Firefox */
+    margin: 0;
+    padding: 0;
+    font-size: 14pt;
+    font-weight: 888;
+    background-color: #121212;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Chrome, Edge, and Safari */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-bottom: 24vh; /* Space for sticky header row */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header-row {
+    position: sticky;
+    top: 10px;
+    z-index: 1; /* Ensure header stays above other content */
+    background-color: ; /* Match body background for seamless look */
+   }
+
+.header-tile {
+}
+
+.tile {
+    width: 48.5vw; /* Adjusted to prevent scrollbar */
+    height: 27vh;
+    background-color: #1a1a1a;
+    border: 0px solid #121212;
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    color: white; /* Contrast with dark background */
+}
+
+.tile:hover {
+    background-color: #2a2a2a;
+}
+
+.header-tile {
+    background-color: #1a1a1a; /* Header-specific background */
+    font-size: 1.4rem; /* Slightly larger text for emphasis */
+    border: 2px solid #2a2a2a;
+}
+
+.tile img {
+    height: 80%; /* 90% of tile height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
