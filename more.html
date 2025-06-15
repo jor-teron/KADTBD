@@ -12,16 +12,22 @@
 
 <div class="grid-container" class="no-scrollbar">
 
+<div class="row">
+	<div class="tile" id="weather-tile"> </div>
+	<div class="tile" id="fortune"> loading fortune... </div>
+</div>
 
+<!--
 <div class="row header-row">
-	<div class="tile header-tile" id="notification"></div>
-	<div class="tile header-tile" id="weather-tile"> </div>
+	<div class="tile header-tile glass" id="notification"></div>
+	<div class="tile header-tile glass" id="news"> </div>
 </div>
 
 <div class="row">
 	<a href="https://www.google.com" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" /> Google </div></a>
 	<a href="https://web.whatsapp.com" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" /> Whatsapp </div></a>
 </div>
+-->
 
 <div class="row">
 	<a href="https://fin.assam.gov.in/cas/login" target="_blank"><div class="tile"><img src="image/india_flag.png" /> FinAssam - Login </div></a>
@@ -35,7 +41,7 @@
 
 <div class="row">
 	<a href="https://mail.google.com" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail&sz=256" /> Gmail </div></a>
-	<div class="tile" id="fortune"><img src="image/computer.png" /> loading fortune... </div>
+	<a href="https://dpassam.assam.gov.in/documents-detail/various-forms-of-directorate-of-pension" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://dpassam.assam.gov.in&sz=64" /> Assam Pension Form's </div></a>
 </div>
 
 <div class="row">
@@ -45,22 +51,36 @@
 
 <div class="row">
 	<a href="https://pfms.nic.in" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://pfms.nic.in&sz=256" /> PFMS </div></a>
-	<a href="https://www.apdcl.org/website/ViewBill" target="_blank"><div class="tile"><img src="image/power.png" /> APDCL - View bill </div></a>
+	<a href="https://pfms.nic.in/SitePages/Users/LoginDetails/Login.aspx" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://pfms.nic.in&sz=256" /> PFMS - Login </div></a>
 </div>
 
 <div class="row">
 	<a href="https://karbianglong.co.in" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.co.in&sz=256" /> KAAC </div></a>
+	<a href="https://karbianglong.gov.in" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.gov.in&sz=256" /> K/A.gov.in </div></a>
+</div>
+
+<div class="row">
+	<a href="https://karbianglong.co.in/Pages/Departments.php" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.co.in&sz=256" /> KAAC Dept. </div></a>
 	<a href="https://karbianglong.co.in/Pages/WhosWho.php" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.co.in&sz=256" /> Dept. i/c </div></a>
 </div>
 
 <div class="row">
-	<a href="https://karbianglong.gov.in" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://karbianglong.gov.in&sz=256" /> K/A.gov.in </div></a>
-	<a href="https://www.india.gov.in/state-and-ut-holiday-calendar" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://www.india.gov.in&sz=256" /> State Holiday </div></a>
+	<a href="https://assam.gov.in" target="_blank"><div class="tile"><img src="image/india_flag.png" /> Assam Govt. </div></a>
+	<a href="https://pwdbnh.assam.gov.in/home.php" target="_blank"><div class="tile"><img src="image/india_flag.png" /> PWD(B&NH) </div></a>
 </div>
 
 <div class="row">
-	<a href="https://finance.assam.gov.in/documents/notifications-16" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" /> Finance - Notification </div></a>
-	<a href="https://finance.assam.gov.in/documents/office-memorandum" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" />  Finance - OM </div></a>
+	<a href="https://finance.assam.gov.in/documents/notifications-16" target="_blank"><div onclick="openLinks()" class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" /> Finance - Notification </div></a>
+	<a href="https://finance.assam.gov.in/documents/office-memorandum" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" /> Finance - OM </div></a>
+</div>
+
+<div class="row">
+	<a href="https://it.assam.gov.in/document-details/state-policies" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://it.assam.gov.in&sz=256" /> IT Policy (State) </div></a>	<a href="https://www.india.gov.in/state-and-ut-holiday-calendar" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://www.india.gov.in&sz=256" /> State's Holiday </div></a>
+</div>
+
+<div class="row">
+	<a href="https://it.assam.gov.in/document-details/important-notices" target="_blank"><div onclick="openLinks()" class="tile"><img src="https://www.google.com/s2/favicons?domain=https://it.assam.gov.in&sz=256" /> State IT - Imp. Notices </div></a>
+	<a href="https://it.assam.gov.in/document-details/actsrules-0" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://it.assam.gov.in&sz=256" /> State IT - Acts / Rules </div></a>
 </div>
 
 <div class="row">
@@ -79,7 +99,7 @@
 </div>
 
 <div class="row">
-	<a href="https://assam.gov.in" target="_blank"><div class="tile"><img src="image/india_flag.png" /> Assam Govt. </div></a>
+	<a href="https://www.apdcl.org/website/ViewBill" target="_blank"><div class="tile"><img src="image/power.png" /> APDCL - View bill </div></a>
 	<a href="https://remotedesktop.google.com/access" target="_blank"><div class="tile"><img src="image/monitor.png" /> Chrome Remote Desktop </div></a>
 </div>
 
@@ -89,16 +109,37 @@
 </div>
 
 <div class="row">
-	<a href="main.html" ><div class="tile"><img src="image/tile.png" />  </div></a>
-	<a href="3d.html"><div class="tile"><img src="image/3d.png" />  </div></a>
+	<a href="main.html" ><div class="tile"><img src="image/tile.png" /> </div></a>
+	<div class="tile" id="saturn">  </div>
 </div>
 
+<!--
+	<a href="https://finance.assam.gov.in/documents/notifications-16" target="_blank"><div onclick="openLinks()" class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" /> Finance - Notification </div></a>
+	<a href="https://finance.assam.gov.in/documents/office-memorandum" target="_blank"><div class="tile"><img src="https://www.google.com/s2/favicons?domain=https://finance.assam.gov.in&sz=256" />  Finance - OM </div></a>
+	<a href="#" onclick="openLinks()" target="_blank">Open Multiple Links</a>
+
+	<a href="3d.html"><div class="tile"><img src="image/3d.png" />  </div></a>
+
+<script type="text/javascript">
+function openLinks() {
+  const urls = [
+  "https://finance.assam.gov.in/documents/notifications-16", 
+  "https://finance.assam.gov.in/documents/office-memorandum"
+  ];
+  urls.forEach(url => window.open(url, '_blank'));
+}
+</script>
+
+<script src="script/saturn.js"></script>
+-->
 
 </div>
 
 <script src="script/notification.js"></script>
+<script src="script/temperature.js"></script>
 <script src="script/weather-tile.js"></script>
 <script src="script/fortune.js"></script>
+<script src="script/gnews.js"></script>
 
 </body>
 </html>
