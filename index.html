@@ -20,6 +20,7 @@ margin: 0;
 </head>
 
 <body>
+
 <script type="text/javascript">
 
 async function checkAndRedirect(links) {
@@ -43,12 +44,15 @@ for (let link of links) {
 alert('All redirect links are unavailable');
 }
 
+// Define the common file path
+const page = 'desktop.html';
+
 // Array of links to try in order
 const redirectLinks = [
-'http://github.local/more.html',
+`http://github.local/${page}`,
 'http://dell.local',
-'https://jor-teron.github.io/KADTBD/more.html',
-'http://server.local'
+`http://server.local/${page}`,
+`https://jor-teron.github.io/KADTBD/${page}`
 ];
 
 // Call the function when page loads
