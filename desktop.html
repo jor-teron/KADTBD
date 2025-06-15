@@ -1,0 +1,177 @@
+<!-- Desktop HTML simulating a Windows 7 interface with tiles and sub-tile windows -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 7 Desktop</title>
+  <!-- Common and desktop-specific styles -->
+  <link rel="stylesheet" href="style/desktop.css">
+  <link rel="stylesheet" href="style/desktop-widget.css">
+  <link rel="stylesheet" href="style/desktop-taskbar.css">
+  <link rel="stylesheet" href="style/glass.css">
+  <link rel="stylesheet" href="style/common.css">
+  <link rel="stylesheet" href="style/background.css">
+  <link rel="stylesheet" href="style/font.css">
+</head>
+<body>
+  <!-- Desktop container for icons, tiles, and gadgets -->
+  <div class="desktop">
+    <!-- Notification header tile above single-column tiles -->
+    <div id="notification">
+      <span class="tile">  </span>
+    </div>
+    <!-- Analog clock gadget -->
+    <div class="analog-clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-dot"></div>
+      </div>
+    </div>
+    <!-- Recycle Bin desktop icon -->
+    <div class="icon trash-icon">
+      <img src="image/trash.png">
+      <span> Nothing Bin </span>
+    </div>
+    <!-- News sidebar gadget -->
+    <div id="news" class="sidebar">
+      <h2>News</h2>
+      <p>News content goes here...</p>
+    </div>
+    <!-- Floating tile 1: Projects -->
+    <div class="floating-tile tile-1">
+      <a href="#tile-window-1" class="tile-link" aria-label="Projects Window">
+        <img src="image/setting.png">
+        <span class="tile"> </span>
+      </a>
+    </div>
+    
+    <!--
+    <div class="floating-tile tile-2">
+    </div>
+    
+    <div class="floating-tile tile-3">
+    </div>
+    
+    <div class="floating-tile tile-4">
+    </div>
+    -->
+    
+    <!-- Full-screen window 1: Projects sub-tiles -->
+    <div id="tile-window-1" class="full-screen-window">
+      <div class="window-content">
+        <h2> Works | Login </h2>
+        <button class="close-window" aria-label="Close Window"> X </button>
+        <div class="sub-tiles">
+          <a href="https://github.com" target="_blank" class="sub-tile" title="GitHub">
+            <img src="image/monitor_2.png" title="GitHub Icon">
+            <span>GitHub</span>
+          </a>
+          <a href="https://example.com" target="_blank" class="sub-tile" title="Portfolio">
+            <img src="image/monitor_2.png" title="Portfolio Icon">
+            <span>Portfolio</span>
+          </a>
+          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 1">
+            <img src="image/monitor_2.png" title="Project 1 Icon">
+            <span>Project 1</span>
+          </a>
+          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 2">
+            <img src="image/monitor_2.png" title="Project 2 Icon">
+            <span>Project 2</span>
+          </a>
+          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 3">
+            <img src="image/monitor_2.png" title="Project 3 Icon">
+            <span>Project 3</span>
+          </a>
+          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 4">
+            <img src="image/monitor_2.png" title="Project 4 Icon">
+            <span>Project 4</span>
+          </a>
+          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 5">
+            <img src="image/monitor_2.png" title="Project 5 Icon">
+            <span>Project 5</span>
+          </a>
+          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 6">
+            <img src="image/monitor_2.png" title="Project 6 Icon">
+            <span>Project 6</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Start menu full-screen window with iframe -->
+    <div id="start-window" class="start-window">
+      <div class="start-window-content">
+        <iframe src="more.html" class="start-iframe" title="Start Menu Content"></iframe>
+      </div>
+    </div>
+    <!-- 3D Start menu full-screen window with iframe -->
+    <div id="start-window-3d" class="start-window-3d">
+      <div class="start-window-3d-content">
+        <iframe src="3d.html" class="start-iframe-3d" title="3D Start Menu Content"></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- Taskbar with Start menus, pinned links, and digital clock -->
+  <footer class="taskbar">
+    <div class="start-links">
+      <a class="start" aria-label="Start Menu" title="Start Menu">
+        <img src="image/menu.png">
+      </a>
+      <!--
+      <a class="start-3d" aria-label="3D Start Menu" title="3D Start Menu">
+        <img src="image/3d_2.png">
+      </a>
+      -->
+    </div>
+    <div class="pinned-links">
+      <a href="https://www.google.com" target="_blank" aria-label="Google" title="Google">
+        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=48">
+        <span></span>
+      </a>
+      <a href="https://web.whatsapp.com" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+        <img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256">
+        <span></span>
+      </a>
+      <a href="https://fin.assam.gov.in/cas/login" target="_blank" aria-label="FinAssam" title="FinAssam">
+        <img src="https://www.google.com/s2/favicons?domain=fin.assam.gov.in&sz=48">
+        <span> Fin <br > Assam </span>
+      </a>
+      <a href="https://services.gst.gov.in/services/login" target="_blank" aria-label="GST" title="GST">
+        <img src="image/gst.png">
+        <span>GST</span>
+      </a>
+    </div>
+    <div class="system-tray">
+      <a href="https://meet.google.com" target="_blank" aria-label="Google Meet" title="Google Meet">
+        <img src="https://www.google.com/s2/favicons?domain=meet.google.com&sz=48">
+        <span></span>
+      </a>
+      <a href="https://calendar.google.com" target="_blank" aria-label="Google Calendar" title="Google Calendar">
+        <img src="https://www.google.com/s2/favicons?domain=https://calendar.google.com&sz=48">
+        <span></span>
+      </a>
+      <!--
+      <a href="weather-hourly.html" target="_blank" aria-label="Weather Hourly">
+        <img src="image/meteorology.png">
+        <span></span>
+      </a>
+      -->
+      <a href="weather-chart.html" target="_blank" aria-label="Weather Chart">
+        <img src="image/cloudy.png">
+        <span id="temperature"></span>
+      </a>
+      <span class="clock"></span>
+    </div>
+  </footer>
+  <!-- Scripts for time, desktop functionality, news, background, and notifications -->
+  <script src="script/time.js"></script>
+  <script src="script/desktop.js"></script>
+  <script src="script/background.js"></script>
+  <script src="script/notification.js"></script>
+  <script src="script/gnews.js"></script>
+  <script src="script/temperature.js"></script>
+</body>
+</html>
