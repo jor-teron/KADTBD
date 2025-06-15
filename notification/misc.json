@@ -4,23 +4,19 @@
 
 ["00", "00", "", "", "", "CUSTOMISED EVENT", "5"],
 
-["10", "01", "10", "31", "D", "Windows 10 [EOL] (15th Oct'2025)", "3"],
+["09", "01", "10", "31", "D", "Windows 10 [EOL] (15th Oct'2025)", "3"],
 
 ["05", "11", "", "", "", "Mother's day", "3"],
 ["05", "15", "", "", "", "World Family's Day", "3"],
 ["06", "15", "", "", "", "Father's day", "3"],
 ["07", "28", "", "", "", "World Parent's day", "3"],
-
 ["09", "06", "", "07", "", "Grandparent's day", "3"],
 
 
-["03", "15", "", "25", "D", "Vernal Equinox (Equal day) ", "2"],
-["06", "15", "", "26", "D", "Summer Solstice (Longest day) ", "2"],
-["09", "19", "", "28", "D", "Autumnal Equinox (Equal day] ", "2"],
-["12", "15", "", "26", "D", "Winter Solstice (Shortest day) ", "2"],
-
-["03", "01", "09", "30", "D", "<span id='line2'> Office hour: <hr /> 10 AM - 05 PM </span>", "2"],
-["10", "01", "02", "28", "D", "<span id='line2'> Office hour: <hr /> 09:30 AM - 04:30 PM </span>", "2"]
+["03", "15", "", "25", "D", "Vernal Equinox (Equal day's) ", "2"],
+["06", "14", "", "26", "D", "Summer Solstice (Longest day's) ", "2"],
+["09", "19", "", "28", "D", "Autumnal Equinox (Equal day's] ", "2"],
+["12", "15", "", "26", "D", "Winter Solstice (Shortest day's) ", "2"]
 
   ]
 }
