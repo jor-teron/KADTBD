@@ -1,0 +1,40 @@
+/* Styles for the glass class to create a Windows Vista Aero Glass effect */
+.glass {
+    /* Semi-transparent white background with low opacity to mimic glass */
+    background: rgba(200, 200, 200, 0.1);
+    
+    /* Applies a blur effect to content behind the element, creating a frosted glass look */
+    backdrop-filter: blur(4px);
+    /* Ensures compatibility with Safari browsers */
+    -webkit-backdrop-filter: blur(4px);
+    
+    /* Adds a subtle gradient overlay for depth, transitioning from slightly opaque white to a lighter gray */
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(200, 200, 200, 0.1)
+    );
+    
+    /* Semi-transparent white border to replicate Aero's glossy edge effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* Soft shadow to give a floating, elevated appearance */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Rounded corners for a smooth, polished look */
+    border-radius: 12px;
+    
+    /* Internal padding to prevent content from touching the edges */
+    padding: 20px;
+    
+    /* Smooth transition for hover effects to ensure changes are fluid */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect to enhance interactivity without vertical movement */
+.glass:hover {
+    /* Slightly increase background opacity for a subtle highlight */
+    background: rgba(255, 255, 255, 0.25);
+    /* Enhance shadow for a stronger glow effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}

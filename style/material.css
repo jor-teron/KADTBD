@@ -1,0 +1,29 @@
+/* Styles for the material class with a dark theme, following Google's Material Design principles */
+.material {
+    /* Dark background color for the dark theme, inspired by Material Design's dark surfaces */
+    background: #1C2526;
+    
+    /* Subtle elevation using box-shadow with lighter tones for visibility on dark background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+    
+    /* Slightly rounded corners for a modern, tactile feel, per Material Design */
+    border-radius: 8px;
+    
+    /* Internal padding for content spacing, following Material Design guidelines */
+    padding: 16px;
+    
+    /* Smooth transitions for hover and elevation changes */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    
+    /* Ensure the element is positioned to allow elevation effects */
+    position: relative;
+}
+
+/* Hover effect to simulate Material Design's raised interaction in dark theme */
+.material:hover {
+    /* Increase elevation with a stronger, lighter shadow for contrast on dark theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+    
+    /* Slight upward movement to enhance the raised effect */
+    transform: translateY(0px);
+}
