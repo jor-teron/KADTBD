@@ -16,6 +16,7 @@ const notificationFiles = [
     'sunday-saturday.json',
     'DAY.json',
     'misc.json',
+    'office.json',
     'sun.json'
 ];
 
