@@ -32,16 +32,14 @@ function updateClocks(time) {
 
 // Toggles the main Start menu full-screen window with iframe
 function toggleStartWindow(e) {
-  e.preventDefault(); // Prevent default <a> behavior
+  e.preventDefault();
   const startWindow = document.querySelector('.start-window');
   const startWindow3D = document.querySelector('.start-window-3d');
   const isActive = startWindow.classList.contains('active');
   startWindow.classList.toggle('active');
-  // Close 3D start window if open
-  if (startWindow3D.classList.contains('active')) {
+  if (startWindow3D && startWindow3D.classList.contains('active')) {
     startWindow3D.classList.remove('active');
   }
-  // Close sub-tile windows if opening
   if (!isActive) {
     closeSubTileWindows();
   }
@@ -49,16 +47,14 @@ function toggleStartWindow(e) {
 
 // Toggles the 3D Start menu full-screen window with iframe
 function toggleStartWindow3D(e) {
-  e.preventDefault(); // Prevent default <a> behavior
+  e.preventDefault();
   const startWindow = document.querySelector('.start-window');
   const startWindow3D = document.querySelector('.start-window-3d');
   const isActive = startWindow3D.classList.contains('active');
   startWindow3D.classList.toggle('active');
-  // Close main start window if open
   if (startWindow.classList.contains('active')) {
     startWindow.classList.remove('active');
   }
-  // Close sub-tile windows if opening
   if (!isActive) {
     closeSubTileWindows();
   }
@@ -72,23 +68,37 @@ function closeSubTileWindows() {
 
 // Event listeners for Start links, close buttons, and tile links
 document.querySelector('.start').addEventListener('click', toggleStartWindow);
-document.querySelector('.start-3d').addEventListener('click', toggleStartWindow3D);
+if (document.querySelector('.start-3d')) {
+  document.querySelector('.start-3d').addEventListener('click', toggleStartWindow3D);
+}
 document.querySelectorAll('.close-window').forEach(button => {
-  button.addEventListener('click', closeSubTileWindows);
+  button.addEventListener('click', () => {
+    button.closest('.full-screen-window').classList.remove('active');
+  });
 });
 document.querySelectorAll('.tile-link').forEach(link => {
-  link.addEventListener('click', () => {
-    const targetId = link.getAttribute('href').substring(1);
-    const targetWindow = document.getElementById(targetId);
-    targetWindow.classList.add('active');
-    // Close both start windows if open
-    const startWindow = document.querySelector('.start-window');
-    const startWindow3D = document.querySelector('.start-window-3d');
-    if (startWindow.classList.contains('active')) {
-      startWindow.classList.remove('active');
-    }
-    if (startWindow3D.classList.contains('active')) {
-      startWindow3D.classList.remove('active');
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetWindow = document.getElementById(targetId);
+      if (targetWindow) {
+        targetWindow.classList.add('active');
+        const startWindow = document.querySelector('.start-window');
+        const startWindow3D = document.querySelector('.start-window-3d');
+        if (startWindow.classList.contains('active')) {
+          startWindow.classList.remove('active');
+        }
+        if (startWindow3D && startWindow3D.classList.contains('active')) {
+          startWindow3D.classList.remove('active');
+        }
+        document.querySelectorAll('.full-screen-window').forEach(window => {
+          if (window !== targetWindow) {
+            window.classList.remove('active');
+          }
+        });
+      }
     }
   });
 });
@@ -97,7 +107,7 @@ document.querySelectorAll('.tile-link').forEach(link => {
 getInternetTime().then(time => {
   updateClocks(time);
   setInterval(() => {
-    time.setSeconds(time.getSeconds() + 1); // Increment time locally
+    time.setSeconds(time.getSeconds() + 1);
     updateClocks(time);
   }, 1000);
 }).catch(() => {
