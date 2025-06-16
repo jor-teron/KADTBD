@@ -5,7 +5,7 @@
   <!-- Meta tags for character encoding and responsive viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Windows 7 Desktop</title>
+  <title> Online Desktop </title>
   <!-- Common and desktop-specific styles -->
   <link rel="stylesheet" href="style/desktop.css">
   <link rel="stylesheet" href="style/desktop-widget.css">
@@ -35,12 +35,62 @@
       <img src="image/trash.png">
       <span> Nothing Bin </span>
     </div>
+    
+
+    
     <!-- News sidebar gadget -->
     <div id="news" class="sidebar">
       <h2>News</h2>
       <p>News content goes here...</p>
     </div>
-    <!-- Floating tile 1: Projects -->
+    
+    <!--  Floating tile for Chat -->
+      <div class="floating-tile tile-3">
+      <a href="#chat-window" class="tile-link">
+        <img src="image/file-sharing.png">
+        <span class="tile"> File Share </span>
+      </a>
+    </div>
+
+    <!-- Full-screen window for Chat with iframe -->
+    <div id="chat-window" class="full-screen-window">
+      <div class="window-content">
+        <button class="close-window" aria-label="Close Window">X</button>
+        <iframe src="chat/" class="app-iframe" title="Calculator"></iframe>
+      </div>
+    </div>
+
+        <!-- Floating tile for Calculator -->
+    <div class="floating-tile tile-1">
+      <a href="#calculator-window" class="tile-link" aria-label="Calculator">
+        <img src="image/calculator.png">
+        <span class="tile"></span>
+      </a>
+    </div>
+    <!-- Full-screen window for Calculator with iframe -->
+    <div id="calculator-window" class="full-screen-window">
+      <div class="window-content">
+        <button class="close-window" aria-label="Close Window">X</button>
+        <iframe src="calculator.html" class="app-iframe" title="Calculator"></iframe>
+      </div>
+    </div>
+    
+    
+    <!-- Floating tile for Notepad -->
+<div class="floating-tile tile-4">
+  <a href="#notepad-window" class="tile-link" aria-label="Notepad">
+    <img src="image/notepad.png">
+    <span class="tile"></span>
+  </a>
+</div>
+<!-- Full-screen window for Notepad with iframe -->
+<div id="notepad-window" class="full-screen-window">
+  <div class="window-content">
+    <button class="close-window" aria-label="Close Window">X</button>
+    <iframe src="notepad.html" class="app-iframe" title="Notepad"></iframe>
+  </div>
+</div>
+    
     
 <!--
     <div class="floating-tile tile-1">
