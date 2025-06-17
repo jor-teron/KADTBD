@@ -1,0 +1,28 @@
+/* cookie-consent.css */
+
+/* Make the cookie consent div initially hidden by default, JS will show it */
+#cookie-consent {
+	position: absolute;
+	bottom: 20px;
+	width: 65%;
+	font-size: 20px;
+	font-weight: 888;
+    display: none;
+	border: ;
+	background: rgba(48, 48, 48, 0.9);
+  border-radius: 10px;
+    /* The transform and opacity for the transition are handled by JavaScript */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#cookie-consent p {
+	margin: 10px 20px;
+}
+
+#cookie-consent button {
+	margin: 10px 20px;
+	width: 250px;
+	font-size: 1em;
+	text-align: center;
+}
+
