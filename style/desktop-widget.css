@@ -1,14 +1,14 @@
 /* Desktop container for icons and gadgets */
 .desktop {
-  height: calc(100vh - 60px); /* Adjusted for 60px taskbar */
+  height: calc(100vh - 50px); /* Adjusted for 60px taskbar */
   position: relative;
 }
 
 /* Notification header tile above single-column tiles */
 #notification {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   width: 60%; /* ~1152px for 1920px desktop */
   height: 25%; /* ~255px for 1020px desktop */
   background: rgba(255, 255, 255, 0.1); /* Transparent glass background */
@@ -99,16 +99,26 @@
 
 /* Desktop icon styling */
 .icon {
+	overflow: overflow-wrap;
+  display: block;
   position: absolute;
-  text-align: center;
+  width: 100px;
   color: white;
   text-shadow: 0 0 5px black;
   cursor: pointer;
-	transition: transform 0.2s ;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ;
 }
 
 .icon:hover {
 	transform: translateY(-20px) ;
+}
+
+.icon-group a {
+
+  display: block;
 }
 
 .icon img {
@@ -116,16 +126,35 @@
   height: 80px;
 }
 
+.icon span {
+  display: ;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
 .trash-icon {
   bottom: 20px;
   right: 20px;
 }
 
-.trash-icon span {
-  display: block;
-  margin-top: 5px;
-  font-size: 12px;
+.calculator-icon {
+  top: 55%;
+  left: 50px;
 }
+
+.notepad-icon {
+  top: 70%;
+  left: 50px;
+}
+
+.paint-icon {
+  top: 85%;
+  left: 50px;
+}
+
 
 .app-iframe {
   width: 100%;
