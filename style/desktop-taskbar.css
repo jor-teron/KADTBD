@@ -2,10 +2,10 @@
 .taskbar {
   z-index: 100;
   position: fixed;
-  bottom: 1px;
+  bottom: 0px;
   width: 100%;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.3);
+  height: 50px;
+  background: rgba(200, 200, 200, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(7px);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
@@ -39,7 +39,7 @@
 
 .start img, .start-3d img {
   position: relative;
-  bottom: 10px;
+  bottom: 12px;
   width: 70px; /* Larger than pinned-links */
   height: 70px;
 }
@@ -50,7 +50,9 @@
 }
 
 .pinned-links a {
-  margin: 0 8px;
+  position: relative;
+  bottom: 13px;
+  margin: 0 8px ;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -62,11 +64,6 @@
 	border: 2px solid rgba(255, 255, 255, 0);
 }
 
-.pinned-links img {
-  width: 54px;
-  height: 54px;
-}
-
 .pinned-links a ,
 .system-tray a {
 	transition: transform 0.2s ;
@@ -75,6 +72,11 @@
 .pinned-links a:hover ,
 .system-tray a:hover {
 	transform: translateY(-20px) ;
+}
+
+.pinned-links img {
+  width: 48px;
+  height: 48px;
 }
 
 .pinned-links a span {
@@ -109,7 +111,7 @@
 
 .system-tray img {
   width: 54px;
-  height: 54px;
+  height: 48px;
 }
 
 .system-tray a span {
@@ -120,9 +122,13 @@
 }
 
 .clock {
-  height: 58px;
+  height: 48px;
   padding: 5px 10px;
   font-size: 2em;
   font-weight: 666;
   line-height: 53px;
+}
+
+#temperature {
+	font-size:1.5em;
 }
