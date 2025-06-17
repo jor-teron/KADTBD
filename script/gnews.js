@@ -104,9 +104,9 @@ function displayHeadline() {
     const article = articles[currentIndex];
     newsDiv.innerHTML = `
         <div class="article">
-            <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
-            <p>${article.description || 'No description available.'}</p>
-            <p><small>Source: ${article.source.name} | Published: ${new Date(article.publishedAt).toLocaleDateString()}</small></p>
+            <div id="news-headline" style="font-weight:888;"><a href="${article.url}" target="_blank">${article.title}</a></div>
+<!--            <p>${article.description || 'No description available.'}</p> -->
+            <p><br><small>Source: ${article.source.name} | Published: ${new Date(article.publishedAt).toLocaleDateString()}</small></p>
         </div>
     `;
 }
@@ -115,7 +115,7 @@ function startRotation() {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % articles.length; // Loop back to 0
         displayHeadline();
-    }, 5000); // Rotate every 5 seconds
+    }, 10000); // Rotate every 5 seconds
 }
 
 // Fetch headlines on script load
