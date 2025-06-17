@@ -7,20 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Online Desktop </title>
   <!-- Common and desktop-specific styles -->
+  <link rel="stylesheet" href="style/background.css">
+  <link rel="stylesheet" href="style/common.css">
+  <link rel="stylesheet" href="style/font.css">
+  <link rel="stylesheet" href="style/no-scrollbar.css">
   <link rel="stylesheet" href="style/desktop.css">
   <link rel="stylesheet" href="style/desktop-widget.css">
   <link rel="stylesheet" href="style/desktop-taskbar.css">
-  <link rel="stylesheet" href="style/common.css">
-  <link rel="stylesheet" href="style/background.css">
-  <link rel="stylesheet" href="style/font.css">
 </head>
+
 <body>
+
   <!-- Desktop container for icons, tiles, and gadgets -->
   <div class="desktop">
     <!-- Notification header tile above single-column tiles -->
-    <div id="notification">
-      <span class="tile">  </span>
-    </div>
+    <div id="notification"> </div>
     <!-- Analog clock gadget -->
     <div class="analog-clock">
       <div class="clock-face">
@@ -30,12 +31,45 @@
         <div class="center-dot"></div>
       </div>
     </div>
+    
     <!-- Recycle Bin desktop icon -->
     <div class="icon trash-icon">
-      <img src="image/trash.png">
-      <span> Nothing Bin </span>
+		<img src="image/trash.png">
+		<span> Nothing Bin </span>
     </div>
     
+    <!-- Recycle Bin desktop icon -->
+    <div class="icon notepad-icon">
+	<a href="#notepad-window" class="tile-link" aria-label="Notepad">
+		<img src="image/notepad.png">
+<!--		<div> Notepad </div> -->
+	</a>
+	</div>
+    
+    <!-- Recycle Bin desktop icon -->
+    <div class="icon calculator-icon">
+	<a href="#calculator-window" class="tile-link" aria-label="Notepad">
+		<img src="image/calculator.png">
+<!--		<span> Calculator </span> -->
+	</a>
+	</div>
+    
+    <!-- Recycle Bin desktop icon -->
+    <div class="icon paint-icon">
+	<a href="#paint-window" class="tile-link" aria-label="Notepad">
+		<img src="image/paint.png">
+<!--		<span> Paint </span> -->
+	</a>
+	</div>
+	
+    <!-- Full-screen window for Notepad with iframe -->
+<div id="paint-window" class="full-screen-window">
+  <div class="window-content">
+    <button class="close-window" aria-label="Close Window">X</button>
+    <iframe src="paint.html" class="app-iframe" title="Notepad"></iframe>
+  </div>
+</div>
+
 
     
     <!-- News sidebar gadget -->
@@ -45,7 +79,7 @@
     </div>
     
     <!--  Floating tile for Chat -->
-      <div class="floating-tile tile-3">
+      <div class="floating-tile tile-1">
       <a href="#chat-window" class="tile-link">
         <img src="image/file-sharing.png">
         <span class="tile"> File Share </span>
@@ -61,12 +95,14 @@
     </div>
 
         <!-- Floating tile for Calculator -->
-    <div class="floating-tile tile-1">
+        <!--
+    <div class="floating-tile tile-3">
       <a href="#calculator-window" class="tile-link" aria-label="Calculator">
         <img src="image/calculator.png">
         <span class="tile"></span>
       </a>
     </div>
+    -->
     <!-- Full-screen window for Calculator with iframe -->
     <div id="calculator-window" class="full-screen-window">
       <div class="window-content">
@@ -77,12 +113,14 @@
     
     
     <!-- Floating tile for Notepad -->
+<!--
 <div class="floating-tile tile-4">
   <a href="#notepad-window" class="tile-link" aria-label="Notepad">
     <img src="image/notepad.png">
     <span class="tile"></span>
   </a>
 </div>
+-->
 <!-- Full-screen window for Notepad with iframe -->
 <div id="notepad-window" class="full-screen-window">
   <div class="window-content">
@@ -90,8 +128,7 @@
     <iframe src="notepad.html" class="app-iframe" title="Notepad"></iframe>
   </div>
 </div>
-    
-    
+        
 <!--
     <div class="floating-tile tile-1">
       <a href="#tile-window-1" class="tile-link" aria-label="Projects Window">
@@ -216,6 +253,7 @@
       <span class="clock"></span>
     </div>
   </footer>
+  
   <!-- Scripts for time, desktop functionality, news, background, and notifications -->
   <script src="script/time.js"></script>
   <script src="script/desktop.js"></script>
@@ -223,5 +261,6 @@
   <script src="script/notification.js"></script>
   <script src="script/gnews.js"></script>
   <script src="script/temperature.js"></script>
+  
 </body>
 </html>
