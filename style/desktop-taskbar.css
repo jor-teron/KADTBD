@@ -5,14 +5,22 @@
   bottom: 0px;
   width: 100%;
   height: 50px;
-  background: rgba(200, 200, 200, 0.4);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(200,200,200,0.7) ;
+/*	background: linear-gradient( to bottom, rgba(220, 220, 220, 0.5) , rgba(100,100,100,0.8) , rgba(20,20,20,1) ) ;
+*/  
+border-top: 0px solid rgba(255, 255, 255, 0);
   backdrop-filter: blur(7px);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0);
   display: flex;
   align-items: center;
   padding: 0 10px;
   box-sizing: border-box;
+
+text-shadow:
+	-1px -1px 0 #111,
+	-1px 1px 0 #111,
+	1px -1px 0 #111,
+	1px 1px 0 #111 ;
 }
 
 /* Start links container for spacing */
@@ -23,25 +31,25 @@
 }
 
 .start, .start-3d {
-  margin: 0 8px; /* Match pinned-links spacing */
+  margin: 0px 0px; /* Match pinned-links spacing */
   border-radius: 5px;
   display: flex;
   align-items: center;
   position: relative; /* For tooltip positioning */
-  border: 2px solid rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 255, 255, 0);
   text-decoration: none;
   background-color: transparent; /* Ensure no background color */
 }
 
 .start:hover, .start-3d:hover {
-  border: 2px solid rgba(255, 255, 255, 0); /* No hover border */
+  border: 0px solid rgba(255, 255, 255, 0); /* No hover border */
 }
 
 .start img, .start-3d img {
-  position: relative;
-  bottom: 12px;
-  width: 70px; /* Larger than pinned-links */
-  height: 70px;
+  position: ;
+  bottom: 2px;
+  width: 43px; /* Larger than pinned-links */
+  height: 43px;
 }
 
 .pinned-links {
@@ -50,33 +58,34 @@
 }
 
 .pinned-links a {
-  position: relative;
-  bottom: 13px;
-  margin: 0 8px ;
+	position: relative;
+	bottom:7px;
+  margin: 0 8px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   position: relative;
-  border: 2px solid rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 255, 255, 0);
 }
 
 .pinned-links a:hover {
-	border: 2px solid rgba(255, 255, 255, 0);
+	border: 0px solid rgba(255, 255, 255, 0);
+}
+
+.pinned-links img {
+  width: 54px;
+  height: 54px;
 }
 
 .pinned-links a ,
 .system-tray a {
+/*	box-shadow: 5px 0px 30px #888; */
 	transition: transform 0.2s ;
 }
 
 .pinned-links a:hover ,
 .system-tray a:hover {
-	transform: translateY(-20px) ;
-}
-
-.pinned-links img {
-  width: 48px;
-  height: 48px;
+	transform: translateY(-12px) ;
 }
 
 .pinned-links a span {
@@ -111,7 +120,7 @@
 
 .system-tray img {
   width: 54px;
-  height: 48px;
+  height: 54px;
 }
 
 .system-tray a span {
@@ -122,13 +131,9 @@
 }
 
 .clock {
-  height: 48px;
+  height: 58px;
   padding: 5px 10px;
   font-size: 2em;
   font-weight: 666;
   line-height: 53px;
-}
-
-#temperature {
-	font-size:1.5em;
 }
