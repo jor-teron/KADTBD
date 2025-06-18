@@ -1,7 +1,7 @@
 /* Global styles for the desktop interface */
 body {
   margin: 0;
-  height: 100vh;
+  height: calc( 100vh - 50px );
   overflow: hidden;
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 14pt;
@@ -12,8 +12,10 @@ body {
   position: fixed;
   top: 15px;
   left: 10px;
-  right: 10px;
+  right: 30px;
   bottom: 60px;
+	width: 55vw;
+	min-width: 500px ;
   background: none; /* Transparent background */
   border-radius: 12px;
   border: 0px solid rgba(255, 255, 255, 0);
@@ -50,9 +52,9 @@ body {
   scrollbar-width: none; /* Hide scrollbar in Firefox */
   -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+	opacity: ;
   transition: opacity 2s ease; /* Smooth transition for opacity */
 }
-
 
 .start-iframe.active {
   opacity: 1; /* Fully visible when active */
@@ -61,3 +63,4 @@ body {
 .start-iframe::-webkit-scrollbar {
   display: none; /* Hide scrollbar in Chrome/Safari */
 }
+
