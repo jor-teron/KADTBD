@@ -1,36 +1,50 @@
 const backgrounds = [
 	
-	{ type: 'image', value: 'wallpaper/bess.jpg', timeout: 15 }, // 5 minutes
-	{ type: 'image', value: 'wallpaper/dalia.jpg', timeout: 10 }, // 3 minutes
-	{ type: 'color', value: '#0533DD', timeout: 10 }, // 1 minute, blue
+	{ type: 'image', value: 'wallpaper/bess.jpg', timeout: 10 }, // 5 minutes
+	{ type: 'image', value: 'wallpaper/dog_01.jpg', timeout: 10 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/dog_02.jpg', timeout: 15 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/panda_01.jpg', timeout: 15 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/panda_02.jpg', timeout: 10 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/panda_03.jpg', timeout: 10 }, // 3 minutes
+//	{ type: 'image', value: 'wallpaper/panda_03.jpg', timeout: 10 }, // 3 minutes
+//	{ type: 'color', value: '#0533DD', timeout: 10 }, // 1 minute, blue
 // { type: 'image', value: 'image/milkyway.jpg', timeout: 300 }, // 5 minutes (commented out as in your code)
-	{ type: 'image', value: 'wallpaper/panda_2.jpg', timeout: 10 }, // 3 minutes
-	{ type: 'image', value: 'wallpaper/panda_1.jpg', timeout: 15 }, // 3 minutes
+//	{ type: 'image', value: 'wallpaper/fish_01.jpg', timeout: 10 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/fish_03.jpg', timeout: 10 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/fish_02.jpg', timeout: 10 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/fish_04.jpg', timeout: 10 }, // 3 minutes
+	{ type: 'image', value: 'wallpaper/penquin_1.jpg', timeout: 10 }, // 3 minutes
+//	{ type: 'image', value: 'wallpaper/panda_2.jpg', timeout: 10 }, // 3 minutes
+//	{ type: 'image', value: 'wallpaper/panda_2.jpg', timeout: 10 }, // 3 minutes
 	{ type: 'image', value: 'wallpaper/dolphin_2.jpg', timeout: 15 }, // 3 minutes keep
 	{ type: 'image', value: 'wallpaper/dolphin_1.jpg', timeout: 15 }, // 3 minutes keep
 //	{ type: 'image', value: 'wallpaper/dolphin_3.jpg', timeout: 4 }, // 3 minutes
 //	{ type: 'image', value: 'wallpaper/dolphin_4.jpg', timeout: 4 }, // 3 minutes
 //	{ type: 'image', value: 'wallpaper/ocean_1.jpg', timeout: 4 }, // 3 minutes
-	{ type: 'image', value: 'wallpaper/ocean_3.jpg', timeout: 15 }, // 3 minutes keep
+	{ type: 'image', value: 'wallpaper/ocean_3.jpg', timeout: 10 }, // 3 minutes keep
+	{ type: 'image', value: 'wallpaper/ocean_7.jpg', timeout: 15 }, // 3 minutes
 	{ type: 'image', value: 'wallpaper/ocean_2.jpg', timeout: 10 }, // 3 minutes keep
-	{ type: 'image', value: 'wallpaper/ocean_4.jpg', timeout: 15 }, // 3 minutes keep
+//	{ type: 'image', value: 'wallpaper/ocean_4.jpg', timeout: 15 }, // 3 minutes keep
 //	{ type: 'image', value: 'wallpaper/ocean_5.jpg', timeout: 4 }, // 3 minutes
 //	{ type: 'image', value: 'wallpaper/ocean_6.jpg', timeout: 4 }, // 3 minutes
 //  { type: 'image', value: 'wallpaper/lake_4.jpg', timeout: 5 }, // 5 minutes
-  { type: 'image', value: 'wallpaper/lake_1.jpg', timeout: 15 }, // 4 minutes
-  { type: 'image', value: 'wallpaper/lake_2.jpg', timeout: 15 }, // 4 minutes
-  { type: 'image', value: 'wallpaper/lake_3.jpg', timeout: 10 }, // 4 minutes
+//  { type: 'image', value: 'wallpaper/lake_1.jpg', timeout: 15 }, // 4 minutes
+//  { type: 'image', value: 'wallpaper/lake_2.jpg', timeout: 15 }, // 4 minutes
+//  { type: 'image', value: 'wallpaper/lake_3.jpg', timeout: 10 }, // 4 minutes
+	{ type: 'image', value: 'wallpaper/dalia.jpg', timeout: 10 }, // 3 minutes
 //  { type: 'image', value: 'wallpaper/moon_sky.jpg', timeout: 5 }, // 3 minutes
 //  { type: 'image', value: 'wallpaper/halfmoon.jpg', timeout: 5 }, // 2 minutes
 //  { type: 'image', value: 'wallpaper/moon.jpg', timeout: 5 }, // 2 minutes
 //  { type: 'image', value: 'wallpaper/meteor.jpg', timeout: 2 }, // 2 minutes
 //  { type: 'image', value: 'wallpaper/earth.jpg', timeout: 4 }, // 5 minutes
 //  { type: 'color', value: '#000000', timeout: 4 }, // 1 minute
-  { type: 'color', value: '#159A2A', timeout: 10 }, // 1 minute green
+  { type: 'color', value: '#159A2A', timeout: 5 }, // 1 minute green
 //  { type: 'color', value: '#B57EDC', timeout: 4 }, // 1 minute
 //  { type: 'color', value: '#967BB6', timeout: 4 }, // 1 minute
 //  { type: 'color', value: '#f9f9f9', timeout: 4 }, // 1 minute
-	{ type: 'color', value: '#121212', timeout: 10 } // 1 minute
+//	{ type: 'color', value: '#121212', timeout: 10 } // 1 minute
+	{ type: 'color', value: '#5a5aDD', timeout: 10 }, // 1 minute, blue
+  { type: 'color', value: '#ffffff', timeout: 3 } // 1 minute
 ];
 
 let currentBackgroundIndex = 0;
