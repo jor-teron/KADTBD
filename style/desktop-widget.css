@@ -99,10 +99,11 @@
 
 /* Desktop icon styling */
 .icon {
-	overflow: overflow-wrap;
+	overflow: ;
   display: block;
   position: absolute;
   width: 100px;
+  max-height:;
   color: white;
   text-shadow: 0 0 5px black;
   cursor: pointer;
@@ -136,25 +137,24 @@
 }
 
 .trash-icon {
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  left: 15px;
 }
 
 .calculator-icon {
-  top: 55%;
-  left: 50px;
+  top: 60%;
+  left: 15px;
 }
 
 .notepad-icon {
-  top: 70%;
-  left: 50px;
+  top: 60%;
+  left: 130px;
 }
 
 .paint-icon {
-  top: 85%;
-  left: 50px;
+  top: 60%;
+  left: 245px;
 }
-
 
 .app-iframe {
   width: 100%;
@@ -270,10 +270,10 @@
 /* Full-screen sub-tile window with maximum transparency and glass style */
 .full-screen-window {
   position: fixed;
-  top: 3%; /* Center with 3% margins for 94% height */
-  left: 2%; /* 2.5% margins for 95% width */
-  width: 95%; /* Maintains ~96% desktop area with height */
-  height: calc(94% - 60px); /* Reduced to 94% for sub-tile spacing, minus taskbar */
+  top: 40px; /* Center with 3% margins for 94% height */
+  left: 75px ; /* 2.5% margins for 95% width */
+  width: calc( 100% - 150px ); /* Maintains ~96% desktop area with height */
+  height: calc(100% - 80px - 25px ); /* Reduced to 94% for sub-tile spacing, minus taskbar */
   background: rgba(30, 30, 30, 0); /* Highly transparent dark background */
   border: 0px solid rgba(0, 0, 255, 0); /* Soft defined border */
   border-radius: 12px;
