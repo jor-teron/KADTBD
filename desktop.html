@@ -18,8 +18,8 @@
 
 <body>
 
-  <!-- Desktop container for icons, tiles, and gadgets -->
-  <div class="desktop">
+<!-- Desktop container for icons, tiles, and gadgets -->
+<div class="desktop">
     <!-- Notification header tile above single-column tiles -->
     <div id="notification"> </div>
     <!-- Analog clock gadget -->
@@ -40,7 +40,7 @@
     
     <!-- Recycle Bin desktop icon -->
     <div class="icon notepad-icon">
-	<a href="#notepad-window" class="tile-link" aria-label="Notepad">
+	<a href="#notepad-window" class="tile-link" >
 		<img src="image/notepad.png">
 <!--		<div> Notepad </div> -->
 	</a>
@@ -48,17 +48,29 @@
     
     <!-- Recycle Bin desktop icon -->
     <div class="icon calculator-icon">
-	<a href="#calculator-window" class="tile-link" aria-label="Notepad">
+	<a href="#calculator-window" class="tile-link" >
 		<img src="image/calculator.png">
 <!--		<span> Calculator </span> -->
 	</a>
 	</div>
     
-    <!-- Recycle Bin desktop icon -->
+    <!-- Paint desktop icon -->
     <div class="icon paint-icon">
-	<a href="#paint-window" class="tile-link" aria-label="Notepad">
+	<a href="#paint-window" class="tile-link" >
 		<img src="image/paint.png">
 <!--		<span> Paint </span> -->
+	</a>
+	</div>
+    <!-- Sitemap desktop icon -->
+    <div class="icon sitemap-icon">
+	<a href="sitemap.html" target="_blank" class="tile-link" >
+		<img src="image/sitemap.png">
+	</a>
+	</div>
+	    <!-- Sitemap desktop icon -->
+    <div class="icon cube-icon">
+	<a href="#3d-window" class="tile-link" >
+		<img src="image/3d_2.png">
 	</a>
 	</div>
 	
@@ -69,7 +81,28 @@
     <iframe src="paint.html" class="app-iframe" title="Notepad"></iframe>
   </div>
 </div>
-
+    <!-- Full-screen window for Calculator with iframe -->
+    <div id="calculator-window" class="full-screen-window">
+      <div class="window-content">
+        <button class="close-window" aria-label="Close Window">X</button>
+        <iframe src="calculator.html" class="app-iframe" title="Calculator"></iframe>
+      </div>
+    </div>
+    <!-- Full-screen window for Notepad with iframe -->
+<div id="notepad-window" class="full-screen-window">
+  <div class="window-content">
+    <button class="close-window" aria-label="Close Window">X</button>
+    <iframe src="notepad.html" class="app-iframe" title="Notepad"></iframe>
+  </div>
+</div>
+        <!-- Full-screen window for Notepad with iframe -->
+<div id="3d-window" class="full-screen-window">
+  <div class="window-content">
+    <button class="close-window" aria-label="Close Window">X</button>
+    <iframe src="3d.html" class="app-iframe" ></iframe>
+  </div>
+</div>
+    
     <!-- News sidebar gadget -->
     <div id="news" class="sidebar">
       <h2>News</h2>
@@ -101,14 +134,7 @@
       </a>
     </div>
     -->
-    <!-- Full-screen window for Calculator with iframe -->
-    <div id="calculator-window" class="full-screen-window">
-      <div class="window-content">
-        <button class="close-window" aria-label="Close Window">X</button>
-        <iframe src="calculator.html" class="app-iframe" title="Calculator"></iframe>
-      </div>
-    </div>
-    
+
     
     <!-- Floating tile for Notepad -->
 <!--
@@ -119,13 +145,6 @@
   </a>
 </div>
 -->
-<!-- Full-screen window for Notepad with iframe -->
-<div id="notepad-window" class="full-screen-window">
-  <div class="window-content">
-    <button class="close-window" aria-label="Close Window">X</button>
-    <iframe src="notepad.html" class="app-iframe" title="Notepad"></iframe>
-  </div>
-</div>
         
 <!--
     <div class="floating-tile tile-1">
@@ -188,20 +207,24 @@
       </div>
     </div>
     -->
+
+
+</div>
+<!-- Desktop element end here -->
     <!-- Start menu full-screen window with iframe -->
     <div id="start-window" class="start-window">
       <div class="start-window-content">
-        <iframe src="one.html" class="start-iframe" title="Start Menu Content"></iframe>
+        <iframe src="menu.html" class="start-iframe" title="Start Menu Content"></iframe>
       </div>
     </div>
 
-  </div>
   <!-- Taskbar with Start menus, pinned links, and digital clock -->
   <footer class="taskbar">
     <div class="start-links">
-      <a class="start" >
+      <a class="start" href="#start-menu-window" >
         <img src="image/apps.png">
       </a>
+      
       <!--
       <a class="start-3d" aria-label="3D Start Menu" title="3D Start Menu">
         <img src="image/3d_2.png">
