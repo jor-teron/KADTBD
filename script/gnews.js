@@ -4,16 +4,16 @@ const cacheKey = 'gnews_headlines';
 const cacheExpiry = 60 * 60 * 1000; // 1 hour in milliseconds
 
 const urls = [
-    // National (India, focus on general news)
-    `https://gnews.io/api/v4/top-headlines?lang=en&country=in&category=general&max=5&q=-entertainment -sports&token=${apiKey}`,
-    `https://gnews.io/api/v4/top-headlines?lang=en&country=in&category=general&max=5&token=${apiKey}`,
-    // World (focus on global news)
-    `https://gnews.io/api/v4/top-headlines?lang=en&category=world&max=5&q=-entertainment -sports&token=${apiKey}`,
-    `https://gnews.io/api/v4/top-headlines?lang=en&category=world&max=5&token=${apiKey}`,
-    // State (Assam)
+// State (Assam)
     `https://gnews.io/api/v4/search?lang=en&country=in&max=3&q=Assam&token=${apiKey}`,
-    // District/Town (Assam districts/towns)
-    `https://gnews.io/api/v4/search?lang=en&country=in&max=2&q=Diphu&token=${apiKey}`
+    // National (India, focus on general news)
+    `https://gnews.io/api/v4/top-headlines?lang=en&country=in&category=general&max=7&token=${apiKey}`,
+//    `https://gnews.io/api/v4/top-headlines?lang=en&country=in&category=general&max=5&token=${apiKey}`,
+// World (focus on global news)
+//    `https://gnews.io/api/v4/top-headlines?lang=en&category=world&max=5&q=-entertainment -sports&token=${apiKey}`,
+// District/Town (Assam districts/towns)
+//    `https://gnews.io/api/v4/search?lang=en&country=in&max=2&q=Diphu&token=${apiKey}`
+    `https://gnews.io/api/v4/top-headlines?lang=en&category=world&max=5&token=${apiKey}`
 ];
 
 let articles = [];
