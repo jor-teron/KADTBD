@@ -1,6 +1,6 @@
 document.addEventListener('keydown', (e) => {
   const keyMap = {
-  'Backspace' : 'C',
+  'Backspace' : '<',
   'Delete' : 'C',
     '0': '0',
     '1': '1',
