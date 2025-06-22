@@ -1,163 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Lighter background */
-    margin: 0;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+
+.calculator {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-.main-container {
-    width: 90%;
-    max-width: 1000px; /* Increased max-width for 2 columns */
-    min-width: 600px;
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* More prominent shadow */
-    border-radius: 10px;
-    text-align: center;
+.display {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
-header {
-    margin-bottom: 30px;
-    border-bottom: 2px solid #e9ecef; /* Lighter border for header */
-    padding-bottom: 20px;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-header h1 {
-    color: #343a40; /* Darker heading */
-    font-size: 2.8em; /* Slightly larger */
-    margin-bottom: 10px;
+.button {
+  background: linear-gradient(#a9a9a9, #fafafa);
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
 }
 
-header p {
-    color: #6c757d; /* Softer text color */
-    font-size: 1.2em;
+.button:hover {
+  background: linear-gradient(#b0b0b0, #e0e0e0);
 }
 
-/* --- Grid Layout for Menu Sections --- */
-.menu-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 30px; /* Space between grid items (groups) */
-    margin-top: 40px; /* Space from header */
-    padding-top: 20px; /* Padding above the first group border */
+.clear {
+  background: rgba(255, 165, 0, 1);
 }
 
-.menu-section {
-    background-color: #fefefe; /* Slightly off-white background for sections */
-    border: 1px solid #dee2e6; /* Overall subtle border for the section */
-    border-top: 5px solid #007bff; /* Prominent border-top for each group */
-    border-radius: 8px;
-    padding: 25px;
-    text-align: left; /* Align list items to the left */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for each section */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+.zero {
+  grid-column: span 1;
 }
 
-.menu-section:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
 
-.menu-section h2 {
-    color: #007bff; /* Blue heading for sections */
-    font-size: 1.6em;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #e9ecef; /* Subtle border under section header */
-    padding-bottom: 10px;
-}
-
-ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    background-color: #ffffff; /* White background for list items */
-    border: 1px solid #f0f2f5; /* Very light border for each list item */
-    margin-bottom: 12px; /* Space between list items */
-    padding: 14px 18px;
-    border-radius: 6px;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-li:last-child {
-    margin-bottom: 0; /* No margin after the last item in a list */
-}
-
-li:hover {
-    background-color: #e6f7ff; /* Light blue on hover */
-    border-color: #a0d9ff;
-}
-
-li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #333; /* Darker text for links */
-    font-size: 1.1em;
-    display: block; /* Make the whole li area clickable */
-    width: 100%;
-    /* Removed flex properties as icons are no longer included */
-    /* Removed align-items: center; */
-}
-
-li a:hover {
-    color: #0056b3; /* Darker blue on hover */
-}
-
-/* Removed .link-icon styles as images are no longer included */
-/*
-.link-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-    flex-shrink: 0;
-    border-radius: 3px;
-}
-*/
-
-footer {
-    margin-top: 50px; /* More space from menu groups */
-    padding-top: 25px;
-    border-top: 1px solid #e9ecef;
-    color: #868e96;
-    font-size: 0.9em;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 800px) {
-    .main-container {
-        min-width: unset; /* Remove min-width on smaller screens */
-        width: 95%;
-        padding: 20px;
-    }
-
-    .menu-grid-container {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-        gap: 20px; /* Reduce gap when stacked */
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    .menu-section h2 {
-        font-size: 1.4em;
-    }
-
-    li {
-        padding: 12px 15px;
-        font-size: 1em;
-    }
-
-    /* Removed .link-icon styles from media query too */
-    /*
-    .link-icon {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-    }
-    */
+.equals {
+  background: rgba(80, 200, 120, 1);
 }
