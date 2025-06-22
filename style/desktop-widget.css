@@ -21,7 +21,8 @@
   display: flex; /* Center text horizontally and vertically */
   align-items: center;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 2em;
+  font-weight: 888;
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -142,18 +143,28 @@
 }
 
 .calculator-icon {
-  top: 60%;
+  top: 30%;
   left: 15px;
 }
 
 .notepad-icon {
-  top: 60%;
+  top: 30%;
   left: 130px;
 }
 
 .paint-icon {
-  top: 60%;
+  top: 30%;
   left: 245px;
+}
+
+.sitemap-icon {
+  top: 30%;
+  left: 360px;
+}
+
+.cube-icon {
+  top: 30%;
+  left: 475px;
 }
 
 .app-iframe {
@@ -206,12 +217,12 @@
 }
 
 .floating-tile.tile-1 {
-  top: calc(25% + 40px); /* Below notification tile */
+  top: calc(50% + 40px); /* Below notification tile */
   left: 20px;
 }
 
 .floating-tile.tile-2 {
-  top: calc(25% + 40px); /* Below notification tile */
+  top: calc(50% + 40px); /* Below notification tile */
   left: calc(20% + 40px) ;
 }
 
