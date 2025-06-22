@@ -1,0 +1,132 @@
+{
+  "title": "Assam gov.in",
+  "url": "https://Assam.gov.in",
+  "priority": 1,
+  "bgColor": "#2ecc71",
+  "children": [
+    {
+      "title": "PWD (B&NH)",
+      "url": "https://pwdbnh.assam.gov.in/home.php",
+      "priority": 2,
+      "bgColor": "#3498db",
+      "children": [
+        {
+          "title": "Contact's",
+          "url": "https://pwdbnh.assam.gov.in/about-us/who-we-are",
+          "priority": 3,
+          "bgColor": "#9b59b6"
+        },
+        {
+          "title": "Notification",
+          "url": "https://pwdbnh.assam.gov.in/documents/notification",
+          "priority": 3,
+          "bgColor": "#e67e22"
+        }
+      ]
+    },
+    
+    {
+      "title": "Finance",
+      "url": "https://finance.assam.gov.in/",
+      "priority": 2,
+      "bgColor": "#e74c3c",
+      "children": [
+        {
+          "title": "Contact's",
+          "url": "https://finance.assam.gov.in/about-us/key-officials-1",
+          "priority": 3,
+          "bgColor": "#f39c12"
+        },
+        {
+          "title": "O.M",
+          "url": "https://finance.assam.gov.in/documents/office-memorandum",
+          "priority": 3,
+          "bgColor": "#3498db"
+        },
+        {
+          "title": "Notification",
+          "url": "https://finance.assam.gov.in/documents/notifications-16",
+          "priority": 3,
+          "bgColor": "#f39c12"
+        }
+      ]
+    },
+    
+    {
+      "title": "I.T.",
+      "url": "https://example.com/blog",
+      "priority": 2,
+      "bgColor": "#d35400",
+      "children": [
+        {
+          "title": "State Policy",
+          "url": "https://it.assam.gov.in/document-details/state-policies",
+          "priority": 3,
+          "bgColor": "#2980b9"
+        },
+        {
+          "title": "Guidelines",
+          "url": "https://it.assam.gov.in/index.php/document-details/guidelines-0",
+          "priority": 3,
+          "bgColor": "#27ae60"
+        },
+        {
+          "title": "Acts / Rules",
+          "url": "https://it.assam.gov.in/index.php/document-details/actsrules-0",
+          "priority": 3,
+          "bgColor": "#c0392b"
+        },
+        {
+          "title": "Notices",
+          "url": "https://it.assam.gov.in/index.php/document-details/important-notices",
+          "priority": 3,
+          "bgColor": "#27ae60"
+        }
+      ]
+    },
+    
+    {
+      "title": "G.A.D.",
+      "url": "https://gad.assam.gov.in/home.php",
+      "priority": 2,
+      "bgColor": "#34495e",
+      "children": [
+       {
+          "title": "Contact's",
+          "url": "https://gad.assam.gov.in/contact-us",
+          "priority": 3,
+          "bgColor": "#7f8c8d"
+        }
+      ]
+    },
+    
+    {
+      "title": "K.A.",
+      "url": "https://karbianglong.gov.in/",
+      "priority": 3,
+      "bgColor": "#1abc9c",
+      "children": [
+        {
+          "title": "Directory",
+          "url": "https://karbianglong.gov.in/directory-search/all",
+          "priority": 3,
+          "bgColor": "#9b59b6"
+        },
+        {
+          "title": "Contact us",
+          "url": "https://karbianglong.gov.in/contact-us",
+          "priority": 3,
+          "bgColor": "#e74c3c"
+        },
+        {
+          "title": "KAAC",
+          "url": "https://karbianglong.gov.in/resource/kaac-portal",
+          "priority": 3,
+          "bgColor": "#2980b9"
+        }
+      ]
+    }
+  ]
+}
+
+
