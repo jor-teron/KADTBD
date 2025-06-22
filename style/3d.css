@@ -1,13 +1,13 @@
 /* Reset default styles and set up full-screen layout */
 body {
-  margin: 0; /* Remove default margins */
-  font-size: 16pt;
+	margin: 0; /* Remove default margins */
+	font-size: 16pt;
 	font-family: sans-serif, serif, "Times New Roman", Times ;
 	font-weight: 888;
-  padding: 0; /* Remove default padding */
-  height: 100vh; /* Full viewport height */
-  background-color: #fff; /* Light gray background */
-  overflow: hidden; /* Prevent scrollbars */
+	padding: 0; /* Remove default padding */
+	height: 100vh; /* Full viewport height */
+	background-color: rgba(150,150,150, 0.4); /* Light gray background */
+	overflow: hidden; /* Prevent scrollbars */
 }
 
 a {
@@ -19,17 +19,17 @@ u {
 	color: green;
 }
 
-
 /* Container for the 3D prism, filling the entire screen */
 .prism-container {
   perspective: 8000px; /* Set 3D perspective depth */
-  perspective-origin: 50% -70%; /* Center the perspective point */
+  perspective-origin: 50% -100%; /* Center the perspective point */
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height for mouse wheel scrolling */
   display: flex; /* Center the prism */
   justify-content: center; /* Horizontal centering */
   align-items: center; /* Vertical centering */
   cursor: default; /* No grab cursor, as mouse wheel controls rotation */
+  transform: rotateY(0deg) translateZ(0vmin);
 }
 
 /* Main prism element, container for all faces */
@@ -51,7 +51,7 @@ u {
   flex-direction: column; /* Stack image and text vertically */
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
-  background-color: rgba(150, 150, 150, 0.6); /* Semi-transparent white background */
+  background-color: rgba(150, 150, 150, 0.7); /* Semi-transparent white background */
   border: 2px solid #aaa; /* Dark border around each tile */
     border-radius: 10px; /* Rounded corners */
   box-sizing: border-box; /* Include border and padding in size */
@@ -192,4 +192,3 @@ u {
 	font-size: 1.2em;
 	color: olive;
 	}
-
