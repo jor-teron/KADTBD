@@ -11,7 +11,7 @@ buttons.forEach(button => {
             currentExpression = '';
             equationParts = [];
             display.value = '';
-        } else if (value === '±') {
+        } else if (value === 'Â±') {
             if (currentExpression && !isOperator(currentExpression.slice(-1))) {
                 let lastNumber = getLastNumber();
                 if (lastNumber) {
