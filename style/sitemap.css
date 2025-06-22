@@ -1,0 +1,59 @@
+/* Global layout */
+body {
+  margin: 0;
+  overflow: hidden; /* prevent scrollbar */
+  background-color: #212121;
+  font-family: sans-serif;
+  font-size: 18pt;
+  font-weight: 888;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#sitemap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* REMOVED: pointer-events: none; */
+  /* The nodes will handle pointer events, and the lines are typically not interactive */
+}
+
+svg#connection-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensures lines are behind the nodes */
+  /*
+   * Optional: If you specifically want to prevent clicks THROUGH the lines
+   * to elements behind the sitemap, but allow clicks on nodes.
+   * If not added, clicks will pass through the transparent parts of the SVG.
+   */
+  pointer-events: none;
+}
+
+/* Node circle */
+.node {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.9s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* clearly defined border */
+  z-index: 1; /* Ensures nodes are above the lines */
+  pointer-events: all; /* allow clicking on the nodes */
+  opacity:;
+}
+
+.node:hover {
+  transform: scale(1.3);
+  /* z-index is already 1, no need to change it on hover unless you want it on top of other nodes */
+}
