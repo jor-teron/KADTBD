@@ -48,11 +48,11 @@
 }
 
 .clear {
-  grid-column: span 1;
+  grid-column: span 2;
 }
 
 .zero {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
 .equals {
