@@ -52,10 +52,10 @@
 }
 
 .zero {
-  grid-column: span 1;
+  grid-column: span 2;
 }
 
 .equals {
   background: rgba(80, 200, 120, 1);
-  grid-column: span 2;
+  grid-column: span 1;
 }
