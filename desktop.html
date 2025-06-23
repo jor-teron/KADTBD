@@ -38,16 +38,31 @@
 		<span> Nothing Bin </span>
     </div>
     
-    <!-- Recycle Bin desktop icon -->
-    <div class="icon notepad-icon">
-	<a href="#notepad-window" class="tile-link" >
-		<img src="image/notepad.png">
+        <!-- Recycle Bin desktop icon -->
+    <div class="icon icon-row-1 google-icon">
+	<a href="https://www.google.com" target="_blank" class="" >
+		<img src="https://www.google.com/s2/favicons?domain=google.com&sz=64">
+<!--		<div> Notepad </div> -->
+	</a>
+	</div>
+            <!-- Recycle Bin desktop icon -->
+    <div class="icon icon-row-1 whatsapp-icon">
+	<a href="https://web.whatsapp.com" target="_blank" class="" >
+		<img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256">
 <!--		<div> Notepad </div> -->
 	</a>
 	</div>
     
     <!-- Recycle Bin desktop icon -->
-    <div class="icon calculator-icon">
+    <div class="icon icon-row-2 notepad-icon">
+	<a href="#notepad-window" class="tile-link" >
+		<img src="image/notepad.png">
+		<span> Notepad </span> 
+	</a>
+	</div>
+    
+    <!-- Recycle Bin desktop icon -->
+    <div class="icon icon-row-1 calculator-icon">
 	<a href="#calculator-window" class="tile-link" >
 		<img src="image/calculator.png">
 <!--		<span> Calculator </span> -->
@@ -55,24 +70,35 @@
 	</div>
     
     <!-- Paint desktop icon -->
-    <div class="icon paint-icon">
+    <div class="icon icon-row-2 paint-icon">
 	<a href="#paint-window" class="tile-link" >
 		<img src="image/paint.png">
-<!--		<span> Paint </span> -->
+		<span> Paint </span>
 	</a>
 	</div>
     <!-- Sitemap desktop icon -->
-    <div class="icon sitemap-icon">
-	<a href="sitemap.html" target="_blank" class="tile-link" >
+    <div class="icon icon-row-2 sitemap-icon">
+	<a href="sitemap.html" target="_blank" class="" >
 		<img src="image/sitemap.png">
+		<span> Assam sitemap </span>
 	</a>
 	</div>
 	    <!-- Sitemap desktop icon -->
-    <div class="icon cube-icon">
+    <div class="icon icon-row-2 cube-icon">
 	<a href="#3d-window" class="tile-link" >
 		<img src="image/3d_2.png">
+		<span> Rotating links </span>
 	</a>
 	</div>
+	
+	<!-- Sitemap desktop icon -->
+    <div class="icon icon-row-1 photoeditor-icon" >
+	<a href="#photoeditor-window" class="tile-link" >
+		<img src="image/image-editing.png">
+		<span> Photo Editor </span>
+	</a>
+	</div>
+	
 	
     <!-- Full-screen window for Notepad with iframe -->
 <div id="paint-window" class="full-screen-window">
@@ -84,7 +110,7 @@
     <!-- Full-screen window for Calculator with iframe -->
     <div id="calculator-window" class="full-screen-window">
       <div class="window-content">
-        <button class="close-window" aria-label="Close Window">X</button>
+        <button class="close-window" aria-label=https://www.google.com/s2/favicons?domain=google.com&sz=48"Close Window">X</button>
         <iframe src="calculator.html" class="app-iframe" title="Calculator"></iframe>
       </div>
     </div>
@@ -103,6 +129,14 @@
   </div>
 </div>
     
+        <!-- Full-screen window for Notepad with iframe -->
+<div id="photoeditor-window" class="full-screen-window">
+  <div class="window-content">
+    <button class="close-window" aria-label="Close Window">X</button>
+    <iframe src="photo-editor.html" class="app-iframe" ></iframe>
+  </div>
+</div>
+    
     <!-- News sidebar gadget -->
     <div id="news" class="sidebar">
       <h2>News</h2>
@@ -110,12 +144,14 @@
     </div>
     
     <!--  Floating tile for Chat -->
+<!--
       <div class="floating-tile tile-1">
       <a href="#chat-window" class="tile-link">
         <img src="image/file-sharing.png">
         <span class="tile"> File Share </span>
       </a>
     </div>
+-->
 
     <!-- Full-screen window for Chat with iframe -->
     <div id="chat-window" class="full-screen-window">
@@ -124,89 +160,6 @@
         <iframe src="chat/" class="app-iframe" title="Calculator"></iframe>
       </div>
     </div>
-
-        <!-- Floating tile for Calculator -->
-        <!--
-    <div class="floating-tile tile-3">
-      <a href="#calculator-window" class="tile-link" aria-label="Calculator">
-        <img src="image/calculator.png">
-        <span class="tile"></span>
-      </a>
-    </div>
-    -->
-
-    
-    <!-- Floating tile for Notepad -->
-<!--
-<div class="floating-tile tile-4">
-  <a href="#notepad-window" class="tile-link" aria-label="Notepad">
-    <img src="image/notepad.png">
-    <span class="tile"></span>
-  </a>
-</div>
--->
-        
-<!--
-    <div class="floating-tile tile-1">
-      <a href="#tile-window-1" class="tile-link" aria-label="Projects Window">
-        <img src="image/setting.png">
-        <span class="tile"> </span>
-      </a>
-    </div>
-    
-    <div class="floating-tile tile-2">
-    </div>
-    
-    <div class="floating-tile tile-3">
-    </div>
-    
-    <div class="floating-tile tile-4">
-    </div>
--->
-    
-    <!-- Full-screen window 1: Projects sub-tiles -->
-    <!--
-    <div id="tile-window-1" class="full-screen-window">
-      <div class="window-content">
-        <h2> Works | Login </h2>
-        <button class="close-window" aria-label="Close Window"> X </button>
-        <div class="sub-tiles">
-          <a href="https://github.com" target="_blank" class="sub-tile" title="GitHub">
-            <img src="image/monitor_2.png" title="GitHub Icon">
-            <span>GitHub</span>
-          </a>
-          <a href="https://example.com" target="_blank" class="sub-tile" title="Portfolio">
-            <img src="image/monitor_2.png" title="Portfolio Icon">
-            <span>Portfolio</span>
-          </a>
-          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 1">
-            <img src="image/monitor_2.png" title="Project 1 Icon">
-            <span>Project 1</span>
-          </a>
-          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 2">
-            <img src="image/monitor_2.png" title="Project 2 Icon">
-            <span>Project 2</span>
-          </a>
-          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 3">
-            <img src="image/monitor_2.png" title="Project 3 Icon">
-            <span>Project 3</span>
-          </a>
-          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 4">
-            <img src="image/monitor_2.png" title="Project 4 Icon">
-            <span>Project 4</span>
-          </a>
-          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 5">
-            <img src="image/monitor_2.png" title="Project 5 Icon">
-            <span>Project 5</span>
-          </a>
-          <a href="https://example.com" target="_blank" class="sub-tile" title="Project 6">
-            <img src="image/monitor_2.png" title="Project 6 Icon">
-            <span>Project 6</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    -->
 
 
 </div>
@@ -232,6 +185,7 @@
       -->
     </div>
     <div class="pinned-links">
+    <!--
       <a href="https://www.google.com" target="_blank" >
         <img src="https://www.google.com/s2/favicons?domain=google.com&sz=48">
         <span></span>
@@ -240,15 +194,25 @@
         <img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256">
         <span></span>
       </a>
+      -->
       <a href="https://fin.assam.gov.in/cas/login" target="_blank" >
         <img src="https://www.google.com/s2/favicons?domain=fin.assam.gov.in&sz=48">
-        <span> Fin <br > Assam </span>
+        <span> Fin <br> Assam </span>
       </a>
       <a href="https://services.gst.gov.in/services/login" target="_blank" >
         <img src="image/gst.png">
-        <span>GST</span>
+        <span> GST </span>
+      </a>
+      <a href="photo-editor.html" target="_blank" >
+        <img src="image/image-editing.png">
+        <span> Image <br> Editor </span>
+      </a>
+      <a href="chat/" target="_blank" >
+        <img src="image/file-sharing.png">
+        <span> File <br> Share </span>
       </a>
     </div>
+    
     <div class="system-tray">
       <a href="https://meet.google.com" target="_blank" >
         <img src="https://www.google.com/s2/favicons?domain=meet.google.com&sz=48">
@@ -280,6 +244,6 @@
   <script src="script/gnews.js"></script>
   <script src="script/temperature.js"></script>
   <script src="script/redirect.js"></script>
-  
+
 </body>
 </html>
