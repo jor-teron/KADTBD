@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotatable Cube Links</title>
+  <link rel="stylesheet" href="style/cube.css">
+</head>
+<body>
+  <div class="cube-container">
+    <div class="cube" id="cube">
+      <div class="face front">
+        <a href="https://example.com" target="_blank">
+          <img src="image/monitor.png" alt="Link to Example">
+        </a>
+      </div>
+      <div class="face back">
+        <a href="https://example.org" target="_blank">
+          <img src="image/monitor_2.png" alt="Link to Example Org">
+        </a>
+      </div>
+      <div class="face left">
+        <a href="https://wikipedia.org" target="_blank">
+          <img src="image/india_flag.png" alt="Link to Wikipedia">
+        </a>
+      </div>
+      <div class="face right">
+        <a href="https://github.com" target="_blank">
+          <img src="image/website.png" alt="Link to GitHub">
+        </a>
+      </div>
+      <div class="face top">
+        <a href="https://x.com" target="_blank">
+          <img src="image/webcam.png" alt="Link to X">
+        </a>
+      </div>
+      <div class="face bottom">
+        <a href="https://news.ycombinator.com" target="_blank">
+          <img src="image/location.png" alt="Link to Hacker News">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <button onclick="showFace('front')">Front</button>
+    <button onclick="showFace('back')">Back</button>
+    <button onclick="showFace('left')">Left</button>
+    <button onclick="showFace('right')">Right</button>
+    <button onclick="showFace('top')">Top</button>
+    <button onclick="showFace('bottom')">Bottom</button>
+  </div>
+  <script src="script/cube.js"></script>
+</body>
+</html>
