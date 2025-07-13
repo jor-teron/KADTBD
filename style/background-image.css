@@ -1,0 +1,67 @@
+/* In your external CSS file (e.g., style.css) */
+
+.desktop {
+  /* Initial background image for the .desktop div (optional, but good for first load) */
+  background-image: url('../wallpaper/bess.jpg'); 
+  background-position: center center; 
+	background-repeat: repeat-x;
+	background-size: cover; 
+	background-size: auto 110vh; /* This is the key for height-based scaling */
+	background-position: center top; /* Optional: Adjusts image starting position */
+  
+  /* Set a defined size for your .desktop div */
+  width: 100vw; 
+  height: 100vh; 
+  
+  /* Apply the animation: 10 images * 10 seconds each = 100s total duration */
+  animation: desktopBackgroundChange 100s infinite; 
+}
+
+@keyframes desktopBackgroundChange {
+  /*
+    Each image will be displayed for 10% of the total animation duration.
+    100% / 10 images = 10% per image.
+    We'll set the display range for each image.
+  */
+
+  /* Image 1: 0s to 10s */
+  0%, 10% { 
+    background-image: url('../wallpaper/office.jpg');
+  }
+  /* Image 2: 10s to 20s */
+  11%, 20% { 
+    background-image: url('../wallpaper/bess.jpg');
+  }
+  /* Image 3: 20s to 30s */
+  21%, 30% { 
+    background-image: url('../wallpaper/dog_02.jpg');
+  }
+  /* Image 4: 30s to 40s */
+  31%, 40% { 
+    background-image: url('../wallpaper/ocean_3.jpg');
+  }
+  /* Image 5: 40s to 50s */
+  41%, 50% { 
+    background-image: url('../wallpaper/dalia.jpg');
+  }
+  /* Image 6: 50s to 60s */
+  51%, 60% { 
+    background-image: url('../wallpaper/panda_01.jpg');
+  }
+  /* Image 7: 60s to 70s */
+  61%, 70% { 
+    background-image: url('../wallpaper/penquin_1.jpg');
+  }
+  /* Image 8: 70s to 80s */
+  71%, 80% { 
+    background-image: url('../wallpaper/lake_1.jpg');
+  }
+  /* Image 9: 80s to 90s */
+  81%, 90% { 
+    background-image: url('../wallpaper/fish_02.jpg');
+  }
+  /* Image 10: 90s to 100s */
+  91%, 100% { 
+    background-image: url('../wallpaper/dolphin_1.jpg');
+  }
+}

@@ -1,0 +1,139 @@
+
+body {
+	font-size: 26px ;
+	font-weight: 800;
+	background: white;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+header {
+	position: absolute;
+	top: 0px;
+	left:0px;
+	height: 180px;
+	width: 100%;
+	background: #55d;
+}
+
+h1, h2, h3 , h4 {
+	text-align: center;
+}
+
+h4 {
+	font-style: italic;
+}
+
+.search {
+	position: absolute;
+	top: calc( 180px + 10px );
+	left: 5%;
+	width: 60% ;
+	height: auto ;
+	border: 0px dashed black;
+
+}
+
+.gsc-control-cse {
+	background: rgba( 0, 0, 200, 0 ) ;
+	
+}
+
+.gsc-control-wrapper-cse {
+	background: rgba( 0, 0, 200, 0 ) ;
+	
+}
+
+.gcse-search {
+	width: 90% ;
+	height: 100px;
+	font-size: 16px;
+	border: 0px dashed black;
+
+}
+
+.gsc-search-box {
+	background: rgba( 0, 0, 200, 0 ) ;
+}
+
+.gsc-input-box {
+	height: 80px;
+	width: 100%;
+	font-size: 30px;
+	border: 0px dashed blue;
+
+}
+
+.gsc-input {
+	height: 70px;
+	width: 100%;
+	font-size: 60px !important;
+	padding: 10px;
+	font-weight: 700;
+	border: 0px dashed red;
+	outline: 0px solid black;
+}
+
+
+input.gsc-input {
+	outline: 2px solid black;
+}
+
+.gsc-search-button {
+	height: 80px;
+	width: 200px;
+	border: 0px dashed black;
+}
+
+.gsc-webResult {
+	padding: 10px;
+	margin: 0px 0px;
+	background: rgba( 128, 128, 0, 0.3 );
+	border-radius: 25px 25px 25px 25px ;
+}
+
+.gsc-webResult * {
+	margin: 2px 20px;
+}
+
+.gs-title {
+	font-size: 26px;
+	font-weight: 700;
+	margin: 0px 10px;
+}
+
+.gs-snippet {
+	margin: 0px;
+}
+
+
+#fortune-container {
+	position: absolute;
+	top: 300px;
+	right:10px;
+	height: 400px;
+	width: 30%;
+	border: 0px solid blue;
+	border-radius: 30px;
+	background: rgba(100, 100, 100, 0) ;
+	background: teal ;
+	
+}
+
+#fortune-container p {
+	margin: 10px 50px;
+	text-align: center;
+	text-decoration: underline;
+	color: blue;
+	font-size: 1.5em;
+
+}
+
+#fortune-container div {
+	margin: 50px 50px;
+	color: white;
+}
+
