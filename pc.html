@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Offline Desktop </title>
+	<link rel="stylesheet" href="style/font.css">
+	<link rel="stylesheet" href="style/analog-clock.css">
+	<link rel="stylesheet" href="style/background-image.css">
+	<link rel="stylesheet" href="style/pc.css">
+	<link rel="stylesheet" href="style/no-scrollbar.css">
+</head>
+<body>
+
+<!--<div class="full-body"> -->
+
+<div class="desktop">
+	<div id="notification"> </div>
+	
+	<!-- Analog clock gadget -->
+	<div class="analog-clock">
+		<div class="clock-face">
+			<div class="hand hour-hand"></div>
+			<div class="hand minute-hand"></div>
+			<div class="hand second-hand"></div>
+			<div class="center-dot"></div>
+		</div>
+    </div>
+    
+    
+	<div id="sticky-note">
+	<iframe src="sticky-note.html"> </iframe>
+<!--		<textarea placeholder="Write your note here..."></textarea>
+		<button> Save </button> -->
+	</div>
+    
+	
+	<a href="https://www.google.com/ncr" target="_blank" >
+	<div class="icons icons-row-1" id="icon-google">
+		<img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" >
+		<div><span> Google </span> </div>
+	</div>
+	</a>
+	
+	<a href="https://web.whatsapp.com" target="_blank" >
+	<div class="icons icons-row-1" id="icon-whatsapp">
+		<img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" >
+		<div><span> Whatsapp </span> </div>
+	</div>
+	</a>
+		
+	<a href="https://fin.assam.gov.in/cas/login" target="_blank" >
+	<div class="icons icons-row-1" id="icon-finassam">
+		<img src="https://www.google.com/s2/favicons?domain=fin.assam.gov.in&sz=48" >
+		<div><span> FinAssam </span> </div>
+	</div>
+	</a>
+
+	<a href="https://services.gst.gov.in/services/login" target="_blank" >
+	<div class="icons icons-row-1" id="icon-gst">
+		<img src="image/gst.png" >
+		<div><span> GST </span> </div>
+	</div>
+	</a>
+
+	<a href="https://services.gst.gov.in/services/login" target="_blank" >
+	<div class="icons icons-row-1" id="icon-etax">
+		<img src="https://www.google.com/s2/favicons?domain=https://eportal.incometax.gov.in&sz=128" >
+		<div><span> I.Tax <br> e-Filling </span> </div>
+	</div>
+	</a>
+
+
+	<a href="calculator.html" target="_blank" >
+	<div class="icons icons-row-2" id="icon-calculator">
+		<img src="image/calculator.png" >
+		<div><span> Calculator </span> </div>
+	</div>
+	</a>
+	
+	<a href="notepad.html" target="_blank" >
+	<div class="icons icons-row-2" id="icon-notepad">
+		<img src="image/notepad.png" >
+		<div><span> Notepad </span> </div>
+	</div>
+	</a>
+	
+	<a href="paint.html" target="_blank" >
+	<div class="icons icons-row-2" id="icon-paint">
+		<img src="image/paint.png" >
+		<div><span> Paint </span> </div>
+	</div>
+	</a>
+	
+	<a href="photo-editor.html" target="_blank" >
+	<div class="icons icons-row-2" id="icon-photo-editor">
+		<img src="image/image-editing.png" >
+		<div><span> Photo Editor </span> </div>
+	</div>
+	</a>
+	
+	<a href="webcam.html" target="_blank" >
+	<div class="icons icons-row-2" id="icon-webcam">
+		<img src="image/webcam.png" >
+		<div><span> Webcam </span> </div>
+	</div>
+	</a>
+	
+	<a href="desktop.html" target="_blank" >
+	<div class="icons icons-bottom" id="icon-old-desktop">
+		<img src="image/desktop-system.png" >
+		<div><span> Old desktop </span> </div>
+	</div>
+	</a>
+	
+	<a href="sitemap.html" target="_blank" >
+	<div class="icons icons-bottom" id="icon-sitemap">
+		<img src="image/sitemap.png" >
+		<div><span> Sitemap </span> </div>
+	</div>
+	</a>
+	
+	<a href="search.html" target="_blank" >
+	<div class="icons icons-bottom" id="icon-search">
+		<img src="image/search-engine.png" >
+		<div><span> Search </span> </div>
+	</div>
+	</a>
+	
+	<div class="icons icons-bottom" id="icon-dustbin">
+		<img src="image/box.png" >
+		<div><span> Nothing bin </span> </div>
+	</div>
+
+
+
+</div>	<!-- end of desktop -->
+
+<div class="window" id="category">
+<!--	<div class="title-bar"> Office Link's <div class="close-button"> X </div> </div> 
+	<div class="close-button" id="minimise-button"> _ </div> -->
+	<div class="close-button"> X </div> 
+	<iframe src="menu.html"> </iframe>
+</div>
+
+<div class="window" id="grid">
+<!--	<div class="title-bar"> Menu <div class="close-button"> X </div> </div> 
+	<div class="close-button" id="minimise-button"> _ </div> -->
+	<div class="close-button"> X </div>
+	<iframe src="more.html"> </iframe>
+</div>
+
+
+<div class="window" id="search">
+	<div class="close-button"> X </div>
+	<iframe src="search.html"> </iframe>
+</div>
+
+
+<footer>
+	<div id="apps">
+		<div class="footer-apps" id="start">
+			<img src="image/tile.png" />
+		</div>
+
+		<div class="footer-apps" id="show-grid">
+			<img src="image/apps.png" />
+		</div>
+		
+		<div class="footer-apps" id="show-search">
+			<img src="image/search-engine-small.png" />
+		</div>
+<!--		
+		<div class="footer-apps" id="show-webcam">
+			<img src="image/webcam.png" />
+		</div>
+-->
+	</div>
+
+		
+
+<!--	
+	<a href="" target="_blank">
+	<div class="footer" id="footer-finassam">
+	<img src="image/india.png" />
+	<span> Fin Assam </span>
+	</div>
+	</a>
+-->	
+	<!-- System tray start -->
+	<div id="system-tray">
+		
+		<img src="image/cloudy.png">	
+		<a href="weather-chart.html" target="_blank" aria-label="Weather Chart">
+			<span id="temperature"></span>
+		</a>
+	-
+<!--	
+		<div class="footer" id="clock" class="clock">	<span class="clock"></span>	</div>
+	-
+-->
+		<div class="footer" id="weekday">	Weekday will come here.	</div>
+	-
+		<div class="footer" id="footer-date">	Date will come here.	</div>
+	</div>
+</footer>
+
+<!--</div>-->
+
+<script src="script/cursor.js" > </script>
+<script src="script/temperature.js"> </script>
+<script src="script/sticky-note.js" > </script>
+<script src="script/pc-window-start-menu.js" > </script>
+<script src="script/pc-window-grid.js" > </script>
+<script src="script/pc-window-search.js" > </script>
+<script src="script/notification.js" > </script>
+<script src="script/weekday-short.js" > </script>
+<script src="script/time.js" > </script>
+<script src="script/date.js" > </script>
+
+</body>
+</html>
