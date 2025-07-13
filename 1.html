@@ -4,43 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> Home [online] </title>
-<link rel="stylesheet" href="style/common.css">
-<link rel="stylesheet" href="style/main.css">
-<link rel="stylesheet" href="style/glass.css">
+<link rel="stylesheet" href="Ubuntu-L.ttf">
+<link rel="stylesheet" href="style/1.css">
 </head>
 
 <body>
 
 <div class="grid-container">
     
-<!--
 	<div class="grid-item"><a href="https://www.google.com/ncr" target="_blank"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" ><span> Google </span></a></div>
 	<div class="grid-item"><a href="https://web.whatsapp.com" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" ><span> Whatsapp </span></a></div>
+
 	<div class="grid-item"><a href="https://fin.assam.gov.in/cas/login" target="_blank"><img src="image/india_flag.png"><span> FinAssam - User Login </span></a></div>
 	<div class="grid-item"><a href="https://services.gst.gov.in/services/login" target="_blank"><img src="image/gst.png"><span> GST - Login </span></a></div>
--->
-	<div class="grid-item" class="glass" id="notification" > </div>
-	<div class="grid-item" class="glass" id="weather-tile"> </div>
-	
-	<div class="grid-item" class="glass" id="fortune" ></div>
-	<div class="grid-item" class="glass" id="news"> </div>
-	
-<!--
-	<div class="grid-item" class="glass"> 
-		<div class="footer" id="weekday">	Weekday will come here.	</div>
-	-
-		<div class="footer" id="footer-date">	Date will come here.	</div>	
-	</div>
-	<div class="grid-item" class="glass"><a href="more.html" ><img src="image/more.png" />  </a></div>
--->
+
+	<a href="weather-chart.html" target="_blank"><div class="grid-item" id="weather-tile"> </div></a>
+	<a href="weather-hourly.html" target="_blank"><div class="grid-item" id="fortune" ></div></a>
+
+	<div class="grid-item" id="notification"></div>
+	<div class="grid-item"><a href="more.html" ><img src="image/more.png" /> &nbsp;&nbsp; <span> &nbsp;&nbsp; &rarr; [ 2 / 3 ] </span></a></div>
+
 </div>
-<!--
+
 <script src="script/notification.js"></script>
--->
 <script src="script/weather-tile.js"></script>
 <script src="script/fortune.js"></script>
-<script src="script/gnews.js"></script>
-<script src="script/notification.js"></script>
 
 </body>
 </html>

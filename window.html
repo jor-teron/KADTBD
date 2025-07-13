@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="window.css">
+</head>
+<body>
+
+<div class="carousel-container">
+  <div class="carousel" id="carousel">
+    
+    <!-- HOMEPAGE -->
+      <div class="side">
+        <a href="https://example.com" target="_blank"><div class="inner-tile"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" /><span> Google </span></div></a>
+        <a href="https://example.org" target="_blank"><div class="inner-tile"><img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256" /><span> Whatsapp </span></div></a>
+        <a href="https://example.net" target="_blank"><div class="inner-tile"><img src="image/india_flag.png" /><span> FinAssam </span></div></a>
+        <a href="https://example.edu" target="_blank"><div class="inner-tile"><img src="image/gst.png" /><span> GST - Login </span></div></a>
+        <div class="inner-tile" id="notification" ></div>
+        <a onclick="showSide('side2')"><div class="inner-tile"><img src="image/more.png" /><span>[ 1 / 9 ]</span></div></a>
+      </div>
+      
+    <!-- Obscure link -->
+      <div class="side">
+        <a href="https://example.com" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span> Gmail </span></div></a>
+        <a href="https://example.org" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span> IT e-Filling </span></div></a>
+        <a href="https://example.com" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ FinAssam - Login ]</span></div></a>
+        <a href="https://example.org" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ Employee Login ]</span></div></a>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ 5 / 6 ]</span></div></a>
+        <a onclick="showSide('side4')"><div class="inner-tile"><img src="image/more.png" /><span>[ 3 / 9 ]</span></div></a>
+      </div>
+      
+    <!-- misc info -->
+      <div class="side">
+        <a href="https://example.com" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span> Diphu hourly weather </span></div></a>
+        <a href="https://example.org" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ diphu temp. chart ]</span></div></a>
+        <div class="inner-tile" id="weather-tile" ></div>
+        <div class="inner-tile" id="fortune" ></div>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ news ]</span></div></a>
+        <a onclick="showSide('side3')"><div class="inner-tile"><img src="image/more.png" /><span>[ 2 / 9 ]</span></div></a>
+      </div>
+
+    <!-- ONLINE WORk -->
+      <div class="side">
+        <a href="https://example.net" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ Finance - Notification ]</span></div></a>
+        <a href="https://example.edu" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ Finance - OM ]</span></div></a>
+        <a href="https://example.net" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ Google Meet ]</span></div></a>
+        <a href="https://example.edu" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ Google Drive ]</span></div></a>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ 4 / 6 ]</span></div></a>
+        <a onclick="showSide('side5')"><div class="inner-tile"><img src="image/more.png" /><span>[ 4 / 9 ]</span></div></a>
+      </div>
+      
+    <!-- MISC -->
+      <div class="side">
+        <a href="https://example.com" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ Assam Govt. ]</span></div></a>
+        <a href="https://example.org" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ K/A.gov.in ]</span></div></a>
+        <a href="https://example.net" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ KAAC ]</span></div></a>
+        <a href="https://example.edu" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ Dept. i/c ]</span></div></a>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span>[ State Holiday ]</span></div></a>
+        <a onclick="showSide('side6')"><div class="inner-tile"><img src="image/more.png" /><span>[ 5 / 9 ]</span></div></a>
+      </div>
+      
+    <!-- Hmore style -->
+      <div class="side">
+        <a href="main.html"><div class="inner-tile"><img src="image/tile.png" /><span> [ main ] </span></div></a>
+        <a href="more.html"><div class="inner-tile"><img src="image/more.png" /><span> [ more ] </span></div></a>
+        <a href="3d.html"><div class="inner-tile"><img src="image/3d.png" /><span> [ 3D ] </span></div></a>
+        <a href="cube.html"><div class="inner-tile"><img src="image/web.png" /><span> [ cube ] </span></div></a>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span> [ Chrome Remote Desktop ] </span></div></a>
+        <a onclick="showSide('side7')"><div class="inner-tile"><img src="image/more.png" /><span>[ 6 / 9 ]</span></div></a>
+      </div>
+
+    <!-- Hmore style -->
+      <div class="side">
+        <a href="main.html"><div class="inner-tile"><img src="image/tile.png" /><span> [ PFMS ] </span></div></a>
+        <a href="more.html"><div class="inner-tile"><img src="image/more.png" /><span> [ APDCL - View bill ] </span></div></a>
+        <a href="3d.html"><div class="inner-tile"><img src="image/3d.png" /><span> [ Google Docs ] </span></div></a>
+        <a href="cube.html"><div class="inner-tile"><img src="image/web.png" /><span> [ MS Office ] </span></div></a>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span> [ Calender ] </span></div></a>
+        <a onclick="showSide('side8')"><div class="inner-tile"><img src="image/more.png" /><span>[ 7 / 9 ]</span></div></a>
+      </div>
+
+    <!-- Hmore style -->
+      <div class="side">
+        <a href="main.html"><div class="inner-tile"><img src="image/web.png" /><span> [ KRITAGYATA ] </span></div></a>
+        <a href="more.html"><div class="inner-tile"><img src="image/web.png" /><span> [ MMLSAY ] </span></div></a>
+        <a href="3d.html"><div class="inner-tile"><img src="image/3d.png" /><span> [ Assam GAD ] </span></div></a>
+        <a href="cube.html"><div class="inner-tile"><img src="image/web.png" /><span> [ Assam PWD(B&NH) ] </span></div></a>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span> [ MS Account ] </span></div></a>
+        <a onclick="showSide('side9')"><div class="inner-tile"><img src="image/more.png" /><span>[ 8 / 9 ]</span></div></a>
+      </div>
+
+    <!-- Hmore style -->
+      <div class="side">
+        <a href="main.html"><div class="inner-tile"><img src="image/tile.png" /><span> [ main ] </span></div></a>
+        <a href="more.html"><div class="inner-tile"><img src="image/more.png" /><span> [ more ] </span></div></a>
+        <a href="3d.html"><div class="inner-tile"><img src="image/3d.png" /><span> [ 3D ] </span></div></a>
+        <a href="cube.html"><div class="inner-tile"><img src="image/web.png" /><span> [ cube ] </span></div></a>
+        <a href="https://example.gov" target="_blank"><div class="inner-tile"><img src="image/web.png" /><span> [  ] </span></div></a>
+        <a onclick="showSide('side1')"><div class="inner-tile"><img src="image/more.png" /><span>[ 9 / 9 ]</span></div></a>
+      </div>
+
+  </div>
+</div>
+
+<script src="window.js"></script>
+<script src="script/notification.js"></script>
+<script src="script/weather-tile.js"></script>
+<script src="script/fortune.js"></script>
+
+</body>
+</html>
