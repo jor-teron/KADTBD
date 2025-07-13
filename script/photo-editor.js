@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const drawCropRectangle = () => {
     // 1. Draw the dark overlay on the entire canvas (this is for the area *outside* your selection)
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'; // Keep this for the "foggy" outer area
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.0)'; // Keep this for the "foggy" outer area
     ctx.fillRect(0, 0, photoCanvas.width, photoCanvas.height);
 
     // 2. THIS IS THE LINE TO CHANGE FOR THE COLOR *INSIDE* THE CROP SELECTION

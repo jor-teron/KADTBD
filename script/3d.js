@@ -6,7 +6,7 @@ let rotateY = 0;
 prismContainer.addEventListener('wheel', (e) => {
   e.preventDefault(); // Prevent page scrolling
   // Scroll up (negative deltaY) rotates counterclockwise, scroll down rotates clockwise
-  rotateY += e.deltaY > 0 ? -30 : 30; // Adjust rotation by 5 degrees per wheel tick
+  rotateY += e.deltaY > 0 ? -10 : 10; // Adjust rotation by 5 degrees per wheel tick
   prism.style.transform = `rotateY(${rotateY}deg)`;
 });
 
