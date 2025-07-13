@@ -9,18 +9,18 @@ body {
 }
 
 .main-container {
-    width: 630px ;
-    max-width: 630px; /* Increased max-width for 2 columns */
+    width: 100% ;
+    max-width: 100%; /* Increased max-width for 2 columns */
     min-width: 330px;
     background-color: #fff;
-    padding: 30px;
+    padding: 0px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* More prominent shadow */
     border-radius: 10px;
     text-align: center;
 }
 
 header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-bottom: 2px solid #e9ecef; /* Lighter border for header */
     padding-bottom: 20px;
 }
@@ -38,11 +38,12 @@ header p {
 
 /* --- Grid Layout for Menu Sections --- */
 .menu-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    display: flex;
+    flex-wrap: wrap;
+/*    grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 30px; /* Space between grid items (groups) */
-    margin-top: 40px; /* Space from header */
-    padding-top: 20px; /* Padding above the first group border */
+    margin-top: 20px; /* Space from header */
+    padding-top: 10px; /* Padding above the first group border */
 }
 
 .menu-section {
@@ -51,7 +52,7 @@ header p {
     border-top: 5px solid #007bff; /* Prominent border-top for each group */
     border-radius: 8px;
     padding: 25px;
-    min-width: ;
+    min-width: 250px ;
     text-align: left; /* Align list items to the left */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for each section */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -74,6 +75,16 @@ ul {
     list-style: none; /* Remove default bullet points */
     padding: 0;
     margin: 0;
+}
+
+ul a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Darker text for links */
+    font-size: 1.1em;
+    display: block; /* Make the whole li area clickable */
+    margin-bottom: 12px; /* Space between list items */
+    width: 100%;
+
 }
 
 li {
