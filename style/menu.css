@@ -13,7 +13,7 @@ body {
     max-width: 100%; /* Increased max-width for 2 columns */
     min-width: 330px;
     background-color: #fff;
-    padding: 0px;
+    padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* More prominent shadow */
     border-radius: 10px;
     text-align: center;

@@ -1,0 +1,297 @@
+/*  Taskbar start from here  */
+
+/* Styles for the main page where the iframe is embedded */
+
+.hover-container {
+    position: relative; /* Essential: This establishes a positioning context for the absolute iframe */
+    display: inline-block; /* Helps the container wrap its content naturally. Use 'block' if you want it to take full width. */
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center; /* To center the image within the container if it's smaller */
+    cursor: pointer; /* Indicates it's interactive */
+    margin: 20px; /* Just for spacing on the page */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hover-container img {
+    max-width: 100px; /* Adjust size of your image as needed */
+    height: auto;
+    display: block; /* Removes extra space below image, good practice */
+    margin: 0 auto; /* Centers the image horizontally if it's smaller than max-width */
+}
+
+.iframe-hover {
+    display: none; /* Crucial: This hides the iframe by default */
+    position: absolute; /* Positions the iframe relative to .hover-container */
+    
+    /* Positioning Adjustments (Choose one or combine as needed): */
+    top: 100%;       /* Places the top of the iframe at the bottom of .hover-container */
+    left: 0;         /* Aligns the left edge of the iframe with .hover-container */
+    /* OR for positioning above: */
+    /* bottom: 100%; */
+    /* OR for positioning to the right: */
+    /* left: 100%; top: 0; */
+    
+    width: 100%;     /* Makes the iframe the same width as .hover-container */
+    height: 250px;   /* Set a fixed height for your chart. Adjust as needed. */
+    border: 1px solid #007bff; /* A distinct border for the iframe */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;     /* Ensures the iframe appears above other content */
+    background-color: #fff; /* White background for the iframe area */
+    box-sizing: border-box; /* Ensures padding/border are included in width/height */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth fade effect */
+    opacity: 0; /* Start invisible for transition */
+    visibility: hidden; /* Start hidden for transition (better for pointer-events) */
+    pointer-events: none; /* Prevents interaction when hidden */
+}
+
+/* When hovering over the .hover-container, make the iframe visible */
+.hover-container:hover .iframe-hover {
+    display: block; /* Changes display to make it occupy space */
+    opacity: 1; /* Makes it fully visible */
+    visibility: visible; /* Makes it clickable/interactive */
+    pointer-events: auto; /* Re-enables interaction when visible */
+}
+
+.window {
+	z-index: 10;
+	font-size: ;
+	font-weight: ;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	position: fixed;
+	border: 0px solid blue;
+	width: 100%;
+	height: calc( 100% - 50px ) ;
+	text-align: center;
+	align-items: center; /* Vertically centers direct children */
+	justify-content: center;
+}
+
+.window .close-button {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-align: center;
+	border: 1px solid white;
+	font-size: 40px ;
+	width: 40px;
+	height: 40px ;
+	background: #55d;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.window #minimise-button  {
+	right: 50px;
+	font-size: 35px ;
+}
+
+.window .title-bar {
+	display: ;
+	position: absolute;
+	border: 0px solid blue;
+	width: 100%;
+	height: 50px;
+	background: green;
+	font-size: 45px;
+	color: white;
+	text-align: center;
+	align-items: center; /* Vertically centers direct children */
+	justify-content: center;
+} 
+
+.window .title-bar .close-button {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-align: center;
+	border: 0px solid blue;
+	font-size: 40px ;
+	width: 40px;
+	height: 40px ;
+	background: black;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.window iframe {
+	border: 0px solid blue;
+	width: 100%;
+	height:  100%;
+}
+
+footer {
+	z-index: 10;
+	display: flex ;
+	flex-direction: row;
+	gap: 10px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	align-items: center; /* Vertically centers direct children */
+	justify-content: center;
+	background: rgba(200,200,200,0.5 );
+	backdrop-filter: blur(3px);
+  font-stretch: condensed;
+  font-weight:800;
+	bottom: 0px;
+	align-items: center; 
+/*	
+	background: linear-gradient( to bottom, rgba(250, 250, 250, 0.5 ), rgba( 50, 50, 50, 0.9 ) ); 
+	background-color: rgba(200, 200, 200, 0.8) ; 
+background-color: linear-gradient( to bottom, rgba(250, 250, 250, 0.9 ), rgba( 50, 50, 50, 0.8 ) );  
+*/
+}
+/*
+footer > * {
+	text-align: center;
+	align-items: center;  Vertically centers direct children 
+	justify-content: center;
+}
+*/
+footer #apps {
+	display: flex ;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 40px;
+	width: 700px;
+	height: 50px;
+	gap: 30px;
+	border: 0px solid blue;
+    margin-bottom: 0px; /* Add this line */
+	align-items: center; 
+}
+
+footer #apps .footer-apps {
+/*	position : absolute; */
+	cursor: pointer;
+	display: block;
+	bottom: 0px;
+	height: 50px ;
+	border-radius: 10px;
+	border: 0px dashed black; 
+	background-color: rgba(50, 250, 50, 0.0 ) ;
+}
+
+#start , #show-grid {
+	width: 60px;
+}
+
+#show-search {
+	height: 50px;
+	width: 150px;
+}
+/*
+#start {
+	left: 70px;
+	width: ;
+}
+
+#show-grid {
+	left: calc( 70px + 50px + 20px ) ;
+	width: ;
+}
+
+#show-webcam {
+	height: 40px;
+	width: auto;
+	left: calc( 70px + 50px + 20px + 50px + 20px + 150px + 20px )  ;
+}
+*/
+
+.footer-apps img {
+	width: auto;
+	height: 95% ;
+	content-align: center;
+}
+
+
+/* System tray begin */
+
+#system-tray {
+	display: flex ;
+	flex-direction: row;
+	gap: 10px;
+  /* Method A: If the parent is a block-level element within a larger container */
+  margin-left: auto;
+  margin-right: 0; /* Or just 'margin-left: auto;' if no specific right margin needed */
+  width: fit-content; /* Or a fixed width, but fit-content is good for dynamic width */
+  /* Or Method B: If the parent is floated */
+  /* float: right; */
+  text-align: right;
+	position: ;
+	right: 5px;
+	width: auto ;
+	border: 0px dashed blue;
+}
+
+#system-tray {
+  font-stretch: condensed;
+    display: flex; /* Use flexbox for the system tray items */
+    align-items: center; /* Vertically center items */
+    gap: 15px; /* Space between system tray items */
+    height: 50px;
+    
+    color: white;
+	text-shadow:
+	-1px -1px 0 #111,
+	-1px 1px 0 #111,
+	1px -1px 0 #111,
+	1px 1px 0 #111 ;
+}
+
+#system-tray .footer {
+	font-size: 35px;
+}
+
+#system-tray a {
+	height: 100%;
+	width: auto ;  
+	display: flex /* Essential for text-align: right to work on block-level children */
+	flex-direction: row;
+  margin-left: 10px; /* Optional: Adds some space between children */
+  border: 0px solid red; /* For visualization */
+  padding: 5px;
+}
+
+#system-tray img ,
+#system-tray a img {
+	align-items: center;
+	height: 50px;
+	width: auto ;
+	vertical-align: middle; /* Align image with text */
+}
+
+#system-tray a span {
+  font-size: 1.3em;
+  margin-left: 4px;
+  color: white;
+  border: 0px solid blue;
+}
+
+#footer-date {
+	right: ;
+	width: auto;
+	font-size: 40px;
+	font-weight:800;
+	background-color: rgba(250, 50, 50, 0.0) ;
+	justify-content: center;
+    white-space: nowrap; /* Prevent date from wrapping */
+    color:white;
+}
+
+#system-tray a span ,
+#footer-date {
+}
+

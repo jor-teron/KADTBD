@@ -1,0 +1,159 @@
+
+body {
+/*	cursor: url('cursor.png') 5 5, auto ; 	*/
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+a {	
+	text-decoration: none; 
+	color: blue;
+	}
+
+.desktop {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -5;
+	width: 100%;
+	height: 100% ;
+/*	
+	background-color:  ;
+	background-image: url('wallpaper/office.jpg');	
+	background-repeat: repeat-x;
+*/	
+	background-size: auto 100vh; /* This is the key for height-based scaling */
+	background-position: center top; /* Optional: Adjusts image starting position */
+}
+
+
+/* Notification header tile above single-column tiles */
+#notification {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60%; /* ~1152px for 1920px desktop */
+  height: 175px; /* ~255px for 1020px desktop */
+  background: rgba(255, 255, 255, 0.1); /* Transparent glass background */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Soft white border */
+  backdrop-filter: blur(2px); /* Glassy blur effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 
+              inset 0 0 10px rgba(255, 255, 255, 0.1); /* Shadow and inset glow */
+  transform: translateY(-5px); /* Slight lift effect */
+  display: flex; /* Center text horizontally and vertically */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 888;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#notification {
+	position: fixed;
+	top: 15px ;
+	left: 20px ;
+	width:60% ;
+	min-width: 800px;
+	height: 175px;
+}
+
+#sticky-note {
+	position: fixed;
+	top: 300px;
+	right: 10px;
+	width: 300px;
+	height: auto;
+/*	
+	border: 0px dashed black;
+	border-radius: 10px;
+	background: rgba(255, 251, 150, 0.0);
+	backdrop-filter: blur(2px); /* Glassy blur effect 
+*/
+	
+}
+
+#sticky-note iframe {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	height:400px;
+	border: 0; /* remove the iframe border */
+}
+
+#icons-container {
+	position: fixed;
+	top: 225px;
+	left: 50px;
+	display : flex;
+	flex-wrap: wrap;
+	width: 750px;
+	height: 500px;
+	border: 0px solid blue;
+	gap: 40px;
+}
+
+#icons-container a {
+	position: block;
+	width: 100px;
+	height: 130px;
+	border: 0px solid blue;
+}
+
+.icons {
+	position: absolute;
+	height: 100px; 
+	width: 100px;
+	border: 0px solid grey;
+	border-radius: 15px 15px 0px 0px;
+	background-color: rgba(200, 200, 200, 0.15 ) ;
+	text-align: center ;
+	font-weight: 800 ;
+	backdrop-filter: blur(1px); /* Apply blur to content behind */
+	margin-left:  ;
+	transition: transform 0.2s ;
+}
+
+.icons:hover {
+	transform: translateY( -15px ) ;
+}
+
+.icons img {
+	width: auto ;
+	height: 95% ;
+}
+
+.icons div {
+	color:;
+	width: 100%;
+	background-color: white;
+}
+
+/*
+
+.icons-row-1 {	top: calc( 30px + 200px + 50px ) ;	}
+.icons-row-2 {	top: calc( 30px + 200px + 50px + 100px + 50px ) ;	}
+.icons-bottom {	bottom: 70px ;	}
+
+#icon-google {	left: 50px ;	}
+#icon-whatsapp {	left: 200px ;	}
+#icon-finassam {	left: 350px ;	}
+#icon-gst {	left: 500px ;	}
+#icon-etax {	left: 650px ;	}
+
+#icon-calculator {	left: 50px ;	}
+#icon-notepad {	left: 200px ;	}
+#icon-paint {	left: 350px ;	}
+#icon-photo-editor {	left: 500px ;	}
+#icon-webcam {	left: 650px ;	}
+
+#icon-old-desktop {	left: 50px ;	}
+#icon-sitemap {	left: 200px ;	}
+#icon-search {	left: 350px ;	}
+#icon-dustbin {	right: 10px ;	z-index: -10; }
+*/
+
