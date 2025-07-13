@@ -26,11 +26,11 @@
 
   /* Image 1: 0s to 10s */
   0%, 10% { 
-    background-image: url('../wallpaper/office.jpg');
+    background-image: url('../wallpaper/bess.jpg');
   }
   /* Image 2: 10s to 20s */
   11%, 20% { 
-    background-image: url('../wallpaper/bess.jpg');
+    background-image: url('../wallpaper/office.jpg');
   }
   /* Image 3: 20s to 30s */
   21%, 30% { 
