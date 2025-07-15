@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Offline Desktop </title>
+<title> Desktop </title>
 	<link rel="stylesheet" href="style/font.css">
 	<link rel="stylesheet" href="style/analog-clock.css">
 	<link rel="stylesheet" href="style/background-image.css">
 	<link rel="stylesheet" href="style/pc-desktop.css">
 	<link rel="stylesheet" href="style/pc-taskbar.css">
+	<link rel="stylesheet" href="style/pc-qr-code.css">
 	<link rel="stylesheet" href="style/no-scrollbar.css">
 </head>
 <body>
+
+<div class="start-menu cursor-pointer">
+	<img src="image/search-engine-small.png" />
+	<iframe src="search.html"> </iframe>
+</div>
 
 <!--<div class="full-body"> -->
 
@@ -126,13 +132,23 @@
 		<div><span> Search - Assam </span> </div>
 	</div>
 	</a>
--->	
 	<a href="search-ka.html" target="_blank" >
 	<div class="icons" id="icon-search">
 		<img src="image/search-engine.png" >
 		<div><span> Search - K/A </span> </div>
 	</div>
 	</a>
+	
+	<a>
+	<div class="icons" id="icon-whatsapp-scan">
+		<img src="image/scanner.png" >
+		<div><span> Scan Me ! </span> </div>
+		<img class="qr-code" src="image/whatsapp-qr-code-user-2.jpeg">
+		<div class="qr-code-span"><span> Whatsapp Scan ! </span> </div>
+	</div>
+
+	</a>
+-->	
 
 	<a>
 	<div class="icons" id="icon-dustbin">
@@ -140,10 +156,31 @@
 		<div><span> Nothing bin </span> </div>
 	</div>
 	</a>
-
+	
+	<a>
+	<div class="icons qr-code-container" id="icon-whatsapp-scan">
+		<img src="image/scanner.png" >
+		<div><span> Scan Me ! </span> </div>
+		<img class="qr-code-img qr-code-img-icon" src="image/whatsapp-qr-code-user-1.jpeg">
+		<div class="qr-code-span qr-code-span-icon"><span> Scan to Send (Whatsapp) </span> </div>
+	</div>
+	</a>
+	
 </div>
 <!-- END of Icons container-->
-	
+
+<!--
+<div class="mouse-test-container">
+<div class="dynamic-mouse" class="hover-test">
+	<img src="image/whatsapp-jor.jpeg" />
+	<span> Hover Me ! </span>
+</div>
+<div class="dynamic-mouse" class="click-test">
+	<span> Click Me ! </span>
+	<iframe src="main.html"> </iframe>
+</div>
+</div>
+-->
 
 </div>	<!-- end of desktop -->
 
@@ -175,16 +212,31 @@
 -->
 
 <footer>
+	
 	<div id="apps">
-		<div class="footer-apps" id="start">
+
+		<div class="footer-apps cursor-pointer" id="start">
 			<img src="image/tile.png" />
 		</div>
 
+		<div class="footer-apps qr-code-container cursor-default" id="footer-show-qr-code-1">
+			<img src="image/qr-code-1.png" />
+			<div class="footer-apps-span"> <span> Scan Me ! </span></div>
+			<img class="qr-code-img qr-code-img-footer qr-code-img-footer-1" src="image/whatsapp-qr-code-user-1.jpeg">
+			<div class="qr-code-span qr-code-span-footer qr-code-span-footer-1"><span> Scan to Send (WhatsApp) </span> </div>
+		</div>
+
+
+<!--
 		<div class="footer-apps" id="show-search">
 			<img src="image/search-engine-small.png" />
 		</div>
+
+		<div class="footer-apps" id="show-menu">
+			<img src="image/website.png" />
+			<iframe src="main.html"> </iframe>	
+		</div>
 	
-<!--		
 		<div class="footer-apps" id="show-grid">
 			<img src="image/apps.png" />
 		</div>	
@@ -212,12 +264,12 @@
 		<div class="hover-container">
 			<iframe src="weather-chart.html" class="iframe-hover"> </iframe>
 		</div>
--->
 		<img src="image/cloudy.png">
 		<a href="weather-chart.html"  target="_blank" aria-label="Weather Chart">
 			<span id="temperature"></span>
 		</a>
 	|
+-->
 <!--	
 		<div class="footer" id="clock" class="clock">	<span class="clock"></span>	</div>
 	-
