@@ -9,6 +9,45 @@ a {
 	color: blue;
 	}
 
+iframe {
+	border: none;
+}
+
+.start-menu {
+	z-index: 10;
+	position: fixed;
+	bottom: 0px;
+	left: 0px ;
+	height: 50px;
+	width: calc( auto + 10px);
+	background: rgba( 200, 50, 50, 0.0) ;
+	text-align: left;
+	align-items: center; /* Vertically centers direct children */
+}
+
+.start-menu img {
+	height: 96%;
+	padding-left: 25px;
+	width: auto;
+
+}
+
+.start-menu iframe {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px ;
+	width: 100%;
+	height: calc( 100% - 50px ) ;
+	outline: none;
+	
+}
+
+.start-menu:hover iframe {
+	display: block;
+	
+}
+/* Desktop CSS start from here */
 .desktop {
 	position:absolute;
 	top: 0px;
@@ -105,6 +144,7 @@ a {
 }
 
 .icons {
+	z-index: 0;
 	position: absolute;
 	height: 100px; 
 	width: 100px;
@@ -113,8 +153,8 @@ a {
 	background-color: rgba(200, 200, 200, 0.15 ) ;
 	text-align: center ;
 	font-weight: 800 ;
-	backdrop-filter: blur(1px); /* Apply blur to content behind */
-	margin-left:  ;
+	backdrop-filter: blur(2px); /* Apply blur to content behind */
+	margin-left:  10px;
 	transition: transform 0.2s ;
 }
 
@@ -132,6 +172,9 @@ a {
 	width: 100%;
 	background-color: white;
 }
+
+
+#icon-dustbin {	z-index: -10; }
 
 /*
 
@@ -156,4 +199,57 @@ a {
 #icon-search {	left: 350px ;	}
 #icon-dustbin {	right: 10px ;	z-index: -10; }
 */
+
+.mouse-test-container {
+	position: fixed;
+	top: 200px;
+	left: 750px;
+	display: flex;
+	gap: 10px 10px;
+}
+
+.dynamic-mouse {
+	width: 200px;
+	height: 200px;
+	background: rgba(100, 100, 100, 0.0) ;
+	border-radius: 15px;
+	border: 0px solid blue;
+	backdrop-filter: blur(4px); /* Apply blur to content behind */
+}
+
+
+.dynamic-mouse iframe ,
+.dynamic-mouse img {
+	display: none;
+	position: fixed;
+	top: -200px ;
+	left: 30%;
+	height: 600px;
+	width: auto;
+}
+/*
+.hover-test img ,
+.click-test img {
+	
+	display: none;
+}
+
+,
+.hover-test:hover img ,
+.click-test:active img
+
+.hover-test:hover img ,
+.click-test:active img {
+	display: block;
+}
+
+.click-test:active {
+	width: 375px;
+}
+*/
+
+.dynamic-mouse:hover iframe  ,
+.dynamic-mouse:hover img  {
+	display: block;
+}
 
