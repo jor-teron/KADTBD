@@ -70,7 +70,7 @@
 }
 
 .icons:hover {
-	transform: translateY( 0px ) ;
+	transform: translateY( -15px ) ;
 }
 
 .icons img {
