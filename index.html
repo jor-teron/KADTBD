@@ -6,15 +6,15 @@
 <title>Multiple Link Redirect</title>
 <style type="text/css">
 body {
-background-color: #222;
-color: white;
-font-family: Arial, sans-serif;
-font-size:24pt;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 </style>
 </head>
@@ -24,35 +24,40 @@ margin: 0;
 <script type="text/javascript">
 
 async function checkAndRedirect(links) {
-for (let link of links) {
-	try {
-	// Check if the link is reachable
-	const response = await fetch(link, { 
-	method: 'HEAD', 
-	mode: 'no-cors' 
-	});
-	// If response is okay, redirect
-	window.location.href = link;
-	return;
-	} catch (error) {
-	console.log(`Link ${link} is not available:`, error);
-	// Continue to next link
-	}
-}
+    for (let link of links) {
+        try {
+            const isReachable = await new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(true); // Image loaded, link is reachable
+                img.onerror = () => resolve(false); // Image failed to load, link not reachable
+                img.src = link; // Attempt to load the link
+            });
 
-// If all links fail
-alert('All redirect links are unavailable');
+            if (isReachable) {
+                console.log(`Link ${link} is available. Redirecting...`);
+                window.location.href = link;
+                return;
+            } else {
+                console.log(`Link ${link} is not available (Image check failed).`);
+            }
+        } catch (error) {
+            console.log(`Error checking link ${link}:`, error);
+        }
+    }
+
+    // If all links fail
+    alert('All redirect links are unavailable');
 }
 
 // Define the common file path
-const page = 'pc.html';
+const page = 'desktop.html';
 
 // Array of links to try in order
 const redirectLinks = [
-`http://github.local/${page}`,
-'http://dell.local',
-`http://server.local/${page}`,
-`https://jor-teron.github.io/KADTBD/${page}`
+    `http://github.local/${page}`,
+    'http://dell.local', // You might need to adjust this if it's not a direct file or if it redirects
+    `http://server.local/${page}`,
+    `https://jor-teron.github.io/KADTBD/${page}`
 ];
 
 // Call the function when page loads
