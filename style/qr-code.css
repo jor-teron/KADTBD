@@ -63,7 +63,7 @@
 .qr-code-container img.qr-code-img-footer 
 {
 	bottom: calc( 0% + 60px + 0px );
-	left: calc( 30% - 250px );
+	right: calc( 10px - 0px );
 }
 
 .qr-code-container img.qr-code-img-footer-1 ,
