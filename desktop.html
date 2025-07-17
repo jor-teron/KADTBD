@@ -5,165 +5,46 @@
   <!-- Meta tags for character encoding and responsive viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Online Desktop </title>
+  <title> Desktop </title>
   <!-- Common and desktop-specific styles -->
-  <link rel="stylesheet" href="style/background.css">
-  <link rel="stylesheet" href="style/common.css">
-  <link rel="stylesheet" href="style/font.css">
-  <link rel="stylesheet" href="style/no-scrollbar.css">
-  <link rel="stylesheet" href="style/desktop.css">
-  <link rel="stylesheet" href="style/desktop-widget.css">
-  <link rel="stylesheet" href="style/desktop-taskbar.css">
+	<link rel="stylesheet" href="style/no-scrollbar.css">
+	<link rel="stylesheet" href="style/font.css">
+	<link rel="stylesheet" href="style/cursor.css">
+	<link rel="stylesheet" href="style/background-image.css">
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/desktop.css">
+	<link rel="stylesheet" href="style/desktop-widget.css">
+	<link rel="stylesheet" href="style/desktop-taskbar.css">
+	<link rel="stylesheet" href="style/desktop-icons.css">
+	<link rel="stylesheet" href="style/qr-code.css">
+	<link rel="stylesheet" href="style/analog-clock.css">
+<!--
+	<link rel="stylesheet" href="style/pc-desktop.css">
+	<link rel="stylesheet" href="style/background.css">	
+-->
 </head>
 
 <body>
 
-<!-- Desktop container for icons, tiles, and gadgets -->
+<script src="script/html-include.js"></script>
+<script src="script/time.js"></script>
+<script src="script/date.js" > </script>
+<script src="script/weekday-short.js" > </script>
+
 <div class="desktop">
     <!-- Notification header tile above single-column tiles -->
     <div id="notification"> </div>
+    
     <!-- Analog clock gadget -->
-    <div class="analog-clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand minute-hand"></div>
-        <div class="hand second-hand"></div>
-        <div class="center-dot"></div>
-      </div>
-    </div>
-    
-    <!-- Recycle Bin desktop icon -->
-    <div class="icon trash-icon">
-		<img src="image/trash.png">
-		<span> Nothing Bin </span>
-    </div>
-    
-        <!-- Recycle Bin desktop icon -->
-    <div class="icon icon-row-1 google-icon">
-	<a href="https://www.google.com" target="_blank" class="" >
-		<img src="https://www.google.com/s2/favicons?domain=google.com&sz=64">
-<!--		<div> Notepad </div> -->
-	</a>
-	</div>
-            <!-- Recycle Bin desktop icon -->
-    <div class="icon icon-row-1 whatsapp-icon">
-	<a href="https://web.whatsapp.com" target="_blank" class="" >
-		<img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256">
-<!--		<div> Notepad </div> -->
-	</a>
-	</div>
-    
-    <!-- Recycle Bin desktop icon -->
-    <div class="icon icon-row-2 notepad-icon">
-	<a href="#notepad-window" class="tile-link" >
-		<img src="image/notepad.png">
-		<span> Notepad </span> 
-	</a>
-	</div>
-    
-    <!-- Recycle Bin desktop icon -->
-    <div class="icon icon-row-1 calculator-icon">
-	<a href="#calculator-window" class="tile-link" >
-		<img src="image/calculator.png">
-<!--		<span> Calculator </span> -->
-	</a>
-	</div>
-    
-    <!-- Paint desktop icon -->
-    <div class="icon icon-row-2 paint-icon">
-	<a href="#paint-window" class="tile-link" >
-		<img src="image/paint.png">
-		<span> Paint </span>
-	</a>
-	</div>
-    <!-- Sitemap desktop icon -->
-    <div class="icon icon-row-2 sitemap-icon">
-	<a href="sitemap.html" target="_blank" class="" >
-		<img src="image/sitemap.png">
-		<span> Assam sitemap </span>
-	</a>
-	</div>
-	    <!-- Sitemap desktop icon -->
-    <div class="icon icon-row-2 cube-icon">
-	<a href="#3d-window" class="tile-link" >
-		<img src="image/3d_2.png">
-		<span> Rotating links </span>
-	</a>
-	</div>
-	
-	<!-- Sitemap desktop icon -->
-    <div class="icon icon-row-1 photoeditor-icon" >
-	<a href="#photoeditor-window" class="tile-link" >
-		<img src="image/image-editing.png">
-		<span> Photo Editor </span>
-	</a>
-	</div>
-	
-	
-    <!-- Full-screen window for Notepad with iframe -->
-<div id="paint-window" class="full-screen-window">
-  <div class="window-content">
-    <button class="close-window" aria-label="Close Window">X</button>
-    <iframe src="paint.html" class="app-iframe" title="Notepad"></iframe>
-  </div>
-</div>
-    <!-- Full-screen window for Calculator with iframe -->
-    <div id="calculator-window" class="full-screen-window">
-      <div class="window-content">
-        <button class="close-window" aria-label=https://www.google.com/s2/favicons?domain=google.com&sz=48"Close Window">X</button>
-        <iframe src="calculator.html" class="app-iframe" title="Calculator"></iframe>
-      </div>
-    </div>
-    <!-- Full-screen window for Notepad with iframe -->
-<div id="notepad-window" class="full-screen-window">
-  <div class="window-content">
-    <button class="close-window" aria-label="Close Window">X</button>
-    <iframe src="notepad.html" class="app-iframe" title="Notepad"></iframe>
-  </div>
-</div>
-        <!-- Full-screen window for Notepad with iframe -->
-<div id="3d-window" class="full-screen-window">
-  <div class="window-content">
-    <button class="close-window" aria-label="Close Window">X</button>
-    <iframe src="3d.html" class="app-iframe" ></iframe>
-  </div>
-</div>
-    
-        <!-- Full-screen window for Notepad with iframe -->
-<div id="photoeditor-window" class="full-screen-window">
-  <div class="window-content">
-    <button class="close-window" aria-label="Close Window">X</button>
-    <iframe src="photo-editor.html" class="app-iframe" ></iframe>
-  </div>
-</div>
-    
-    <!-- News sidebar gadget -->
-    <div id="news" class="sidebar">
-      <h2>News</h2>
-      <p>News content goes here...</p>
-    </div>
-    
-    <!--  Floating tile for Chat -->
-<!--
-      <div class="floating-tile tile-1">
-      <a href="#chat-window" class="tile-link">
-        <img src="image/file-sharing.png">
-        <span class="tile"> File Share </span>
-      </a>
-    </div>
--->
+    <div class="analog-clock">	</div>
+	<script> includeHTML("analog-clock.html", ".analog-clock"); </script>
 
-    <!-- Full-screen window for Chat with iframe -->
-    <div id="chat-window" class="full-screen-window">
-      <div class="window-content">
-        <button class="close-window" aria-label="Close Window">X</button>
-        <iframe src="chat/" class="app-iframe" title="Calculator"></iframe>
-      </div>
-    </div>
-
+	<div id="icons-container" class="border-1px">
+	<script> includeHTML("desktop-icons.html", "#icons-container"); </script>
 
 </div>
 <!-- Desktop element end here -->
+
     <!-- Start menu full-screen window with iframe -->
     <div id="start-window" class="start-window">
       <div class="start-window-content">
@@ -172,78 +53,20 @@
     </div>
 
   <!-- Taskbar with Start menus, pinned links, and digital clock -->
-  <footer class="taskbar">
-    <div class="start-links">
-      <a class="start" href="#start-menu-window" >
-        <img src="image/apps.png">
-      </a>
-      
-      <!--
-      <a class="start-3d" aria-label="3D Start Menu" title="3D Start Menu">
-        <img src="image/3d_2.png">
-      </a>
-      -->
-    </div>
-    <div class="pinned-links">
-    <!--
-      <a href="https://www.google.com" target="_blank" >
-        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=48">
-        <span></span>
-      </a>
-      <a href="https://web.whatsapp.com" target="_blank" >
-        <img src="https://www.google.com/s2/favicons?domain=https://web.whatsapp.com&sz=256">
-        <span></span>
-      </a>
-      -->
-      <a href="https://fin.assam.gov.in/cas/login" target="_blank" >
-        <img src="https://www.google.com/s2/favicons?domain=fin.assam.gov.in&sz=48">
-        <span> Fin <br> Assam </span>
-      </a>
-      <a href="https://services.gst.gov.in/services/login" target="_blank" >
-        <img src="image/gst.png">
-        <span> GST </span>
-      </a>
-      <a href="photo-editor.html" target="_blank" >
-        <img src="image/image-editing.png">
-        <span> Photo <br> Editor </span>
-      </a>
-      <a href="chat/" target="_blank" >
-        <img src="image/file-sharing.png">
-        <span> File <br> Share </span>
-      </a>
-    </div>
-    
-    <div class="system-tray">
-      <a href="https://meet.google.com" target="_blank" >
-        <img src="https://www.google.com/s2/favicons?domain=meet.google.com&sz=48">
-        <span></span>
-      </a>
-      <a href="https://calendar.google.com" target="_blank" >
-        <img src="https://www.google.com/s2/favicons?domain=https://calendar.google.com&sz=48">
-        <span></span>
-      </a>
-      <!--
-      <a href="weather-hourly.html" target="_blank" aria-label="Weather Hourly">
-        <img src="image/meteorology.png">
-        <span></span>
-      </a>
-      -->
-      <a href="weather-chart.html" target="_blank" aria-label="Weather Chart">
-        <img src="image/cloudy.png">
-        <span id="temperature"></span>
-      </a>
-      <span class="clock"></span>
-    </div>
-  </footer>
+	<footer class="taskbar text-white-with-black-outline">	</footer>
+	<script> includeHTML("desktop-taskbar.html", ".taskbar"); </script>
 
   <!-- Scripts for time, desktop functionality, news, background, and notifications -->
-  <script src="script/time.js"></script>
-  <script src="script/desktop.js"></script>
+<script src="script/desktop.js"></script>
+<script src="script/notification.js"></script>
+<script src="script/temperature.js"></script>
+<script src="script/cursor.js"></script>
+
+<!--
   <script src="script/background.js"></script>
-  <script src="script/notification.js"></script>
   <script src="script/gnews.js"></script>
-  <script src="script/temperature.js"></script>
   <script src="script/redirect.js"></script>
+-->
 
 </body>
 </html>
