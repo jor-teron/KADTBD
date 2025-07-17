@@ -50,7 +50,15 @@
                 <button id="cancelCropBtn" disabled>Cancel Crop</button>
                 <button id="applyCropBtn" disabled>Apply Crop</button>
             </section>
-
+                    
+            <section class="section-group">
+                <h3>Adjustments</h3>
+                <label for="brightnessSlider">Brightness:</label>
+                <input type="range" id="brightnessSlider" min="0" max="200" value="100">
+                <label for="contrastSlider">Contrast:</label>
+                <input type="range" id="contrastSlider" min="0" max="200" value="100">
+            </section>
+            
         </aside>
 
         <section id="canvas-container">
@@ -62,14 +70,7 @@
                 </div>
             </div>
         </section>
-                    
-            <section class="section-group">
-                <h3>Adjustments</h3>
-                <label for="brightnessSlider">Brightness:</label>
-                <input type="range" id="brightnessSlider" min="0" max="200" value="100">
-                <label for="contrastSlider">Contrast:</label>
-                <input type="range" id="contrastSlider" min="0" max="200" value="100">
-            </section>
+
 
     </main>
 
