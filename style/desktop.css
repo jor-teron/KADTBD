@@ -5,7 +5,18 @@ body {
   overflow: hidden;
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 14pt;
+	background-repeat: repeat-x;
+	background-size: cover ; /* This is the key for height-based scaling */
+	background-position: center center; /* Optional: Adjusts image starting position */
+	animation: slide 3s linear infinite;
 }
+
+/*
+@keyframes slide { 
+			from	{	background-position: 100% 0; 	}
+			to		{	background-position: 0 0; 	}
+				}
+*/
 
 /* Desktop container for icons and gadgets */
 .desktop {
@@ -18,9 +29,11 @@ body {
 /*	
 	background-color:  ;
 	background-repeat: repeat-x;
-*/	
 	background-image: url('wallpaper/Windows_XP_Blue_Bliss.jpg');	
+*/	
 	background-size: 100vw auto ; /* This is the key for height-based scaling */
+	background-size: auto 96vh; /* This is the key for height-based scaling */
+	background-size: contain ; /* This is the key for height-based scaling */
 	background-position: center center;  /*Optional: Adjusts image starting position */
 }
 

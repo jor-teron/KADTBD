@@ -1,5 +1,4 @@
 
-
 /* Notification header tile above single-column tiles */
 #notification {
   position: absolute;
@@ -26,7 +25,6 @@
     1px 1px 0 #000;
 }
 
-
 #notification {
 	position: fixed;
 	top: 10px ;
@@ -36,14 +34,12 @@
 	height: 160px;
 }
 
-
 #notification .tile {
   font-size: 4em; /* Larger text (~32px) */
   color: white; /* Ensure white text for visibility */
 }
 
-
-
+/*   redundant . Orphan*/
 /* Desktop icon styling */
 .icon {
 	overflow: ;

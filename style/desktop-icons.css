@@ -1,23 +1,49 @@
 
 
-.desktop #icons-container {
+#icons-container {
 	position: fixed;
 	top: 180px;
 	left: 10px;
 	display : flex;
 	flex-wrap: wrap;
-	width: 750px;
-	height: 300px;
+	width: 950px;
+	height: auto;
 	border: 0px solid blue;
+	border-radius: 25px;
 	gap: 20px 20px;
   align-items: top;
   justify-content: ;
   background: ;
+  padding: 25px;
+  
+  background: rgba( 250, 250, 250, 0.0);
+  opacity: 0.4;
+  
+	transition: background 0.2s, opacity 0.2s ;
 }
 
+#icons-container:hover {
+  background: rgba( 255, 255, 255, 0.8);
+	opacity: 1;
+  backdrop-filter: blur(0px); /* Glassy blur effect */
+  
+}
+/*
+#icons-container a .icons img {
+	opacity: 0.5;
+	background: rgba( 250, 250, 250, 0.0);
+}
+
+#icons-container:hover a .icons img {
+	background: rgba( 250, 250, 250, 0.0);
+	opacity: 1;
+}
+
+*/
+
 #icons-container a {
-	position: block;
-	width: 90px;
+	display: ;
+	width: 95px;
 	height: 125px;
 	border: 0px solid blue;
 }
@@ -27,7 +53,7 @@
 	position: absolute;
 	width: 90px;
 	height: 90px; 
-	border: 0px solid grey;
+	border: 0px solid red;
 	border-radius: 15px 15px 0px 0px;
 	background-color: rgba(200, 200, 200, 0.15 ) ;
 	text-align: center ;
@@ -36,23 +62,42 @@
 	margin-left: 0px;
 	padding-left: 0px;
 	transition: transform 0.2s ;
+	opacity: ;
 }
 
 .icons:hover {
-	transform: translateY( -15px ) ;
+	opacity: 1;
+}
+
+.icons:hover {
+	transform: translateY( 0px ) ;
 }
 
 .icons img {
 	width: auto ;
-	height: 95% ;
+	height: 100% ;
+	position: relative;
+	opacity: 1;
+	display: ;
+	transition: opacity 0.4s;
+}
+
+.icons:hover img {
+	opacity: 1;
 }
 
 .icons div {
+	opacity: 1;
+	font-size: 15px;
 	color:;
 	width: 100%;
 	background-color: white;
+	border: 0px solid black;
 }
 
+.icons:hover div {
+	opacity: 1;
+}
 
 #icon-dustbin {	z-index: 0; }
 
