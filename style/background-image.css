@@ -14,7 +14,7 @@
   height: 100vh; 
   
   /* Apply the animation: 10 images * 10 seconds each = 100s total duration */
-  animation: desktopBackgroundChange 20s infinite; 
+  animation: desktopBackgroundChange 100s infinite; 
 }
 
 @keyframes desktopBackgroundChange {
