@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Draw the custom arrow cursor ---
     ctx.beginPath();
-    ctx.moveTo(2, 2);
-    ctx.lineTo(25, 50);
-    ctx.lineTo(30, 30);
-    ctx.lineTo(50, 25);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(35, 37);
+    ctx.lineTo(16, 37);
+    ctx.lineTo(0, 50);
     ctx.closePath();
 
     // Set fill color for the arrow

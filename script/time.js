@@ -11,7 +11,8 @@ function updateClock() {
   const minutesPadded = minutes < 10 ? '0' + minutes : minutes;
   const secondsPadded = seconds < 10 ? '0' + seconds : seconds;
   
-  const timeString = `${hours}:${minutesPadded}:${secondsPadded} ${ampm}`;
+//  const timeString = `${hours}:${minutesPadded}:${secondsPadded} ${ampm}`;
+  const timeString = `${hours}:${minutesPadded} ${ampm}`;
   const clockElement = document.querySelector('.clock');
   if (clockElement) {
     clockElement.textContent = timeString;
@@ -35,3 +36,4 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock(); // Initial call to avoid 1-second delay
+

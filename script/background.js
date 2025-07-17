@@ -1,8 +1,10 @@
 const backgrounds = [
 	
+	{ type: 'image', value: 'wallpaper/office.jpg', timeout: 10 }, // 5 minutes
+//  	{ type: 'color', value: '#ffffff', timeout: 30 }, // 1 minute,
 	{ type: 'image', value: 'wallpaper/bess.jpg', timeout: 10 }, // 5 minutes
-	{ type: 'image', value: 'wallpaper/dog_01.jpg', timeout: 10 }, // 3 minutes
-	{ type: 'image', value: 'wallpaper/dog_02.jpg', timeout: 15 }, // 3 minutes
+//	{ type: 'image', value: 'wallpaper/dog_01.jpg', timeout: 10 }, // 3 minutes
+//	{ type: 'image', value: 'wallpaper/dog_02.jpg', timeout: 15 }, // 3 minutes
 	{ type: 'image', value: 'wallpaper/panda_01.jpg', timeout: 15 }, // 3 minutes
 	{ type: 'image', value: 'wallpaper/panda_02.jpg', timeout: 10 }, // 3 minutes
 	{ type: 'image', value: 'wallpaper/panda_03.jpg', timeout: 10 }, // 3 minutes
@@ -16,8 +18,8 @@ const backgrounds = [
 	{ type: 'image', value: 'wallpaper/penquin_1.jpg', timeout: 10 }, // 3 minutes
 //	{ type: 'image', value: 'wallpaper/panda_2.jpg', timeout: 10 }, // 3 minutes
 //	{ type: 'image', value: 'wallpaper/panda_2.jpg', timeout: 10 }, // 3 minutes
-	{ type: 'image', value: 'wallpaper/dolphin_2.jpg', timeout: 15 }, // 3 minutes keep
-	{ type: 'image', value: 'wallpaper/dolphin_1.jpg', timeout: 15 }, // 3 minutes keep
+	{ type: 'image', value: 'wallpaper/dolphin_2.jpg', timeout: 10 }, // 3 minutes keep
+	{ type: 'image', value: 'wallpaper/dolphin_1.jpg', timeout: 10 }, // 3 minutes keep
 //	{ type: 'image', value: 'wallpaper/dolphin_3.jpg', timeout: 4 }, // 3 minutes
 //	{ type: 'image', value: 'wallpaper/dolphin_4.jpg', timeout: 4 }, // 3 minutes
 //	{ type: 'image', value: 'wallpaper/ocean_1.jpg', timeout: 4 }, // 3 minutes
