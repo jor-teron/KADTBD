@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Desktop </title>
   <!-- Common and desktop-specific styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 	<link rel="stylesheet" href="style/no-scrollbar.css">
 	<link rel="stylesheet" href="style/font.css">
 	<link rel="stylesheet" href="style/cursor.css">
-	<link rel="stylesheet" href="style/background-image.css">
 	<link rel="stylesheet" href="style/common.css">
 	<link rel="stylesheet" href="style/desktop.css">
 	<link rel="stylesheet" href="style/desktop-widget.css">
@@ -18,7 +19,9 @@
 	<link rel="stylesheet" href="style/desktop-icons.css">
 	<link rel="stylesheet" href="style/qr-code.css">
 	<link rel="stylesheet" href="style/analog-clock.css">
+    <link rel="stylesheet" href="style/auth_passwd.css">
 <!--
+	<link rel="stylesheet" href="style/background-image.css">
 	<link rel="stylesheet" href="style/pc-desktop.css">
 	<link rel="stylesheet" href="style/background.css">	
 -->
@@ -45,6 +48,7 @@
 </div>
 <!-- Desktop element end here -->
 
+<!-- ORPHAN -->
     <!-- Start menu full-screen window with iframe -->
     <div id="start-window" class="start-window">
       <div class="start-window-content">
@@ -56,14 +60,31 @@
 	<footer class="taskbar text-white-with-black-outline">	</footer>
 	<script> includeHTML("desktop-taskbar.html", ".taskbar"); </script>
 
-  <!-- Scripts for time, desktop functionality, news, background, and notifications -->
+<!--
+<div id="overlay" class="hidden">	</div>
+<script> includeHTML("password-overlay.html", "#overlay"); </script>
+-->
+
+    <div id="overlay" class="hidden">
+        <div class="overlay-content">
+            <h2 class="text-3xl font-bold text-gray-800">Enter Password</h2>
+<!--            <p class="text-gray-600">Please enter the password to access this page.</p>	-->
+            <input type="password" id="password-input" placeholder="Password" class="focus:ring-2 focus:ring-blue-300">
+            <p id="error-message" class="text-red-500 text-sm hidden">Incorrect password. Please try again.</p>
+            <button id="submit-password">Unlock Page</button>
+            <p></p>
+        </div>
+    </div>
+    
+<!-- Scripts for time, desktop functionality, news, background, and notifications -->
 <script src="script/desktop.js"></script>
 <script src="script/notification.js"></script>
 <script src="script/temperature.js"></script>
 <script src="script/cursor.js"></script>
+<script src="script/auth_passwd.js"></script>
+  <script src="script/background.js"></script>
 
 <!--
-  <script src="script/background.js"></script>
   <script src="script/gnews.js"></script>
   <script src="script/redirect.js"></script>
 -->
