@@ -1,0 +1,130 @@
+
+.qr-code-container
+{
+	border: 0px solid blue;
+	display: flex ;
+	flex-direction: row;
+	margin-right: 30px;
+}
+
+.qr-code-container .qr-code-icon {
+	margin-right: 10px;
+}
+
+.qr-code-container .qr-code-text {
+	margin-right: 10px;
+}
+
+.qr-code-container img.qr-code-img ,
+.qr-code-container div.qr-code-span
+{
+	position: fixed;
+	display: none;
+	z-index: 10;
+	border: 0px solid red;
+	color: black;
+	background: white;
+	width: auto;
+}
+
+.qr-code-container img.qr-code-img 
+{
+	height: calc( 100vh - 70px );
+	border-radius: 25px 25px 25px 25px;
+	width: auto ;
+}
+
+.qr-code-container div.qr-code-span 
+{
+	height: 50px;
+	font-size: 35px;
+	font-weight: 800;
+	border-radius:  25px 25px 25px 25px;
+}
+
+.qr-code-container:hover img.qr-code-img ,
+.qr-code-container:hover div.qr-code-span  
+{
+	z-index: 15;
+	display: block;
+}
+
+
+.qr-code-container img.qr-code-img-icon
+{
+	bottom: calc( 0% + 50px );
+}
+
+.qr-code-container div.qr-code-span-icon 
+{
+	bottom: calc( 0% + 0px ) ;
+}
+
+.qr-code-container img.qr-code-img-footer 
+{
+	bottom: calc( 0% + 60px + 0px );
+	left: calc( 30% - 250px );
+}
+
+.qr-code-container img.qr-code-img-footer-1 ,
+.qr-code-container img.qr-code-img-footer-2 ,
+.qr-code-container img.qr-code-img-footer-3
+{ 
+	left: ;
+}
+
+.qr-code-container div.qr-code-span-footer 
+{
+
+	bottom: calc( 0% + 60px + 0px );
+	left: calc( 50% + 250px );
+	border-radius: 10px;
+	height: 100px;
+	width: auto;
+	text-align: center;
+	font-size: 45px;
+	margin: 20px 50px;
+}
+
+
+/* 000000000000000000000000000000000000 */
+
+/*
+#show-qr-code {
+	
+}
+
+#show-qr-code img.qr-code-img ,
+#show-qr-code div.qr-code-span 
+{
+	position: fixed;
+	display: none;
+	left: 200px ;
+	width: 650px;
+	color: black;
+	background: white;
+	border: 0px solid black;
+	border-radius: 30px;
+
+}
+
+#show-qr-code img.qr-code-img 
+{
+	bottom: 100px;
+	height: auto;
+}
+
+#show-qr-code div.qr-code-span 
+{
+	height: 50px;
+	bottom: calc( 0% + 50px ) ;
+	font-size: 40px;
+	font-weight: 800;
+}
+
+#show-qr-code:hover img.qr-code-img ,
+#show-qr-code:hover img.qr-code-span 
+{
+	display: block;
+}
+*/

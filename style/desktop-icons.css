@@ -1,0 +1,58 @@
+
+
+.desktop #icons-container {
+	position: fixed;
+	top: 180px;
+	left: 10px;
+	display : flex;
+	flex-wrap: wrap;
+	width: 750px;
+	height: 300px;
+	border: 0px solid blue;
+	gap: 20px 20px;
+  align-items: top;
+  justify-content: ;
+  background: ;
+}
+
+#icons-container a {
+	position: block;
+	width: 90px;
+	height: 125px;
+	border: 0px solid blue;
+}
+
+.icons {
+	z-index: 0;
+	position: absolute;
+	width: 90px;
+	height: 90px; 
+	border: 0px solid grey;
+	border-radius: 15px 15px 0px 0px;
+	background-color: rgba(200, 200, 200, 0.15 ) ;
+	text-align: center ;
+	font-weight: 800 ;
+	backdrop-filter: blur(2px); /* Apply blur to content behind */
+	margin-left: 0px;
+	padding-left: 0px;
+	transition: transform 0.2s ;
+}
+
+.icons:hover {
+	transform: translateY( -15px ) ;
+}
+
+.icons img {
+	width: auto ;
+	height: 95% ;
+}
+
+.icons div {
+	color:;
+	width: 100%;
+	background-color: white;
+}
+
+
+#icon-dustbin {	z-index: 0; }
+

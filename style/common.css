@@ -1,8 +1,41 @@
 
+body {
+/*	cursor: url('cursor.png') 5 5, auto ; 	*/
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
 a { 
 	text-decoration: none;
 	color: blue; 
 }
+
+
+iframe {
+	border: none;
+}
+
+.display-none {		display: none;	}
+.display-block {	display: block;	}
+.display-flex {		display: flex;	flex-direction: row;}
+
+.text-white-with-black-outline {
+	color: white;
+	text-shadow:
+	-1px -1px 0 #111,
+	-1px 1px 0 #111,
+	1px -1px 0 #111,
+	1px 1px 0 #111 ;
+}
+
+.cursor-pointer {	cursor: pointer;	}
+.cursor-default {	cursor: default;	}
+
+.border-1px {	border: 1px solid red;	}
+.border-0px {	border: 0px solid blue;	}
+
+
+
+
 
 u {
 	color: green;
@@ -42,4 +75,6 @@ u {
 	font-size: 1.1em;
 	color: white;
 	}
+
+
 

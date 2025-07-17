@@ -1,3 +1,23 @@
+
+.show-hover-window .start-menu-iframe {
+	display: none;
+	position: fixed;
+	bottom: 50px;
+	left: 0px ;
+	height: calc(100vh - 50px );
+	width: 100vw;
+}
+
+
+.show-hover-window:hover .start-menu-iframe {
+	display: block;
+}
+
+.qr-code-img {
+	
+}
+
+
 /* Taskbar styling, reduced to 60px height */
 .taskbar {
   z-index: 100;
@@ -30,32 +50,38 @@ text-shadow:
   margin-right: 16px; /* Gap between Start Menus and pinned links */
 }
 
-.start, .start-3d {
-  margin: 0px 0px; /* Match pinned-links spacing */
-  border-radius: 5px;
+.start-menu, .start-3d {
   display: flex;
+  flex-direction: row ;
   align-items: center;
   position: relative; /* For tooltip positioning */
   border: 0px solid rgba(255, 255, 255, 0);
+  border: 0px solid red;
+  border-radius: 5px;
   text-decoration: none;
   background-color: transparent; /* Ensure no background color */
+  margin-right: 100px;
 }
 
 .start:hover, .start-3d:hover {
   border: 0px solid rgba(255, 255, 255, 0); /* No hover border */
 }
 
-.start img, .start-3d img {
+.start-menu img, .start-3d img {
   position: ;
   bottom: 2px;
-  width: 43px; /* Larger than pinned-links */
-  height: 43px;
+  height: 48px;
+  width: auto; /* Larger than pinned-links */
+  margin-left: 25px;
+  margin-right: 10px;
+  border: 0px solid red;
 }
 
 .pinned-links {
   display: flex;
   align-items: center;
 }
+
 
 .pinned-links a {
 	position: relative;
@@ -96,22 +122,38 @@ text-shadow:
   color: white;
 }
 
+/* 11111111111111111111111111111111 */
+
 .system-tray {
   margin-left: auto;
   color: white;
-  font-size: 14px;
+  font-size: 20px;
   display: flex;
   align-items: center;
 }
 
+.pinned-icon {
+
+  display: flex;
+  flex-direction: row;
+  font-size: 1.4em;
+  margin: 0px 20px;
+}
+
+.pinned-icon img {
+	height: 46px;
+	width: auto;
+  margin-right: 1s0px;
+}
+
 .system-tray a {
-  margin: 0 2px;
+  margin: 0 4px;
   display: flex;
   align-items: center;
   position: relative;
-  border: 2px solid rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 255, 255, 0);
   border-radius: 5px;
-  padding: 0px 5px;
+  padding: 0px 0px;
 }
 
 .system-tray a:hover {
@@ -119,13 +161,13 @@ text-shadow:
 }
 
 .system-tray img {
-  width: 50px;
-  height: 50px;
+  width: auto;
+  height: 46px;
 }
 
 .system-tray a span {
   font-stretch: condensed;
-  font-size: 1.5em;
+  font-size: 1em;
   margin-left: 4px;
   color: white;
 }
@@ -133,7 +175,7 @@ text-shadow:
 .clock {
   height: 58px;
   padding: 5px 10px;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 666;
   line-height: 53px;
 }

@@ -1,5 +1,8 @@
 /*  Taskbar start from here  */
 
+
+
+
 /* Styles for the main page where the iframe is embedded */
 
 .hover-container {
@@ -128,6 +131,7 @@
 	height:  100%;
 }
 
+
 footer {
 	z-index: 5;
 	display: flex ;
@@ -138,21 +142,22 @@ footer {
 	left: 0px;
 	width: 100%;
 	height: 50px;
-	text-align: center;
-	align-items: center; /* Vertically centers direct children */
-	justify-content: center;
+	text-align: ;
+	align-items: ; /* Vertically centers direct children */
+	justify-content: ;
 	background: rgba(200,200,200,0.5 );
 	backdrop-filter: blur(3px);
   font-stretch: condensed;
   font-weight:800;
 	bottom: 0px;
-	align-items: center; 
+	
 /*	
 	background: linear-gradient( to bottom, rgba(250, 250, 250, 0.5 ), rgba( 50, 50, 50, 0.9 ) ); 
 	background-color: rgba(200, 200, 200, 0.8) ; 
 background-color: linear-gradient( to bottom, rgba(250, 250, 250, 0.9 ), rgba( 50, 50, 50, 0.8 ) );  
 */
 }
+
 /*
 footer > * {
 	text-align: center;
@@ -160,42 +165,39 @@ footer > * {
 	justify-content: center;
 }
 */
+
 footer #apps {
 	display: flex ;
 	flex-wrap: wrap;
 	flex-direction: row;
 	padding: 0px;
 	left: 200px;
-	width: 700px;
+	width: auto;
 	height: 50px;
-	gap: 20px;
+	gap: 0px;
 	border: 0px solid blue;
     margin-bottom: 0px; /* Add this line */
-    margin-left: 250px;
+    margin-left: 100px;
 	align-items: center; 
+}
+
+footer #apps #footer-show-qr-code-2 {
+	display: none;
 }
 
 footer #apps .footer-apps {
 /*	position : absolute; */
-	cursor: 
+
 	display: flex;
 	flex-direction: row;
 	bottom: 0px;
 	height: 50px ;
+	width: auto;
 	border-radius: 10px;
 	border: 0px dashed black; 
 	background-color: rgba(50, 250, 50, 0.0 ) ;
+    margin-left: 50px;
 }
-
-.cursor-default
-{
-	cursor: default;
-}	
-
-.cursor-pointer
-{
-	cursor: pointer;
-}	
 
 footer iframe ,
 footer #apps #show-menu iframe {
@@ -214,14 +216,21 @@ footer #apps #show-menu:hover iframe {
 
 .footer-apps-span
 {
-	width: 70px;
+	width: auto;
+	margin-left: 10px;
+	align-items: center; 
+	border: 0px dashed black; 
+	color: ;
 }
 
 .footer-apps-span span 
 {
-	font-size: 22px;
-	color: blue;
+	font-size: 20px;
+/*
 	word-break: break-word;
+	align-items: center; 
+*/
+	border: 0px dashed black; 
 }
 
 
@@ -230,6 +239,7 @@ footer #apps #show-menu:hover iframe {
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 #start , #show-grid {
+	display: none;
 	width: 60px;
 }
 
@@ -238,6 +248,12 @@ footer #apps #show-menu:hover iframe {
 	width: 150px;
 }
 
+
+footer #apps #start {
+
+	display: ;
+
+}
 
 /*
 #start {
@@ -267,39 +283,33 @@ footer #apps #show-menu:hover iframe {
 /* System tray begin 0000000000000000000000000000000000000000000 */
 
 #system-tray {
+	position: absolute;
+	right: 5px;
 	display: flex ;
 	flex-direction: row;
-	gap: 10px;
+	gap: 0px;
   /* Method A: If the parent is a block-level element within a larger container */
-  margin-left: auto;
-  margin-right: 0; /* Or just 'margin-left: auto;' if no specific right margin needed */
+  margin-left: 10px;
+  margin-right: 10px; /* Or just 'margin-left: auto;' if no specific right margin needed */
   width: fit-content; /* Or a fixed width, but fit-content is good for dynamic width */
   /* Or Method B: If the parent is floated */
-  /* float: right; */
-  text-align: right;
-	position: ;
-	right: 5px;
+	float: right; 
 	width: auto ;
-	border: 0px dashed blue;
+	border: 0px dashed red;
 }
 
 #system-tray {
-  font-stretch: condensed;
-    display: flex; /* Use flexbox for the system tray items */
     align-items: center; /* Vertically center items */
-    gap: 15px; /* Space between system tray items */
+    gap: 0px; /* Space between system tray items */
     height: 50px;
     
     color: white;
-	text-shadow:
-	-1px -1px 0 #111,
-	-1px 1px 0 #111,
-	1px -1px 0 #111,
-	1px 1px 0 #111 ;
+	font-stretch: condensed;
+	text-align: right;
 }
 
 #system-tray .footer {
-	font-size: 35px;
+	font-size: 25px;
 }
 
 #system-tray a {
@@ -323,7 +333,6 @@ footer #apps #show-menu:hover iframe {
 #system-tray a span {
   font-size: 1.3em;
   margin-left: 4px;
-  color: white;
   border: 0px solid blue;
 }
 

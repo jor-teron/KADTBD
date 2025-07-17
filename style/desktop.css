@@ -7,6 +7,23 @@ body {
   font-size: 14pt;
 }
 
+/* Desktop container for icons and gadgets */
+.desktop {
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+	width: 100%;
+	height: calc( 100% - 0px ) ;
+/*	
+	background-color:  ;
+	background-repeat: repeat-x;
+*/	
+	background-image: url('wallpaper/Windows_XP_Blue_Bliss.jpg');	
+	background-size: 100vw auto ; /* This is the key for height-based scaling */
+	background-position: center center;  /*Optional: Adjusts image starting position */
+}
+
 /* Start menu full-screen window styling */
 .start-window {
   position: fixed;
@@ -63,3 +80,5 @@ body {
 .start-iframe::-webkit-scrollbar {
   display: none; /* Hide scrollbar in Chrome/Safari */
 }
+
+
