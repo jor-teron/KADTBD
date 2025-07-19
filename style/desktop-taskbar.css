@@ -1,22 +1,21 @@
 
-.show-hover-window .start-menu-iframe {
-	display: none;
+.start-menu .start-menu-iframe {
+	z-index: -100 ;
+	display: block;
 	position: fixed;
 	bottom: 50px;
-	left: 0px ;
+	left: -100vw ;
 	height: calc(100vh - 50px );
 	width: 100vw;
+	transition: left 1.5s ease-in-out ;
 }
 
-
-.show-hover-window:hover .start-menu-iframe {
+.start-menu:hover .start-menu-iframe {
 	display: block;
+	left: 0px ;
 }
 
-.qr-code-img {
-	
-}
-
+.qr-code-img {	}
 
 /* Taskbar styling, reduced to 60px height */
 .taskbar {
@@ -25,7 +24,7 @@
   bottom: 0px;
   width: 100%;
   height: 50px;
-  background: rgba(200,200,200,0.7) ;
+  background: rgba(250,250,250,0.6) ;
 /*	background: linear-gradient( to bottom, rgba(220, 220, 220, 0.5) , rgba(100,100,100,0.8) , rgba(20,20,20,1) ) ;
 */  
 border-top: 0px solid rgba(255, 255, 255, 0);
@@ -33,7 +32,7 @@ border-top: 0px solid rgba(255, 255, 255, 0);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0);
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 10px 0px 0px;
   box-sizing: border-box;
 
 text-shadow:
@@ -50,33 +49,76 @@ text-shadow:
   margin-right: 16px; /* Gap between Start Menus and pinned links */
 }
 
-.start-menu, .start-3d {
+.start-menu {
   display: flex;
   flex-direction: row ;
+  position: relative;
+  bottom: 0px;
   align-items: center;
-  position: relative; /* For tooltip positioning */
+  height: 49px;
   border: 0px solid rgba(255, 255, 255, 0);
   border: 0px solid red;
-  border-radius: 5px;
+  border-radius: 0px 25px 0px 0px;
   text-decoration: none;
   background-color: transparent; /* Ensure no background color */
   margin-right: 100px;
+	background-color: rgba( 60, 110, 170, 0.9) ;
+	box-shadow: 4px 3px 4px 2px rgba(0, 0, 0, 0.2) ;
 }
 
-.start:hover, .start-3d:hover {
+.start-menu:hover {
   border: 0px solid rgba(255, 255, 255, 0); /* No hover border */
+	box-shadow: 4px 3px 4px 2px rgba(0, 0, 0, 0.6) ;
 }
 
-.start-menu img, .start-3d img {
-  position: ;
+.start-menu img {
+  position: absolute;
   bottom: 2px;
+  left: 0px;
   height: 48px;
   width: auto; /* Larger than pinned-links */
   margin-left: 25px;
   margin-right: 10px;
-  border: 0px solid red;
+  border: 1px solid orange;
 }
 
+.start-menu .start-menu-icon {
+	width: 80px;
+	height: 50px;
+	background-color: ;
+  border: 0px solid blue;
+	background-image: url('../image/windows-xp.png') ;
+	background-repeat: no-repeat ;
+	background-size: auto 100%;
+	background-position: center center;
+	
+}
+
+.start-menu:hover .start-menu-icon {
+	background-color: ;
+/*
+	background-image: url('../image/windows-xp-mono.png');
+	background-color: linear-gradiant ( to bottom, #D8e4f1, #3a6ea5 ) ;
+	*/
+}
+
+.start-menu div.span {
+	position: relative;
+	left: 0px;
+	width: 100px;
+	height: ;
+	font-size: 25px ;
+	font-weight: 800 ;
+  border: 0px solid blue;
+
+}
+
+.hover-hidden:hover {
+	opacity: 0;
+
+}
+
+/* 000000000000000000000000000000000000 */
 .pinned-links {
   display: flex;
   align-items: center;
@@ -173,7 +215,7 @@ text-shadow:
 }
 
 .clock {
-  height: 58px;
+  height: 50px;
   padding: 5px 10px;
   font-size: 1em;
   font-weight: 666;
