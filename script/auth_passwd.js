@@ -10,7 +10,7 @@ const CORRECT_PASSWORD = "2000"; // <<< CHANGE THIS TO YOUR DESIRED PASSWORD
 // Set the duration for authentication expiration.
 // If a unit is not needed, set its value to 0.
 const AUTH_EXPIRATION_HOURS = 0;
-const AUTH_EXPIRATION_MINUTES = 30;
+const AUTH_EXPIRATION_MINUTES = 45;
 const AUTH_EXPIRATION_SECONDS = 0;
 // ------------------------------------------
 

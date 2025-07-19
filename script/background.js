@@ -1,5 +1,5 @@
 const backgrounds = [
-    { type: 'image', value: 'wallpaper/xp.jpg', position: 'center bottom', size: 'cover', timeout: 10 }, // 5 minutes
+    { type: 'image', value: 'wallpaper/xp-small.jpg', position: 'center bottom', size: 'cover', timeout: 10 }, // 5 minutes
     { type: 'image', value: 'wallpaper/office.jpg', position: 'center bottom', size: 'cover', timeout: 10 }, // 5 minutes
     // 	{ type: 'color', value: '#ffffff', timeout: 30 }, // 1 minute,
     { type: 'image', value: 'wallpaper/bess.jpg', position: 'center center', size: 'cover', timeout: 10 }, // 5 minutes
