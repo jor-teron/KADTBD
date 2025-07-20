@@ -18,6 +18,18 @@ body {
 				}
 */
 
+#desktop-overlay-top {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 150px;
+	background-color: rgba(0,0,0,0);
+	z-index: 100;
+
+}
+
+
 /* Desktop container for icons and gadgets */
 .desktop {
 	position:fixed;
