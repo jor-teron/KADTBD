@@ -4,11 +4,14 @@
 	border: 0px solid blue;
 	display: flex ;
 	flex-direction: row;
-	margin-right: 30px;
+	margin-right: 5px;
+  border: 0px solid green;
 }
 
 .qr-code-container .qr-code-icon {
-	margin-right: 10px;
+	margin-right: 5px;
+	height: 45px;
+  border: 0px solid green;
 }
 
 .qr-code-container .qr-code-text {
@@ -55,7 +58,7 @@
 	bottom: calc( 0% + 50px );
 }
 
-.qr-code-container div.qr-code-span-icon 
+.qr-code-container div.qr-code-span-icon
 {
 	bottom: calc( 0% + 0px ) ;
 }

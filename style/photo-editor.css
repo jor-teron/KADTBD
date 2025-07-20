@@ -2,7 +2,10 @@
 :root {
     --primary-color: #007bff;
     --secondary-color: #6c757d;
+    --bg-color: #888;
+/*
     --bg-color: #f8f9fa;
+*/
     --panel-bg: #ffffff;
     --border-color: #dee2e6;
     --text-color: #343a40;
@@ -182,37 +185,6 @@ header h1 {
     cursor: not-allowed;
 }
 
-/* New: Styles for the orientation select dropdown */
-#orientationSelect {
-
-    width: 100%;
-    padding: 8px 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    box-sizing: border-box;
-    -webkit-appearance: none; /* Remove default arrow on WebKit browsers */
-    -moz-appearance: none; /* Remove default arrow on Firefox */
-    appearance: none; /* Remove default arrow */
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%204%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M2%200L0%202h4L2%200zM2%205L0%203h4L2%205z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 8px 10px;
-    background-color: #f8f9fa; /* Or your desired color */
-    color: #333; /* Adjust text color if needed for contrast */
-}
-
-#orientationSelect:hover {
-    border-color: var(--primary-color);
-}
-
-#orientationSelect option {
-    background-color: ; /* This might work on some browsers, but not all */
-    color: ;
-}
-
 
 /* Canvas Container (Right Panel) */
 #canvas-container {
@@ -220,7 +192,10 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #888;
+    /*
     background-color: #e9ecef;
+*/
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -229,7 +204,7 @@ header h1 {
     /* A4 Paper Dimensions for Display */
     /* Use max-width/height to ensure it scales down for smaller screens */
     /* Dynamic width/heig#f8f9faht based on A4 aspect ratio and viewport available space */
-    width: calc((100vh - var(--header-height) - 30px) * var(--a4-portrait-aspect-ratio));
+    width: calc((100vw - var(--control-panel-width) - 30px) * var(--a4-portrait-aspect-ratio));
     height: calc(100vh - var(--header-height) - 30px);
     max-width: var(--a4-portrait-width-px);
     max-height: var(--a4-portrait-height-px);
@@ -241,7 +216,7 @@ header h1 {
     /* Ensure it scales down if height is the limiting factor */
     min-width: 0;
     min-height: 0;
-    border: 2px solid var( --primary-color );
+    border: 0px solid var( --primary-color );
 }
 
 /* Adjust canvas container aspect ratio based on page orientation for CSS display */
@@ -256,11 +231,14 @@ header h1 {
 
 #photoCanvas {
     /* Canvas itself will take up 100% of its parent (#canvas-container) */
-    width: 100%;
+    width: auto;
     height: 100%;
     display: block;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--border-color);
+    background: ;
+    outline: none;
+    background-color: #e9ecef;
 }
 
 /* File Upload Overlay */
@@ -280,6 +258,7 @@ header h1 {
     border-radius: 8px;
     padding: 5%;
     box-sizing: border-box;
+    border: 1px solid var(--primary-color);
 }
 
 #file-overlay.hidden {
@@ -365,6 +344,7 @@ header h1 {
     color: var(--text-color); /* Ensures consistent text color */
 }
 
+
 /* Ensure your select elements themselves are consistently styled */
 #paperSizeSelect,
 #orientationSelect {
@@ -382,7 +362,7 @@ header h1 {
     background-repeat: no-repeat;
     background-position: right 8px center;
     background-size: 8px 10px;
-    background-color: var(--bg-color); /* Use a consistent background var */
+    background-color: #f8f9fa; /* Use a consistent background var */
     color: var(--text-color); /* Use a consistent text color var */
 }
 
@@ -392,5 +372,9 @@ header h1 {
     border-color: var(--primary-color);
 }
 
+#orientationSelect option {
+    background-color:  ; /* This might work on some browsers, but not all */
+    color: ;
+}
 
 

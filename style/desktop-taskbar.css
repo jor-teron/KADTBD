@@ -58,17 +58,21 @@ text-shadow:
   height: 49px;
   border: 0px solid rgba(255, 255, 255, 0);
   border: 0px solid red;
-  border-radius: 0px 25px 0px 0px;
   text-decoration: none;
   background-color: transparent; /* Ensure no background color */
   margin-right: 100px;
+/*
+  border-radius: 0px 25px 0px 0px;
 	background-color: rgba( 60, 110, 170, 0.9) ;
 	box-shadow: 4px 3px 4px 2px rgba(0, 0, 0, 0.2) ;
+*/	
 }
 
 .start-menu:hover {
   border: 0px solid rgba(255, 255, 255, 0); /* No hover border */
+	background-color: #5a5aDD;
 	box-shadow: 4px 3px 4px 2px rgba(0, 0, 0, 0.6) ;
+/**/
 }
 
 .start-menu img {
@@ -87,7 +91,7 @@ text-shadow:
 	height: 50px;
 	background-color: ;
   border: 0px solid blue;
-	background-image: url('../image/windows-xp.png') ;
+	background-image: url('../image/windows-tilted-outline.png') ;
 	background-repeat: no-repeat ;
 	background-size: auto 100%;
 	background-position: center center;
@@ -172,6 +176,7 @@ text-shadow:
   font-size: 20px;
   display: flex;
   align-items: center;
+  border: 0px solid blue;
 }
 
 .pinned-icon {
@@ -196,6 +201,7 @@ text-shadow:
   border: 0px solid rgba(255, 255, 255, 0);
   border-radius: 5px;
   padding: 0px 0px;
+  border: 0px solid orange;
 }
 
 .system-tray a:hover {
@@ -216,8 +222,9 @@ text-shadow:
 
 .clock {
   height: 50px;
-  padding: 5px 10px;
-  font-size: 1em;
+  padding: 5px 5px;
+  font-size: 1.1em;
   font-weight: 666;
-  line-height: 53px;
+  line-height: 50px;
+  border: 1px solid orange;
 }
