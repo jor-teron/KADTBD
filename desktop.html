@@ -2,12 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta tags for character encoding and responsive viewport -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Desktop </title>
-  <!-- Common and desktop-specific styles -->
-    <script src="https://cdn.tailwindcss.com"></script>
+	<!-- Meta tags for character encoding and responsive viewport -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Desktop </title>
+	<link rel="icon" type="image/x-icon" href="favicon.png">
+	<!-- Common and desktop-specific styles -->
+	<script src="https://cdn.tailwindcss.com"></script>
     
 	<link rel="stylesheet" href="style/no-scrollbar.css">
 	<link rel="stylesheet" href="style/font.css">
@@ -34,6 +35,8 @@
 <script src="script/date.js" > </script>
 <script src="script/weekday-short.js" > </script>
 
+<div id="desktop-overlay-top"> </div>
+
 <div class="desktop">
     <!-- Notification header tile above single-column tiles -->
     <div id="notification"> </div>
@@ -50,39 +53,41 @@
 
 <!-- ORPHAN -->
     <!-- Start menu full-screen window with iframe -->
-    <div id="start-window" class="start-window">
-      <div class="start-window-content">
-        <iframe src="menu.html" class="start-iframe" title="Start Menu Content"></iframe>
-      </div>
-    </div>
+<div id="start-window" class="start-window">
+	<div class="start-window-content">
+	<iframe src="menu.html" class="start-iframe" title="Start Menu Content"></iframe>
+	</div>
+</div>
 
-  <!-- Taskbar with Start menus, pinned links, and digital clock -->
-	<footer class="taskbar text-white-with-black-outline">	</footer>
-	<script> includeHTML("desktop-taskbar.html", ".taskbar"); </script>
+<!-- Taskbar with Start menus, pinned links, and digital clock -->
+<footer class="taskbar text-white-with-black-outline">	</footer>
+<script> includeHTML("desktop-taskbar.html", ".taskbar"); </script>
 
 <!--
 <div id="overlay" class="hidden">	</div>
 <script> includeHTML("password-overlay.html", "#overlay"); </script>
 -->
 
-    <div id="overlay" class="hidden">
-        <div class="overlay-content">
-            <h2 class="text-3xl font-bold text-gray-800">Enter Password</h2>
-<!--            <p class="text-gray-600">Please enter the password to access this page.</p>	-->
-            <input type="password" id="password-input" placeholder="Password" class="focus:ring-2 focus:ring-blue-300">
-            <p id="error-message" class="text-red-500 text-sm hidden">Incorrect password. Please try again.</p>
-            <button id="submit-password">Unlock Page</button>
-            <p></p>
-        </div>
-    </div>
-    
+<div id="overlay" class="hidden">
+	<div class="overlay-content">
+		<h2 class="text-3xl font-bold text-gray-800">Enter Password</h2>
+<!--
+		<p class="text-gray-600">Please enter the password to access this page.</p>	
+-->
+		<input type="password" id="password-input" placeholder="Password" class="focus:ring-2 focus:ring-blue-300">
+		<p id="error-message" class="text-red-500 text-sm hidden">Incorrect password. Please try again.</p>
+		<button id="submit-password">Unlock Page</button>
+        <p></p>
+	</div>
+</div>
+
 <!-- Scripts for time, desktop functionality, news, background, and notifications -->
 <script src="script/desktop.js"></script>
 <script src="script/notification.js"></script>
 <script src="script/temperature.js"></script>
 <script src="script/cursor.js"></script>
 <script src="script/auth_passwd.js"></script>
-  <script src="script/background.js"></script>
+<script src="script/background.js"></script>
 
 <!--
   <script src="script/gnews.js"></script>
