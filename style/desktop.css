@@ -18,15 +18,15 @@ body {
 				}
 */
 
+/* Defunct element code */
 #desktop-overlay-top {
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100vw;
-	height: 150px;
+	height: 145px;
 	background-color: rgba(0,0,0,0);
 	z-index: 100;
-
 }
 
 
@@ -97,7 +97,6 @@ body {
   transition: opacity 2s ease; /* Smooth transition for opacity */
 }
 
-
 .start-iframe.active {
   opacity: 1; /* Fully visible when active */
 }
@@ -105,5 +104,3 @@ body {
 .start-iframe::-webkit-scrollbar {
   display: none; /* Hide scrollbar in Chrome/Safari */
 }
-
-
