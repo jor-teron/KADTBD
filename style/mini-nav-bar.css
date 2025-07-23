@@ -1,0 +1,90 @@
+
+.nav-bar
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 40px;
+	border: 0px solid blue;
+	font-size: 20px;
+
+}
+
+.nav-bar .menu-section
+{
+	min-width: 100px;
+	width: 14.25%;
+	max-width: 400px;
+}
+
+.nav-bar .menu-section-hide
+{
+	display: none;
+}
+
+.nav-bar .menu-section h2
+{
+	margin: 0px 0px;
+	border: 0px solid black;
+	text-align: center;
+	font-weight: 900;
+	background-color: rgba(250,250,250,0.2 ) ;
+	backdrop-filter: blur( 5px );
+	margin: 0px 1px;
+	color: rgba(255,255,255, 0.8) ;
+	text-shadow:
+	-1px -1px 0 #111,
+	-1px 1px 0 #111,
+	1px -1px 0 #111,
+	1px 1px 0 #111 ;
+}
+
+.nav-bar .menu-section h2:hover
+{
+	color: green;
+	text-shadow:none;
+	background-color: rgba(250,250,250,0.5) ;
+}
+
+.nav-bar .menu-section ul
+{
+	position: relative;
+	top: -18px;
+	display: none;
+	flex-direction: column;
+	border: 0px solid black;
+	transition: display 1s;
+	min-height: 300px;
+	border: 0px solid black;
+
+}
+
+
+.nav-bar .menu-section:hover ul
+{
+	display: flex;
+	display: ;
+
+}
+
+.nav-bar .menu-section ul a 
+{
+	height: ;
+}
+
+.nav-bar .menu-section ul a li
+{
+	list-style: none;
+	font-size: 22px;
+	margin: 1px 0px;
+	background-color: rgba(250,250,250,0.3) ;
+}
+
+.nav-bar .menu-section ul a li:hover
+{
+	background-color: rgba(255,140,0,0.5);
+}

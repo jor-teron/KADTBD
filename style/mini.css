@@ -9,6 +9,21 @@ body
 	width: 100vw;
 }
 
+.hidden { display: none;	}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {	color: blue;	}
+
+header,
+nav 
+{
+	z-index: 100;
+}
+
 .container 
 {
 	position: fixed;

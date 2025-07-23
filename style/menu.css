@@ -8,7 +8,9 @@ body {
     min-height: 100vh;
 }
 
-header {
+header ,
+footer
+{
     margin-bottom: 20px;
     border-bottom: 2px solid #e9ecef; /* Lighter border for header */
     padding-bottom: 0px;
@@ -25,7 +27,6 @@ h1  {
 	margin: 0px;
 	padding: 0px;
 	line-height: 0.9;
-
 }
 
 header p {
@@ -39,13 +40,14 @@ header p {
     min-width: 330px;
     background-color: #fff;
     padding: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* More prominent shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow */
     border-radius: 10px;
     text-align: center;
 }
 
 /* --- Grid Layout for Menu Sections --- */
-.menu-grid-container {
+.menu-grid-container 
+{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
