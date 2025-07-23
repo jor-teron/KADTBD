@@ -27,7 +27,7 @@ nav
 .container 
 {
 	position: fixed;
-   	top: 0px;
+   	top: 40px;
    	left: 0px;
    	display: flex;
    	flex-direction: row;
@@ -35,7 +35,7 @@ nav
    	justify-content: center;
    	align-items: center;
    	width: 100vw;
-   	height: 99.5vh;
+   	height: calc( 99.5vh - 40px );
 }
 
 .box
