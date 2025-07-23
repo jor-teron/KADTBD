@@ -13,17 +13,6 @@
 	font-size: 20px;
 }
 
-.nav-bar .menu-section h2
-{
-	opacity: 0;
-	transition: opacity 0.4s;
-}
-
-.nav-bar:hover .menu-section h2
-{
-	opacity: 1;
-}
-
 .nav-bar .menu-section
 {
 	min-width: 100px;
@@ -34,6 +23,13 @@
 .nav-bar .menu-section-hide
 {
 	display: none;
+}
+
+.nav-bar .menu-section:hover h2
+{
+	color: green;
+	text-shadow:none;
+	background-color: rgba(250,250,250,0.5) ;
 }
 
 .nav-bar .menu-section h2
@@ -53,11 +49,15 @@
 	1px 1px 0 #111 ;
 }
 
-.nav-bar .menu-section h2:hover
+.nav-bar .menu-section h2
 {
-	color: green;
-	text-shadow:none;
-	background-color: rgba(250,250,250,0.5) ;
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+.nav-bar:hover .menu-section h2
+{
+	opacity: 1;
 }
 
 .nav-bar .menu-section ul
@@ -73,12 +73,9 @@
 
 }
 
-
 .nav-bar .menu-section:hover ul
 {
 	display: flex;
-	display: ;
-
 }
 
 .nav-bar .menu-section ul a 
