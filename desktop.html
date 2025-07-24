@@ -1,14 +1,15 @@
-<!-- Desktop HTML simulating a Windows 7 interface with tiles and sub-tile windows -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<!-- Meta tags for character encoding and responsive viewport -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Desktop </title>
+	<title> vDesktop </title>
 	<link rel="icon" type="image/x-icon" href="favicon.png">
 	<!-- Common and desktop-specific styles -->
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
     
 	<link rel="stylesheet" href="style/no-scrollbar.css">
 	<link rel="stylesheet" href="style/font.css">
@@ -16,11 +17,13 @@
 	<link rel="stylesheet" href="style/common.css">
 	<link rel="stylesheet" href="style/desktop.css">
 	<link rel="stylesheet" href="style/desktop-widget.css">
-	<link rel="stylesheet" href="style/desktop-taskbar.css">
 	<link rel="stylesheet" href="style/desktop-icons.css">
+	<link rel="stylesheet" href="style/desktop-taskbar.css">
 	<link rel="stylesheet" href="style/qr-code.css">
 	<link rel="stylesheet" href="style/analog-clock.css">
+	<link rel="stylesheet" href="style/auth.css">
     <link rel="stylesheet" href="style/auth_passwd.css">
+
 <!--
 	<link rel="stylesheet" href="style/background-image.css">
 	<link rel="stylesheet" href="style/pc-desktop.css">
@@ -31,13 +34,30 @@
 <body>
 
 <script src="script/html-include.js"></script>
-<script src="script/time.js"></script>
-<script src="script/date.js" > </script>
-<script src="script/weekday-short.js" > </script>
-
-<!-- DId not work as expected
-<div id="desktop-overlay-top"> </div>
+<!--
+<div class="overlay">	
+	<div class="auth-container">
+		<div id="qr-scanner" class="scanner"></div>
+		<input type="password" id="password-input" class="password-input" placeholder="Password" autofocus>
+	</div>
+</div>
+<script> //includeHTML("auth-qr-pass-overlay.html", ".overlay"); </script>
 -->
+
+<!--
+<div id="overlay" class="hidden">	</div>
+<script> includeHTML("password-overlay.html", "#overlay"); </script>
+-->
+
+<div id="overlay" class="hidden">
+	<div class="overlay-content">
+		<h2 class="text-3xl font-bold text-gray-800">Enter Password</h2>
+		<input type="password" id="password-input" placeholder="Password" class="focus:ring-2 focus:ring-blue-300">
+		<p id="error-message" class="text-red-500 text-sm hidden">Incorrect password. Please try again.</p>
+		<button id="submit-password">Unlock Page</button>
+        <p></p>
+	</div>
+</div>
 
 <div class="desktop">
     <!-- Notification header tile above single-column tiles -->
@@ -53,37 +73,13 @@
 </div>
 <!-- Desktop element end here -->
 
-<!-- ORPHAN -->
-    <!-- Start menu full-screen window with iframe -->
-<div id="start-window" class="start-window">
-	<div class="start-window-content">
-	<iframe src="menu.html" class="start-iframe" title="Start Menu Content"></iframe>
-	</div>
-</div>
-
 <!-- Taskbar with Start menus, pinned links, and digital clock -->
 <footer class="taskbar text-white-with-black-outline">	</footer>
 <script> includeHTML("desktop-taskbar.html", ".taskbar"); </script>
 
-<!--
-<div id="overlay" class="hidden">	</div>
-<script> includeHTML("password-overlay.html", "#overlay"); </script>
--->
-
-<div id="overlay" class="hidden">
-	<div class="overlay-content">
-		<h2 class="text-3xl font-bold text-gray-800">Enter Password</h2>
-<!--
-		<p class="text-gray-600">Please enter the password to access this page.</p>	
--->
-		<input type="password" id="password-input" placeholder="Password" class="focus:ring-2 focus:ring-blue-300">
-		<p id="error-message" class="text-red-500 text-sm hidden">Incorrect password. Please try again.</p>
-		<button id="submit-password">Unlock Page</button>
-        <p></p>
-	</div>
-</div>
-
 <!-- Scripts for time, desktop functionality, news, background, and notifications -->
+<script src="script/auth.js"></script>
+<script src="script/time.js"></script>
 <script src="script/desktop.js"></script>
 <script src="script/notification.js"></script>
 <script src="script/temperature.js"></script>
@@ -92,8 +88,11 @@
 <script src="script/background.js"></script>
 
 <!--
-  <script src="script/gnews.js"></script>
-  <script src="script/redirect.js"></script>
+<script src="script/auth-session.js"></script>
+<script src="script/date.js" > </script>
+<script src="script/weekday-short.js" > </script>
+<script src="script/gnews.js"></script>
+<script src="script/redirect.js"></script>
 -->
 
 </body>
