@@ -15,7 +15,7 @@ header.header-small {
 	position: absolute;
 	top: 0px;
 	left:0px;
-	height: 110px;
+	height: 100px;
 	width: 100%;
 	background: #55d;
 	margin: 0px 0px;
@@ -23,21 +23,8 @@ header.header-small {
 	z-index:10;
 }
 
-
-header.header-small {
-	height: 45px;
-}
-
-header div {
-	height: 10px;
-}
-
 header, h1, h2, h3 , h4, h5, h6, p {
 	text-align: center;
-}
-
-header div {
-	font-style: italic;
 }
 
 .title-1 {
@@ -51,46 +38,13 @@ header div {
 
 .search {
 	position: absolute;
-	top: calc( 40px + 0px );
+	top: calc( 100px + 0px );
 	left: 5%;
-	width: 96% ;
+	width: 90% ;
 	height: auto ;
 	border: 0px dashed black;
 }
 
-.iframe-container {
-	position: absolute;
-	top: 100px;
-	left: 0px;
-	width:100%;
-	height: auto;
-	min-height: 700px;
-	display: flex;
-
-}
-
-.iframe-container iframe {
-	width: calc( 50% - 0px) ;
-	height: auto;
-	min-height: 700px;
-	outline: none;
-	border: none;
-}
-
-#weather-tile {
-font-size:1em;
-	position: absolute;
-	display: flex;
-	top: 200px;
-	right:10px;
-	height: 200px;
-	width: 30%;
-	min-width: 250px;
-	border: 0px solid blue;
-	border-radius: 30px;
-	background: rgba(100, 100, 100, 0) ;
-	background:  ;
-}
 
 /*  lets google cook */
 
@@ -146,25 +100,3 @@ input.gsc-input {
 .gsc-search-button svg {
 	height:50px !important;
 }
-
-.gsc-webResult {
-	padding: 10px;
-	margin: 0px 0px;
-	background: rgba( 128, 128, 0, 0.3 );
-	border-radius: 25px 25px 25px 25px ;
-}
-
-.gsc-webResult * {
-	margin: 2px 20px;
-}
-
-.gs-title {
-	font-size: 26px;
-	font-weight: 700;
-	margin: 0px 10px;
-}
-
-.gs-snippet {
-	margin: 0px;
-}
-
