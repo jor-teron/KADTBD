@@ -1,9 +1,9 @@
 const backgrounds = [
-    { type: 'image', value: 'wallpaper/xp-small.jpg', position: 'center bottom', size: 'cover', timeout: 10 }, // 5 minutes
-    { type: 'image', value: 'wallpaper/bess.jpg', position: 'center center', size: 'cover', timeout: 10 }, // 5 minutes
+//    { type: 'image', value: 'wallpaper/xp-small.jpg', position: 'center bottom', size: 'cover', timeout: 10 }, // 5 minutes
+//    { type: 'image', value: 'wallpaper/bess.jpg', position: 'center center', size: 'cover', timeout: 10 }, // 5 minutes
 	{ type: 'color', value: '#5a5aDD', timeout: 10 }, // Lavender
-	{ type: 'image', value: 'wallpaper/office.jpg', position: 'center bottom', size: 'contain', timeout: 3 }, // 5 minutes
-	{ type: 'color', value: '#121212', timeout: 10 }, // Grey
+//	{ type: 'image', value: 'wallpaper/office.jpg', position: 'center bottom', size: 'contain', timeout: 3 }, // 5 minutes
+	{ type: 'color', value: '#121212', timeout: 20 }, // Grey
 //	{ type: 'color', value: '#967BB6', timeout: 4 }, // Light Lavender/pinks
 //	{ type: 'color', value: '#B57EDC', timeout: 5 }, // Pink
 //	{ type: 'color', value: '#f9f9f9', timeout: 4 }, // 1 minute
