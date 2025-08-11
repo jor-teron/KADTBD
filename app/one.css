@@ -35,7 +35,10 @@ a
 
 .grid-container .row a
 {
-	min-width: 49%;
+	width:49%;
+	min-width: 150px;
+	max-width: 300px;
+	
 }
 
 .grid-container .row a .tile
