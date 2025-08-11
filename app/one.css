@@ -14,9 +14,14 @@ a
 	text-decoration: none;
 }
 
+header
+{
+	margin: 15px 0px 20px 0px;
+	font-weight: 800;
+}
+
 .grid-container
 {
-
 	background-color: #121212;
 	width: 100vw;
 	text-align: center;
