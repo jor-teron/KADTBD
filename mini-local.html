@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Homepage </title>
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="stylesheet" href="style/mini.css">
+<link rel="stylesheet" href="style/mini-nav-bar.css">
+<link rel="stylesheet" href="style/no-scrollbar.css">
+<!--
+<link rel="stylesheet" href="style/font.css">
+<link rel="stylesheet" href="style/mini-menu.css">
+-->
+</head>
+
+<body>
+<script src="script/html-include.js"></script>
+
+<!--
+<nav class="context-menu"> </nav>
+<script> //includeHTML("mini-menu.html", ".context-menu"); </script>
+
+<nav class="start-menu"> 
+	<div class="context-menu-span"> Start </div>
+	<div class="start-menu-container"> </div>
+	<script> //includeHTML("menu-list.html", ".start-menu-container"); </script>
+</nav>
+-->
+
+<nav class="nav-bar"> </nav>
+<script> includeHTML("menu-list.html", ".nav-bar"); </script>
+
+<div class="container">
+	<div class="box" id="left">
+		<div class="icons-container">	</div>
+		<script> includeHTML("mini-icons.html", ".icons-container"); </script>
+	</div>
+	<div class="box" id="right">
+<!--		
+		<div class="icons-container">
+			<a href="desktop.html" target="_blank" >
+				<img src="image/windows.png" >
+			</a>
+		</div>
+-->
+	</div>
+</div>
+
+<script src="script/cursor.js"></script>
+<script src="script/background-mini.js"></script>
+</body>
+</html>
